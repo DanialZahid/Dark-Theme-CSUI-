@@ -1,0 +1,240 @@
+/*
+	# Dark Theme (CSUI)
+
+	[DESCRIPTION]
+
+	A UI theme (custom CSS) for GameBanana website.
+
+	The UI theme is focused on changing the site-wide UI into a darker one (black), as well as tweaking almost all of the aspects of the site.
+	-----------------------------
+
+	[DETAILS]
+
+	Website: GameBanana (https://gamebanana.com/) >>> UI Themes (https://gamebanana.com/scripts/cats/2238/)
+	Submission profile page: https://gamebanana.com/scripts/10441/
+	GitHub repository page: https://github.com/DanialZahid/Dark-Theme-CSUI-
+	Browsers tested: Google Chrome [version 78.0.3904.87 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
+	Date released: 2019-07-17
+	Last updated: 2019-11-04
+	Current version: 1.2.0
+	-----------------------------
+
+	[AUTHORS]
+
+	## Author / Ownership
+
+	* Danial Zahid [Coder]
+
+	## Special Thanks
+
+	* tom [QuickDL material icon class addition]
+	* Ring-A-Ding Rampage [Helped with a few issues]
+	* Wallpaperplay [Background image]
+	-----------------------------
+
+	[CONTACT DETAILS]
+
+	## Author / Owner
+
+	> Email address: danialz@pm.me
+	> Portfolio: http://danialzahid.ga/
+	> Twitter: @DanialZahid17
+	> GitHub: https://github.com/DanialZahid/
+	> GameBanana: https://gamebanana.com/members/1336101/
+
+	## tom
+
+	> GameBanana: https://gamebanana.com/members/1382/
+
+	## Ring-A-Ding Rampage
+
+	> GameBanana: https://gamebanana.com/members/1244443/
+
+	## Wallpaperplay
+
+	> Website: https://wallpaperplay.com/
+	-----------------------------
+
+	[CHANGELOG]
+
+	## Version 1.2.0 [Minor Update] [2019-10-04]
+
+	* [Fixed] Next and previous button icons in the lightbox.
+	* [Fixed] Attributes module links color to match with the default UI link color.
+	* [Fixed] Uneven margin on the presets in the filters area.
+	* [Fixed] Scripts section code viewer UI.
+	* [Added] Blue color UI to the stamps form.
+	* [Changed] Main background color with an image.
+	* [Changed] Add, edit, and reply forms UI color from blue to green. Also, reduced their color alpha a bit.
+	* [Changed] Avatar border style (for members with clearance level) to solid.
+	* [Changed] Top and side navigator background color as well as their panes color to be more dark.
+	* [Changed] Lightbox icon colors from teal to indigo.
+	* [Changed] Several module buttons position aligned to center to match with the rest of the UI style.
+	* [Changed] Add and edit forms as well as their tabs aligned to center.
+	* [Revamped] Modules UI.
+	* [Revamped] Subtitle.
+	* [Revamped] Record UI in various sections/areas.
+	* [Tweaked] Member profile > Stamps Log and Posts sections.
+	* [Tweaked] Updates module records UI.
+	* [Tweaked] Posts (comments) list.
+	* [Miscellaneous] A couple of other tweaks and bug fixes.
+
+	## Version 1.1.0 [Minor Update] [2019-07-24]
+
+	* [Fixed] SubjectShaper style is no longer overridden by the theme.
+	* [Fixed] Posts are now left-aligned in the Questions section.
+	* [Tweaked] Blockquote styling.
+	* [Tweaked] Messages styling in the Alerts and the Activity panes.
+	* [Miscellaneous] A few other minor changes.
+
+	## Version 1.0.0 [2019-07-17]
+
+	* Initial release.
+	-----------------------------
+
+	[LICENSE]
+
+	You are allowed to install this UI theme.
+
+	You are not allowed to:
+
+	1. Redistribute this UI theme on the Internet.
+	2. Use this UI theme in your own work (either, published or not).
+	3. Modify and publish the modified version of this UI theme on the Internet.
+	4. Take or use any components (either, modified or not) of this UI theme and use in your own work (either, published or not).
+	5. Take or use any components (either, modified or not) of this UI theme and publish on the Internet.
+	6. Use this UI theme or its components for commercial purposes.
+	-----------------------------
+*/
+
+/*		[CORE]		*/
+
+@import url('https://fonts.googleapis.com/css?family=Arimo|Aldrich|Fira+Mono|Doppio+One&display=swap');
+
+*   /*  [Version 1.2.0 | Addition]  */
+{
+    border-radius: 0 !important;
+}
+
+html
+{
+  background: #212121;
+}
+
+#BodyWrapper
+{
+	background: var(--CSUIBodyBG) #212121;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body
+{
+	font-size: var(--CSUIFontSize);
+	font-family: var(--CSUITextFF) !important;
+	color: var(--CSUIBodyTextColor);
+	background: var(--CSUIBodyColor);
+	text-shadow: var(--CSUIBodyTS);
+}
+
+a:hover, .Linklike:hover, #SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div strong, #SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div small, .MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover, .MainForm fieldset#Attributes .AvailableAttributes h5:hover, .RichText .TableOfContents ul li:hover, .AdvancedListSettingsModule>.Content .OrderAndSortControls fieldset legend:hover, #SectionMatchesModule ul li.Selected a, #SectionMatchesModule ul li:hover a, #SectionMatchesModule ul li.Selected a span, #GameMatchesModule ul li.Selected a span, #AttributesModule a:hover
+{
+	color: var(--CSUILinkHoverColor) !important;
+}
+
+a, .Linklike, .RichText .TableOfContents ul li
+{
+	color: var(--CSUILinkColor);
+	text-shadow: var(--CSUILinkShadow);
+}
+
+#AttributesModule a
+{
+	color: var(--CSUILinkColor) !important;
+  text-shadow: var(--CSUILinkShadow) !important;
+}
+
+#ContentGrid.HiddenColumnMode.xs row>column.xs-h	/*	[Version 1.2.0 | Updated]	*/
+{
+	background: #212121;
+	border-left: 1px solid var(--CSUIGreyColor);
+}
+
+.PageModule>.Content
+{
+	padding: 10px;
+}
+
+#ContentGrid>row>column:not(:first-child)
+{
+	background: initial;
+	border: initial;
+}
+
+moduleGroup
+{
+	margin: 10px;
+  padding: initial;
+	border: none;
+}
+
+.PageModule
+{
+	background: var(--CSUICardBGColor);
+	border: var(--CSUICardBorder) !important;
+	margin: 10px;
+	padding: 0;
+}
+
+moduleGroup>.PageModule
+{
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+#MasterLog log
+{
+	color: var(--CSUIGreenColor);
+	font-weight: bold;
+	border: 1px solid var(--CSUIGreenColor);
+	font-size: var(--CSUIFontSize);
+	background: var(--CSUISLBGColor);
+	padding: 5px;
+}
+
+#MasterLog log span
+{
+	border: none;
+}
+
+#Loader.Complete span
+{
+	border-color: var(--CSUIGreenColor);
+}
+
+#Loader span
+{
+	border: 3px dashed var(--CSUIRedColor);
+}
+
+#Loader span, #Loader span:after
+{
+    border-radius: 50% !important;
+	width: 22px;
+	height: 22px;
+}
+
+#Loader.Complete num
+{
+	color: var(--CSUIGreenColor);
+}
+
+#Loader num
+{
+	color: var(--CSUIRedColor);
+	font-size: 10px;
+	text-align: center;
+	margin-top: 1px;
+}

@@ -1,0 +1,205 @@
+/*		[TEXT EDITORS | INPUT | FIELDS]		*/
+
+.MainForm
+{
+	max-width: 1000px;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid #000000;
+}
+
+#EditFormModule .MainForm, #AddFormModule .MainForm	/*	[Version 1.2.0 | Addition]	*/
+{
+	margin: auto;
+}
+
+.MainForm .InputsWrapper fieldset>legend .Title
+{
+	font-size: var(--CSUIH4FontSize);
+	color: var(--CSUIHColor);
+}
+
+.Editor .Toolbars>div
+{
+	margin: 0 0 10px 0;
+}
+
+.Editor .Toolbars>div button
+{
+	margin: 0 5px 0 0;
+}
+
+.Modal, #GamesListModule .Content .SteamInfoRollout
+{
+	background: rgba(0, 0, 0, 0.4) !important;
+	border: 1px solid #000000 !important;
+}
+
+.Editor .ViewModes .Wysiwyg .RichText, .Editor .ViewModes .Source textarea, .Editor .ViewModes .Backup .RichText
+{
+	background: var(--CSUITextAreaBGColor);
+	border: var(--CSUITextAreaBorder);
+	font-size: var(--CSUIFontSize);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText
+{
+	font-family: var(--CSUITextFF);
+	color: var(--CSUIWhiteColor);
+}
+
+.Editor .ViewModes .Source textarea
+{
+	font-family: var(--CSUIMonoFF);
+	color: var(--CSUIGreenColor);
+	font-size: 12px !important;
+}
+
+.Editor .ViewModes .Backup .RichText
+{
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+	color: var(--CSUIGreyColor);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText:focus
+{
+	background: var(--CSUITextAreaBGColor);
+	border: var(--CSUITextAreaHoverBorder);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText:hover
+{
+	background: var(--CSUITextAreaBGColor);
+	border: var(--CSUITextAreaHoverBorder);
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus, input[type=num]:focus, input[type=tel]:focus, select:focus, .SelectLike:focus, option:focus, .OptionLike:focus, optgroup:focus, textarea:focus, .TextareaLike:focus
+{
+	background: var(--CSUITextAreaBGColor) !important;
+	border: var(--CSUITextAreaHoverBorder) !important;
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=password]:hover, input[type=number]:hover, input[type=email]:hover, input[type=num]:hover, input[type=tel]:hover, select:hover, .SelectLike:hover, option:hover, .OptionLike:hover, optgroup:hover, textarea:hover, .TextareaLike:hover
+{
+	background: var(--CSUITextAreaBGColor) !important;
+	border: var(--CSUITextAreaHoverBorder) !important;
+}
+
+input[type=text], input[type=password], input[type=password], input[type=number], input[type=email], input[type=num], input[type=tel], select, .SelectLike, optgroup, textarea, .TextareaLike
+{
+	border: var(--CSUITextAreaBorder) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+}
+
+input#GameFinder
+{
+	color: var(--CSUIWhiteColor);
+}
+
+li.OptionLike:hover
+{
+	background: #424242 !important;
+}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options
+{
+	background: var(--CSUISLBGColor) !important;
+}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover
+{
+	color: var(--CSUILinkHoverColor);
+	background: #424242 !important;
+	border: 1px solid var(--CSUIGreenColor);
+}
+
+.Editor .WysiwygPalettes
+{
+	background: rgba(79, 195, 247, 0.05);
+	border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+.Editor .WysiwygPalettes>h4
+{
+	font-family: var(--CSUIMonoFF) !important;
+	font-size: 10px !important;
+	background: rgba(66, 66, 66, 0.7);
+	opacity: 0.6;
+}
+
+.Editor .WysiwygPalettes .ImageInserter ul:empty:after, .Editor .WysiwygPalettes .ElementConfig.Active:empty:after
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+pre, #HistoryListModule .Content .Changes li .NewVersion .ValueWrapper, #HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper, #ArchiveTreesModule .Content>ul>li .ArchiveTreeWrapper
+{
+	color: var(--CSUIGreenColor) !important;
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+	font-family: var(--CSUIMonoFF) !important;
+}
+
+#CodeViewerModule .CodeWithLineNumbers
+{
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper del, #HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper del
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper ins, #HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper ins
+{
+	color: var(--CSUIBlueColor) !important;
+}
+
+#LicenseModule article
+{
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+}
+
+.Editor .ViewModeSwitchers span.Wysiwyg
+{
+	color: var(--CSUIWhiteColor);
+	background: rgba(186, 104, 200, 0.5);
+	border: 1px solid var(--CSUIPurpleColor);
+}
+
+.Editor .ViewModeSwitchers span.Source
+{
+	color: var(--CSUIWhiteColor);
+	background: rgba(156, 204, 101, 0.5);
+	border: 1px solid var(--CSUIGreenColor);
+}
+
+.Editor .ViewModeSwitchers span.Backup
+{
+	color: var(--CSUIWhiteColor);
+	background: rgba(79, 195, 247, 0.5);
+	border: 1px solid var(--CSUIBlueColor);
+}
+
+.Editor .ViewModeSwitchers span
+{
+	font-family: var(--CSUIMonoFF);
+	font-size: 10px;
+	opacity: 0.6;
+}
+
+.Editor .ViewModeSwitchers span.Active
+{
+	opacity: 1;
+}
+
+.PostsListModule .Posts > li .PostHeader .Poster small
+{
+	font-size: 11px;
+}

@@ -1,0 +1,105 @@
+/*		[COLORS]		*/
+
+.GreenColor
+{
+	color: var(--CSUIGreenColor) !important;
+}
+
+.RedColor
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+.GreyColor
+{
+	color: var(--CSUIGreyColor) !important;
+}
+
+.BlueColor
+{
+	color: var(--CSUIBlueColor) !important;
+}
+
+.PurpleColor
+{
+	color: var(--CSUIPurpleColor) !important;
+}
+
+.OrangeColor
+{
+	color: var(--CSUIOrangeColor) !important;
+}
+
+/*		[TIMESTAMPS AND RATINGS]		*/
+
+.LessThan5minsOld
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+.LessThan4HoursOld
+{
+	color: var(--CSUIOrangeColor) !important;
+}
+
+.LessThan30minsOld
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+.LessThan1HourOld
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+.OlderThan1Day
+{
+	color: var(--CSUIGreyColor) !important;
+}
+
+span.RatedLessThan5
+{
+	color: var(--CSUIRedColor);
+}
+
+span.Rated5To7
+{
+	color: var(--CSUIOrangeColor);
+}
+
+span.Rated7To9
+{
+	color: var(--CSUIBlueColor);
+}
+
+span.Rated9To10
+{
+	color: var(--CSUIGreenColor);
+}
+
+/*		[SMALL FONT SIZE]		*/
+
+#ArchiveTreesModule .Content > ul > li > small span, #ArchiveTreesModule .Content > ul > li > small a, #ModlogListModule .Action blockquote, #ModlogListModule .Affected li, #PmTheModsModule .Content, #StaffProfileModule div.Content dd.Initiatives ul li div em, #StaffProfileModule div.Content dd.Initiatives ul li div a, #EmptyBioNoticeModule span, #ArchiveTreesModule .Content>ul>li>small, .MainForm fieldset#Attributes .SelectedAttributes ul li span, .MainForm fieldset#Attributes .SelectedAttributes ul li button, .MainForm fieldset#Attributes .AvailableAttributes ul .AttributesGroup strong, .MainForm fieldset#ChangeLog ul li>spriteIcon, .MainForm fieldset#ChangeLog ul li button, .MainForm fieldset#ChangeLog ul li input, .MainForm fieldset#ChangeLog ul li select, .PostsListModule .Posts>li .PostHeader .DateAdded, .PostsListModule .Posts>li .PostHeader .DateModified, #NavOptionsNavModule pane .GuestNotice, #NavOptionsNavModule pane wrapper>span, #NavOptionsNavModule pane a, #FilesModule .Content ul li>span small, #FilesModule .Content ul li>.FileInfo small, #GlobalSubmissionAnnouncementModule .Content p small, #AvailableKeysListListToolbarModule button small, #RegistrationFormModule .Description small, li.Stamper
+{
+	font-size: var(--CSUISmallFontSize) !important;
+}
+
+/*		[SMALL FONT SIZE AND GREY COLOR]		*/
+
+#RanksListModule recordcell span, #SideNav #StatsNavModule pane column:first-child stat statLabel, #Recipients small, #Recipients textarea, #FilesModule .Content ul li>span .Description, #FilesModule .Content ul li>.FileInfo .Description, #MedalsModule .Content ul li div small, .MainForm .InputsWrapper fieldset .InputHelp, #TopGamesModule .Content .GamesList li a span, dt, #SearchNavModule pane #PopularTermSuggestions li small, #SearchNavModule pane #BrowserHistorySuggestions li small, #PortfolioEntriesListModule recordcell.Identifiers small, .MainForm fieldset#Category .Category small, .MainForm fieldset#Type small, .MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .BulkAddAuthorInput small, .PostsListModule .Posts > li article footer
+{
+	color: var(--CSUIGreyColor) !important;
+	font-size: var(--CSUISmallFontSize) !important;
+}
+
+/*		[CONTENT CENTER ALIGNMENT]		*/
+
+#ParticipantsListModule .Entries ul, .PostsListModule .Posts>li article .PostStamps, #FilesModule .Content ul li .DownloadOptions, #ThanksToggleModule .Content, #GameModule .Content a, #StatsModule ul, #MoreBySubmitterSubmissionsListModule records, #MoreInCategorySubmissionsListModule records, #SubmitterModule .Content, #WipsBySubmitterSubmissionsListModule records, .AdvancedElement_Switch.Inline ul, .PostsListModule .Posts > li .PostTools
+{
+	justify-content: center !important;
+}
+
+#ShareButtonsModule, #OverviewModule table, #FlagsModule li, #GameSubscriptionToggleModule, #LikeToggleModule, #UiThemeInstallerModule, #PostAddFormRequesterModule, #TodoAddFormRequesterModule, #UpdateAddFormRequesterModule, #SubmissionsListAdvancedListSettingsModule, .InfiniteScroller, #ModlogListAdvancedListSettingsModule, #FlagAddFormRequesterModule, #WithheldSubmissionsListAdvancedListSettingsModule, #NavOptionsNavModule pane wrapper, #PermitsModule recordcell.Identifiers, [data-_sViewMode=Grid] recordCell.Preview, recordcell.Ownership, recordcell.Controls, [data-_sViewMode=Grid] recordCell.Identifiers, #StaffListModule table, #HeadlineWrapper overlay
+{
+	text-align: center !important;
+}
