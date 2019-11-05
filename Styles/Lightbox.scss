@@ -1,0 +1,75 @@
+/*		[LIGHTBOX]		*/
+
+.lg-outer .lg-thumb-outer
+{
+	background-color: var(--CSUISLBGColor) !important;
+}
+
+.lg-outer .lg-toogle-thumb
+{
+	background-color: var(--CSUISLBGColor) !important;
+	color: var(--CSUITealColor) !important;
+}
+
+.lg-outer .lg-toogle-thumb:hover, .lg-next.lg-icon:hover, .lg-prev.lg-icon:hover
+{
+	color: var(--CSUIWhiteColor) !important;
+}
+
+.lg-toolbar
+{
+	background-color: var(--CSUISLBGColor) !important;
+}
+
+#lg-counter
+{
+	color: var(--CSUIGreyColor) !important;
+	font-size: var(--CSUISmallFontSize) !important;
+}
+
+.lg-toolbar .lg-icon:hover
+{
+	color: var(--CSUIWhiteColor) !important;
+}
+
+.lg-toolbar .lg-icon
+{
+	color: var(--CSUIIndigoColor) !important;	/*	[Version 1.2.0 | Updated]	*/
+}
+
+.lg-actions .lg-next, .lg-actions .lg-prev
+{
+	background-color: var(--CSUISLBGColor) !important;
+	color: var(--CSUIIndigoColor) !important;	/*	[Version 1.2.0 | Updated]	*/
+}
+
+.lg-sub-html
+{
+	background-color: rgba(0, 0, 0, 0.25) !important;
+	color: var(--CSUIBodyTextColor) !important;
+}
+
+.lg-outer .lg-thumb-item
+{
+	border: 1px solid #000000 !important;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover
+{
+	border-color: var(--CSUILinkHoverColor) !important;
+}
+
+.lg-outer .lg-dropdown
+{
+	color: var(--CSUIBodyTextColor) !important;
+	padding: 5px !important;
+	font-family: var(--CSUITextFF) !important;
+	font-size: var(--CSUIFontSize) !important;
+	background: var(--CSUISNListBGColor) !important;
+	border: var(--CSUISNListBorderColor) !important;
+}
+
+.lg-outer .lg-dropdown a:hover
+{
+	background: var(--CSUIButtonBGHoverColor) !important;
+}

@@ -1,0 +1,172 @@
+/*		[MODULES]		*/
+
+#WithholdNoticeModule
+{
+	color: var(--CSUIRedColor) !important;
+	padding-bottom: 20px;
+	background: rgba(232, 78, 64, 0.15);
+	border: 1px solid rgba(232, 78, 64, 0.3);
+}
+
+#UnwithholdInstructionsModule, #PrivateAccessNoticeModule, #FlagNoticeModule, #ModeratorNoticeModule, #IssuesModule, #RequirementsModule, #RulesModule
+{
+	color: var(--CSUIRedColor) !important;
+	border: 1px solid rgba(232, 78, 64, 0.3) !important;
+	background: rgba(232, 78, 64, 0.15) !important;
+}
+
+#WithholdNoticeModule h3, #UnwithholdInstructionsModule h3, #PrivateAccessNoticeModule h3, #ModeratorNoticeModule h3, #TrashNoticeModule h3, #FlagNoticeModule h3, #RequirementsModule h3, #RulesModule h3, #ResponsibilitiesModule h3, #ManagersListModule h3, #TrashNoticeModule h3, #FlagsModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+	background: rgba(232, 78, 64, 0.3);
+}
+
+#WithholdFormModule, #TrashFormModule, #FlagsModule, #ManagersListModule, #TrashNoticeModule, #PermitsModule, #AddModnoteFormModule
+{
+	border: 1px solid rgba(232, 78, 64, 0.3) !important;
+	background: rgba(232, 78, 64, 0.07) !important;
+}
+
+#LicenseModule, #WhenModule
+{
+	background: rgba(255, 112, 67, 0.15) !important;
+	border: 1px solid rgba(255, 112, 67, 0.3) !important;
+	color: var(--CSUIOrangeColor) !important;
+}
+
+#LicenseModule h3, #WhenModule h3, #WithholdLogModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+  background: rgba(255, 112, 67, 0.3);
+}
+
+#WithholdLogModule
+{
+	background: rgba(255, 112, 67, 0.15) !important;
+	border: 1px solid rgba(255, 112, 67, 0.3) !important;
+}
+
+#ResponsibilitiesModule
+{
+	border: 1px solid rgba(232, 78, 64, 0.3) !important;
+	background: rgba(232, 78, 64, 0.15) !important;
+	text-align: center !important;
+}
+
+#WhereModule
+{
+	background: rgba(158, 158, 158, 0.15);
+	border: 1px solid rgba(158, 158, 158, 0.3);
+}
+
+#WhereModule h3
+{
+	color: var(--CSUIGreyColor);
+}
+
+#FilesModule, #AlternateFileSourcesModule
+{
+	background: rgba(121, 134, 203, 0.15) !important;
+	border: 1px solid rgba(121, 134, 203, 0.3) !important;
+	text-align: center !important;
+}
+
+#FilesModule h3, #AlternateFileSourcesModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+	background: rgba(121, 134, 203, 0.3);
+}
+
+#GlobalSubmissionAnnouncementModule
+{
+	background: rgba(128, 203, 196, 0.15) !important;
+	border: 1px solid rgba(128, 203, 196, 0.3) !important;
+}
+
+#GlobalSubmissionAnnouncementModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+ 	background: rgba(128, 203, 196, 0.3);
+}
+
+#ParticipantsListModule, #VotersListModule
+{
+	background: rgba(79, 195, 247, 0.15) !important;
+	border: 1px solid rgba(79, 195, 247, 0.3) !important;
+}
+
+#ParticipantsListModule h3, #VotersListModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+ 	background: rgba(79, 195, 247, 0.3);
+}
+
+#UpdatesModule h3, #ProgressReportModule h3, #AvailableKeysListModule h3, #BountySummaryModule h3, #BoostBountyFormModule h3, #AwardBountyFormModule h3, #PrizesModule h3, #UnseenBroadcastsModule h3, #UnwithholdFormModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+	background: rgba(156, 204, 101, 0.3);
+}
+
+#UpdatesModule, #ProgressReportModule, #BountySummaryModule, #BoostBountyFormModule, #AwardBountyFormModule, #PrizesModule, #UnwithholdFormModule
+{
+	background: rgba(156, 204, 101, 0.15);
+	border: 1px solid rgba(156, 204, 101, 0.3) !important;
+}
+
+#EditFormModule, #AddFormModule, #ReplyFormModule
+{
+	background: rgba(156, 204, 101, 0.07);
+	border: 1px solid rgba(156, 204, 101, 0.3) !important;
+}
+
+#StampsFormModule
+{
+	border: 1px solid rgba(79, 195, 247, 0.3) !important;
+	background: rgba(79, 195, 247, 0.07) !important;
+}
+
+#TodosModule
+{
+	background: rgba(186, 104, 200, 0.15) !important;
+	border: 1px solid rgba(186, 104, 200, 0.3) !important;
+}
+
+#TodosModule h3
+{
+	color: var(--CSUIWhiteColor) !important;
+	background: rgba(186, 104, 200, 0.3);
+}
+
+#UpdatesModule record	/* [Version 1.2.0 | Update]	*/
+{
+	padding: 10px !important;
+	margin: 5px !important;
+	background: rgba(33, 33, 33, 0.8);
+	opacity: 1;
+	border: 1px solid rgba(158, 158, 158, 0.5);
+}
+
+#FlagsModule recordCell.Preview
+{
+	text-align: left;
+}
+
+#UpdatesModule .Details>ul>li code
+{
+	color: var(--CSUIWhiteColor) !important;
+}
+
+#ResponsibilitiesModule li
+{
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 1px solid var(--CSUIRedColor) !important;	/*	[Version 1.2.0 | Updated]	*/
+	background: rgba(232, 78, 64, 0.1) !important;
+}
+
+#CategoryModule, #CategoryModule .Content a
+{
+	text-align: center !important;
+	justify-content: center !important;
+}

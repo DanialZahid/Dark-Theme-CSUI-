@@ -1,0 +1,98 @@
+/*		[FONT ICONS]		*/
+
+maticon.WasFeatured
+{
+	color: var(--CSUIYellowColor) !important;
+}
+
+statwrapper.Rank maticon
+{
+	color: var(--CSUIPurpleColor) !important;
+}
+
+statwrapper.Progress maticon, #SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon:hover, .RecommendedInputsCount maticon, .RecommendedInput matIcon, statwrapper.LastBoostDate maticon, statwrapper.Bounty maticon, statwrapper.Bounty, statwrapper.LastActivityDate maticon
+{
+	color: var(--CSUIGreenColor) !important;
+}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li matIcon
+{
+	color: var(--CSUIGreenColor);
+}
+
+#SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon, #SubmissionsListAdvancedListSettingsModule .SelectedGames li matIcon
+{
+	color: var(--CSUITealColor) !important;
+}
+
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li:hover matIcon, .RequiredInput matIcon, .RequiredInputsCount maticon
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+#ToggleHiddenColumnModeButton.Active matIcon
+{
+	color: var(--CSUIGreenColor);
+	border-left-color: var(--CSUIGreenColor);
+}
+
+#ToggleHiddenColumnModeButton.Selected matIcon
+{
+	color: var(--CSUIRedColor);
+	border-left-color: var(--CSUIRedColor);
+}
+
+#ToggleHiddenColumnModeButton matIcon
+{
+	background: var(--CSUISLBGColor);
+}
+
+#SearchNavModule #SearchForm button:hover maticon
+{
+	color: var(--CSUIGreenColor);
+}
+
+#SearchNavModule #SearchForm button maticon
+{
+	color: var(--CSUITealColor);
+}
+
+html.Member_Submissions_Todo #SubmissionsListModule .Identifiers>matIcon, #TodosModule .Identifiers>matIcon
+{
+	color: var(--CSUIPurpleColor) !important;
+}
+
+#MasterLog log .CloseButton:hover
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+.QuickDlIcon.PurpleColor
+{
+	color: var(--CSUIGreenColor) !important;
+	opacity: 0.8 !important;
+}
+
+.QuickDlIcon.PurpleColor:hover
+{
+	opacity: 1 !important;
+}
+
+#SubmissionsListModule .OwnSubmission
+{
+	color: var(--CSUIBlueColor) !important;
+}
+
+spriteIcon.RightArrowIcon, .SpriteIcon.RightArrowIcon
+{
+  opacity: 1;
+}
+
+matIcon
+{
+	opacity: 1;
+	text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000 !important;
+	font-size: 15px !important;
+	color: var(--CSUITealColor);
+	vertical-align: middle !important;	/*	[Version 1.2.0 | Addition]	*/
+}

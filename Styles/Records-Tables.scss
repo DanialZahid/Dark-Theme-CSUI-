@@ -1,0 +1,195 @@
+/*		[RECORDS AND TABLES]		*/
+
+.Paginator, .AjaxPaginator
+{
+	padding: 5px;
+	background: var(--CSUIRecordsBGColor);
+	border: var(--CSUIRecordTableViewBorder);
+	margin: 5px 0px 5px 0px;
+	text-align: center;
+}
+
+record:hover
+{
+	opacity: var(--CSUIRecordsHoverOpacity);
+}
+
+
+[data-_sViewMode=Classic] records
+{
+	width: 100%;
+	text-align: center;
+	border-spacing: 0px;
+}
+
+[data-_sViewMode=Classic] columnHeadings columnHeading
+{
+	background: var(--CSUITableTHBGColor);
+	font-weight: bold;
+	text-align: center;
+	color: var(--CSUITableHeadingColor);
+	border: var(--CSUITableHeadingBorder);
+	font-size: var(--CSUITableHeadingFontSize);
+	font-family: var(--CSUIHFF);
+	padding: 3px;
+}
+
+record
+{
+	background: var(--CSUIRecordsBGColor);
+	border: var(--CSUIRecordCellBorder);
+	padding: var(--CSUIRecordCellPadding);
+	margin: 10px 5px;
+	opacity: var(--CSUIRecordsOpacity);
+}
+
+[data-_sViewMode=Classic] record recordCell
+{
+	padding: var(--CSUIRecordCellPadding);
+	border: var(--CSUIRecordTableViewBorder);
+}
+
+recordcell.Identifiers
+{
+	text-align: left;
+}
+
+recordCell.Stats
+{
+	font-size: var(--CSUISmallFontSize) !important;
+	text-align: center !important;
+}
+
+recordCell.Stats statGroup
+{
+	margin: 5px;
+}
+
+recordcell.PostId, recordcell.PostDate, recordcell.Suspicions.RedColor, recordcell.Poster	/*	[Version 1.2.0 | Addition]	*/
+{
+	margin: auto 5px;
+}
+
+#MembersListModule recordCell.Member
+{
+	width: initial !important;
+	justify-content: center !important;
+}
+
+#CategoriesListModule record, #SectionsModule record
+{
+	padding: 10px;
+	margin: 0 0 5px 0;
+}
+
+[data-_sViewMode=List] recordCell
+{
+	margin: 0 0 5px 0;
+}
+
+[data-_sViewMode=Grid] records
+{
+	margin: 0;
+	justify-content: space-around;
+}
+
+[data-_sViewMode=Grid] record
+{
+	padding: 0;
+}
+
+[data-_sViewMode=Grid] recordCell.Ownership
+{
+	top: 5px;
+	left: 5px;
+}
+
+[data-_sViewMode=Grid] recordCell.Category
+{
+	top: 5px;
+	right: 5px;
+}
+
+[data-_sViewMode=List] record
+{
+	border: 1px solid #000000;
+	margin: 5px;
+	padding: 5px;
+}
+
+[data-_sViewMode=List] record:last-child
+{
+	border-bottom: 1px solid #000000;
+}
+
+recordcell.Stamps	/*	[Version 1.2.0 | Addition]	*/
+{
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #000;
+  background: rgba(158, 158, 158, 0.2);
+}
+
+#PostsListModule recordCell.Section	/*	[Version 1.2.0 | Addition]	*/
+{
+	padding: 5px;
+	border: 1px solid #000;
+	background: rgba(158, 158, 158, 0.2);
+}
+
+#PostsListModule recordcell	/*	[Version 1.2.0 | Addition]	*/
+{
+	font-size: 16px !important;
+	margin: 5px;
+}
+
+#StampsLogListModule .Direction .Avatar.HasClearanceLevel
+{
+  border: 1px solid var(--CSUIRedColor) !important;
+}
+
+StampsLogListModule .Direction, #StampsLogListModule .PostInfo
+{
+  margin: 5px;
+}
+
+table
+{
+	width: 100%;
+}
+
+td:hover
+{
+	opacity: var(--CSUITableTDHoverOpacity);
+}
+
+td
+{
+	background: var(--CSUIRecordsBGColor);
+	opacity: var(--CSUITableTDOpacity);
+}
+
+table td, table th
+{
+	border: var(--CSUIRecordTableViewBorder);
+}
+
+table thead th
+{
+	font-weight: bold;
+	text-align: center;
+	color: var(--CSUITableHeadingColor);
+	border: var(--CSUITableHeadingBorder);
+	font-size: var(--CSUITableHeadingFontSize);
+	background: var(--CSUITableTHBGColor);
+}
+
+table thead th:empty
+{
+	border: var(--CSUITableHeadingBorder);
+}
+
+dd
+{
+	color: var(--CSUIWhiteColor);
+}
