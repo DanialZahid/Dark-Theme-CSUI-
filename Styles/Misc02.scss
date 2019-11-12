@@ -32,7 +32,7 @@ ol, ul, menu, li
 #GamesNavModule pane header .SubscriptionBenefitsNotice wrapper placeholder
 {
 	border: 2px dashed var(--CSUIIndigoColor);
-	border-radius: 100% !important;	/*	[Version 1.2.0 | Addition]	*/
+	border-radius: 100% !important;
 }
 
 #TopGamesModule .Content .GameTypeFilters li
@@ -276,7 +276,7 @@ select optgroup, .SelectLike optgroup
 	background: var(--CSUIPanesCardBGColor);
 	padding: 5px;
 	border: 1px solid rgba(156, 204, 101, 0.5);
-	color: var(--CSUIGreenColor);	/*	[Version 1.2.0 | Addition]	*/
+	color: var(--CSUIGreenColor);
 }
 
 .AdvancedListSettingsModule>.Content .Presets ul li
@@ -329,7 +329,7 @@ itemCount
 .ScriptPreview code
 {
 	background: rgba(0, 0, 0, 0.3);
-	font-size: 10px !important;	/*	[Version 1.2.0 | Updated]	*/
+	font-size: 10px !important;
 }
 
 code
@@ -355,10 +355,10 @@ code
 
 #CodeViewerModule .CodeWithLineNumbers .Code
 {
-  border-left: 1px solid var(--CSUIGreyColor);
-  width: 100%;
-  text-align: left;
-  font-size: var(--CSUISmallFontSize) !important;
+	border-left: 1px solid var(--CSUIGreyColor);
+	width: 100%;
+	text-align: left;
+	font-size: var(--CSUISmallFontSize) !important;
 }
 
 #SearchSuggesterModule .GeneralSuggestions li
@@ -609,7 +609,7 @@ html.Member_Submissions_Flag #SubmissionsListModule .Preview ul, #FlagsModule .P
 {
 	background: var(--CSUITextAreaBGColor) !important;
 	border: 2px solid rgba(156, 204, 101, 0.2) !important;
- 	font-size: 14px;
+	font-size: 14px;
 }
 
 .QuestionPreview blockquote
@@ -676,11 +676,99 @@ fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover
 {
 	margin: 3px !important;
 	padding: 5px !important;
-	background: rgba(33, 33, 33, 0.7) !important;
+	background: #212121 !important;
 	border: 1px solid #111 !important;
 }
 
 #StatsModule ul
 {
 	margin-bottom: 0;
+}
+
+#Member_Submissions_Update #SubmissionsListModule .UpdateHeader
+{
+	font-size: var(--CSUIH3FontSize);
+	margin: 5px;
+}
+ul.Posts
+{
+	text-align: left;
+}
+
+/*		BananaExchange		*/
+
+#BexPromoModule .Content>a .MoneyCostOverlay, #BexPromoModule .Content>a .PointCostOverlay, #NewBexGamesModule li a overlay, #GamesListModule .Content>ul>li .Preview .GameName
+{
+	background: rgba(0, 0, 0, 0.8);
+	font-size: var(--CSUISmallFontSize) !important;
+}
+
+#BexPromoModule .Content>a .PointCostOverlay, #NewBexGamesModule li a overlay.PointsCost, #GamesListModule .Content>ul>li .Preview .PointCost
+{
+	color: var(--CSUIGreenColor) !important;
+}
+
+#AvailableKeysListListToolbarModule button span
+{
+	font-size: var(--CSUIFontSize) !important;
+	color: var(--CSUIGreenColor) !important;
+}
+
+#NewBexGamesModule li a overlay.Availability
+{
+	color: var(--CSUIRedColor) !important;
+}
+
+/*		Filters		*/
+
+.AdvancedListSettingsModule>.Content .Presets ul li:last-child
+{
+	margin-bottom: auto;
+}
+
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected
+{
+	background: var(--CSUIDBGColor);
+	padding: 5px;
+	border: 1px solid rgba(156,204,101,0.5);
+}
+
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected a
+{
+	color: var(--CSUIGreenColor) !important;
+}
+
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected a:hover
+{
+	color: var(--CSUILinkHoverColor) !important;
+}
+
+p#Countdown
+{
+	color: var(--CSUIRedColor) !important;
+	font-size: var(--CSUIH4FontSize);
+}
+
+.Modal .Contents > module > .Description, .Modal .Contents > module > .LogMessages
+{
+	margin-right: 0;
+}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li itemCount.RecentlyAddedItems
+{
+	color: var(--CSUIGreenColor) !important;
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li itemCount.RecentlyUpdatedItems
+{
+	color: var(--CSUIBlueColor) !important;
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion, #HistoryListModule .Content .Changes li .PreviousVersion
+{
+	margin-right: 5px;
 }

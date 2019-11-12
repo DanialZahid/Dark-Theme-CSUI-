@@ -1,10 +1,12 @@
 # Dark Theme (CSUI) - AUTHORS
 
-## Ownership
+## Authors
+
+### Original Author
 
 * Danial Zahid [**Coder**]
 
-## Special Thanks
+### Special Thanks
 
 * tom [**QuickDL material icon class addition**]
 * Ring-A-Ding Rampage [**Helped with a few issues**]
@@ -12,13 +14,13 @@
 
 ---
 
-## Contact
+## Contact Details
 
-### Author / Owner
+### Danial Zahid
 
 * Email address: danialz@pm.me
 * [Portfolio](http://danialzahid.ga)
-* [Twitter](https://twitter.com/DanialZahid17)
+* [Twitter](https://twitter.com/@DanialZahid17)
 * [GitHub](https://github.com/DanialZahid/)
 * [GameBanana](https://gamebanana.com/members/1336101)
 

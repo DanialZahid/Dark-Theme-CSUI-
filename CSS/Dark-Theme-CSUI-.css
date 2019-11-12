@@ -10,18 +10,18 @@
 
 	[DETAILS]
 
-	Website: GameBanana (https://gamebanana.com/) >>> UI Themes (https://gamebanana.com/scripts/cats/2238/)
-	Submission profile page: https://gamebanana.com/scripts/10441/
-	GitHub repository page: https://github.com/DanialZahid/Dark-Theme-CSUI-
-	Browsers tested: Google Chrome [version 78.0.3904.87 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
+	Website: GameBanana (https://gamebanana.com/) > UI Themes (https://gamebanana.com/scripts/cats/2238/)
+	Submission profile: https://gamebanana.com/scripts/10441/
+	GitHub repository: https://github.com/DanialZahid/Dark-Theme-CSUI-
+	Browsers tested: Google Chrome [version 78.0.3904.97 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
 	Date released: 2019-07-17
-	Last updated: 2019-11-04
-	Current version: 1.2.0
+	Last updated: 2019-11-12
+	Current version: 1.3.0
 	-----------------------------
 
 	[AUTHORS]
 
-	## Author / Ownership
+	## Original Author
 
 	* Danial Zahid [Coder]
 
@@ -34,7 +34,7 @@
 
 	[CONTACT DETAILS]
 
-	## Author / Owner
+	## Danial Zahid
 
 	> Email address: danialz@pm.me
 	> Portfolio: http://danialzahid.ga/
@@ -57,7 +57,19 @@
 
 	[CHANGELOG]
 
-	## Version 1.2.0 [Minor Update] [2019-10-04]
+	## Version 1.3.0 [Minor Update] [2019-11-12]
+
+	* [Fixed] Opacity flickering issue on records table.
+	* [Removed] Low opacity from the records.
+	* [Revamped] Buttons UI.
+	* [Tweaked] Member profile > Updates section records.
+	* [Tweaked] Member profile > Game Keys section records.
+	* [Tweaked] Submission profile > History section.
+	* [Tweaked] Records table header and cells border.
+	* [Tweaked] Center aligned most of the buttons to match with the rest of the theme.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.2.0 [Minor Update] [2019-11-04]
 
 	* [Fixed] Next and previous button icons in the lightbox.
 	* [Fixed] Attributes module links color to match with the default UI link color.
@@ -214,6 +226,14 @@ moduleGroup > .PageModule {
   font-size: 10px;
   text-align: center;
   margin-top: 1px;
+}
+
+.PageModule > .Description {
+  padding: 5px 25px 5px 5px;
+  margin: 5px auto;
+  color: var(--CSUIWhiteColor);
+  font-size: var(--CSUIH4FontSize);
+  background: rgba(158, 158, 158, 0.3);
 }
 
 /*		[TOP AND SIDE NAVIGATOR]		*/
@@ -392,6 +412,12 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded {
   font-size: var(--CSUIH4FontSize);
 }
 
+#AlertsNavModule pane .Broadcasts > li .Messages li, #ActivityNavModule pane .Broadcasts > li .Messages li {
+  padding: 5px;
+  border-top: 1px solid rgba(158, 158, 158, 0.3);
+  font-size: var(--CSUISmallFontSize);
+}
+
 /*		[SUBNAVIGATOR]		*/
 #SubNavigator .BasicSubNavigator, #SubNavigator .DropdownMenuSubNavigator, #Breadcrumb {
   font-family: var(--CSUIHFF) !important;
@@ -402,7 +428,6 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded {
   text-align: center;
   font-family: var(--CSUIHFF) !important;
   justify-content: center;
-  /* [Version 1.2.0 | Addition] */
 }
 
 #SubNavigator .ActiveEntry, .MainForm .InputsWrapper .CategoryTabs li.Selected {
@@ -445,6 +470,14 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
 #SubNavigator li itemCount {
   font-size: var(--CSUIFontSize);
   color: var(--CSUIGreenColor);
+}
+
+#SubNavigator .ActiveEntry a {
+  color: var(--CSUIGreenColor);
+}
+
+.AdvancedElement_Tabs li {
+  transition: all 0.15s ease-in-out;
 }
 
 /*		[MODULES]		*/
@@ -511,6 +544,10 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
 #FilesModule h3, #AlternateFileSourcesModule h3 {
   color: var(--CSUIWhiteColor) !important;
   background: rgba(121, 134, 203, 0.3);
+}
+
+#FilesModule .Content ul li {
+  border-bottom: 1px solid rgba(158, 158, 158, 0.3);
 }
 
 #GlobalSubmissionAnnouncementModule {
@@ -584,7 +621,6 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: 1px solid var(--CSUIRedColor) !important;
-  /*	[Version 1.2.0 | Updated]	*/
   background: rgba(232, 78, 64, 0.1) !important;
 }
 
@@ -593,7 +629,44 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
   justify-content: center !important;
 }
 
+#FeaturingsModule, #FeaturedListModule, #ContestModule {
+  background: rgba(255, 235, 59, 0.15) !important;
+  border: 1px solid rgba(255, 235, 59, 0.3) !important;
+}
+
+#ContestModule h3 {
+  color: var(--CSUIYellowColor) !important;
+}
+
+#ModeratorNoticeModule article, #PrivateAccessNoticeModule p {
+  color: var(--CSUIWhiteColor) !important;
+}
+
 /*		[BUTTONS]		*/
+button, .ButtonLike {
+  font-size: var(--CSUIButtonFontSize);
+  font-family: var(--CSUIButtonFF);
+  padding: var(--CSUIButtonPadding) !important;
+  background: var(--CSUIButtonBGColor) !important;
+  color: var(--CSUIButtonTextColor);
+  font-weight: bold !important;
+  text-shadow: 2px 2px #000;
+}
+
+button:hover, .ButtonLike:hover, #GameMatchesModule ul li:hover a, #GameMatchesModule ul li:hover a, #SectionMatchesModule ul li:hover a, #Recipients .RecipientGroup > div ul li:hover {
+  background: var(--CSUIButtonBGHoverColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+}
+
+a.ButtonLike:hover {
+  text-shadow: none !important;
+}
+
+.ButtonLike.Selected, button.Expanded, button[disabled]:hover, button[disabled].Selected, button[disabled].Expanded, .ButtonLike[disabled]:hover, .ButtonLike[disabled].Selected, .ButtonLike[disabled].Expanded, button[disabled], .ButtonLike[disabled], #SectionMatchesModule ul li.Selected a, #GameMatchesModule ul li.Selected a, #Recipients .RecipientGroup > div ul li.SelectedRecipient, .ButtonLike.Expanded {
+  background: var(--CSUIButtonSelectedBGColor) !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
 .Modal .CloseModal:hover {
   color: var(--CSUIRedColor);
 }
@@ -612,61 +685,14 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
   opacity: 1 !important;
 }
 
-.ExtendedContentButton {
-  color: var(--CSUIButtonTextColor);
-  background: rgba(156, 204, 101, 0.3) !important;
-  border: 1px solid var(--CSUIGreenColor) !important;
-}
-
-button, .ButtonLike {
-  font-size: var(--CSUIButtonFontSize);
-  font-family: var(--CSUIButtonFF);
-  border: var(--CSUIButtonBorder);
-  padding: var(--CSUIButtonPadding) !important;
-  background: var(--CSUIButtonBGColor) !important;
-  color: var(--CSUIButtonTextColor);
-  font-weight: bold !important;
-}
-
-button:hover, button.Selected, .ButtonLike:hover, #GameMatchesModule ul li:hover a, #GameMatchesModule ul li:hover a, #SectionMatchesModule ul li:hover a, #Recipients .RecipientGroup > div ul li:hover {
-  background: var(--CSUIButtonBGHoverColor) !important;
-  border: var(--CSUIButtonBorderHover) !important;
-  color: var(--CSUIWhiteColor) !important;
-}
-
-a.ButtonLike:hover {
-  text-shadow: none !important;
-}
-
-.ButtonLike.Selected, button.Expanded, button[disabled]:hover, button[disabled].Selected, button[disabled].Expanded, .ButtonLike[disabled]:hover, .ButtonLike[disabled].Selected, .ButtonLike[disabled].Expanded, button[disabled], .ButtonLike[disabled], #SectionMatchesModule ul li.Selected a, #GameMatchesModule ul li.Selected a, #Recipients .RecipientGroup > div ul li.SelectedRecipient, .ButtonLike.Expanded {
-  border: var(--CSUIButtonSelectedBorder) !important;
-  background: var(--CSUIButtonSelectedBGColor) !important;
-  color: var(--CSUIGreenColor) !important;
-}
-
 button.IconButton span, button.IconButton hoverAlt, .ButtonLike.IconButton span, .ButtonLike.IconButton hoverAlt {
   padding: var(--CSUIButtonTextSpanPadding) !important;
   border: 0 !important;
 }
 
-#FilesModule .Content ul li .DownloadOptions a, #AlternateFileSourcesModule li {
-  padding: 10px !important;
-  background: rgba(156, 204, 101, 0.3) !important;
-  border: 1px solid var(--CSUIGreenColor) !important;
-  font-weight: bold !important;
-  font-family: var(--CSUIButtonFF) !important;
-  font-size: var(--CSUIButtonFontSize);
-}
-
 #AlternateFileSourcesModule li small {
   color: var(--CSUIWhiteColor) !important;
   font-size: var(--CSUISmallFontSize) !important;
-}
-
-#FilesModule .Content ul li .DownloadOptions a:hover {
-  background: var(--CSUIButtonBGHoverColor) !important;
-  color: var(--CSUIWhiteColor) !important;
-  text-shadow: none !important;
 }
 
 #FilesModule .Content ul li .DownloadOptions a span small {
@@ -685,7 +711,6 @@ button.IconButton span, button.IconButton hoverAlt, .ButtonLike.IconButton span,
 
 #PageFooter #ImportantLinks li a:hover {
   background: var(--CSUIButtonBGHoverColor);
-  border: var(--CSUIButtonBorderHover) !important;
   text-shadow: none !important;
 }
 
@@ -699,89 +724,9 @@ button.IconButton span, button.IconButton hoverAlt, .ButtonLike.IconButton span,
   margin-right: 3px;
 }
 
-#LikeToggleModule button, #ThanksToggleModule button {
-  background: rgba(186, 104, 200, 0.3) !important;
-  border: 1px solid var(--CSUIPurpleColor) !important;
-}
-
-#LikeToggleModule button:hover, #ThanksToggleModule button:hover {
-  background: rgba(186, 104, 200, 0.8) !important;
-}
-
-#BuddyToggleModule button, #SubmitterSubscriptionToggleModule button, #GameSubscriptionToggleModule button, #SubmissionSubscriptionToggleModule button, button#WaveformToggle, #MemberSubscriptionToggleModule button {
-  border: 1px solid var(--CSUIBlueColor) !important;
-  background: rgba(79, 195, 247, 0.3) !important;
-}
-
-#BuddyToggleModule button:hover, #SubmitterSubscriptionToggleModule button:hover, #GameSubscriptionToggleModule button:hover, #SubmissionSubscriptionToggleModule button:hover, button#WaveformToggle:hover, #MemberSubscriptionToggleModule button:hover {
-  background: rgba(79, 195, 247, 0.8) !important;
-}
-
-#PmMeModule button {
-  border: 1px solid var(--CSUIYellowColor) !important;
-  background: rgba(255, 235, 59, 0.3) !important;
-}
-
-#PmMeModule button:hover {
-  background: rgba(255, 235, 59, 0.8) !important;
-}
-
 #HistoryListModule .Content .Changes li .NewVersion > button, #HistoryListModule .Content .Changes li .PreviousVersion > button {
   font-size: var(--CSUISmallFontSize);
   margin: 0 3px 0 0;
-}
-
-#PageFooter #ImportantLinks li #AddIdeaLink {
-  background: rgba(255, 235, 59, 0.3) !important;
-  border: 1px solid #FFEB3B !important;
-  color: var(--CSUIYellowColor) !important;
-}
-
-#PageFooter #ImportantLinks li #AddIdeaLink:hover {
-  background: rgba(255, 235, 59, 0.8) !important;
-}
-
-#PageFooter #ImportantLinks li #AddBugLink {
-  background: rgba(232, 78, 64, 0.3) !important;
-  border: 1px solid var(--CSUIRedColor) !important;
-  color: var(--CSUIRedColor) !important;
-}
-
-#PageFooter #ImportantLinks li #AddBugLink:hover, #AddModnoteFormRequesterModule button:hover, #IssueAddFormRequesterModule button:hover, button#sbmtgmtrshr:hover {
-  background: rgba(232, 78, 64, 0.8) !important;
-}
-
-#AddModnoteFormRequesterModule button, #IssueAddFormRequesterModule button, button#sbmtgmtrshr {
-  background: rgba(232, 78, 64, 0.3) !important;
-  border: 1px solid var(--CSUIRedColor) !important;
-}
-
-#PageFooter #ImportantLinks li #AddTicketLink {
-  background: rgba(79, 195, 247, 0.3) !important;
-  border: 1px solid #4FC3F7 !important;
-  color: var(--CSUIBlueColor) !important;
-}
-
-#PageFooter #ImportantLinks li #AddTicketLink:hover {
-  background: rgba(79, 195, 247, 0.8) !important;
-}
-
-#UiThemeInstallerModule button, #AvailableKeysListListToolbarModule button, #InstallFormModule button {
-  background: rgba(156, 204, 101, 0.3) !important;
-  border: 1px solid var(--CSUIGreenColor) !important;
-}
-
-#UiThemeInstallerModule button:hover, #AvailableKeysListListToolbarModule button:hover, #InstallFormModule button:hover {
-  background: var(--CSUIButtonBGHoverColor) !important;
-}
-
-#ModlogListAdvancedListSettingsModule button, #SubmissionsListAdvancedListSettingsModule button, #MembersListAdvancedListSettingsModule button, #WithheldSubmissionsListAdvancedListSettingsModule button {
-  border: 1px solid var(--CSUITealColor) !important;
-  background: rgba(128, 203, 196, 0.3) !important;
-}
-
-#ModlogListAdvancedListSettingsModule button:hover, #SubmissionsListAdvancedListSettingsModule button:hover, #MembersListAdvancedListSettingsModule button:hover, #WithheldSubmissionsListAdvancedListSettingsModule button:hover {
-  background: rgba(128, 203, 196, 0.8) !important;
 }
 
 .IconOnlyButton {
@@ -791,6 +736,97 @@ button.IconButton span, button.IconButton hoverAlt, .ButtonLike.IconButton span,
 .PostsListModule .Posts > li .PostTools .TopAnswerToggleButton {
   font-size: var(--CSUIButtonFontSize);
   margin: auto 5px;
+}
+
+/*		UNIQUE BUTTONS		*/
+.ExtendedContentButton {
+  color: var(--CSUIButtonTextColor);
+  background: rgba(156, 204, 101, 0.4) !important;
+}
+
+#FilesModule .Content ul li .DownloadOptions a, #AlternateFileSourcesModule li {
+  padding: 10px !important;
+  background: rgba(156, 204, 101, 0.4) !important;
+  font-weight: bold !important;
+  font-family: var(--CSUIButtonFF) !important;
+  font-size: var(--CSUIButtonFontSize);
+}
+
+#FilesModule .Content ul li .DownloadOptions a:hover {
+  background: rgba(156, 204, 101, 0.8) !important;
+  color: var(--CSUIWhiteColor) !important;
+  text-shadow: none !important;
+}
+
+#LikeToggleModule button, #ThanksToggleModule button {
+  background: rgba(186, 104, 200, 0.4) !important;
+}
+
+#LikeToggleModule button:hover, #ThanksToggleModule button:hover {
+  background: rgba(186, 104, 200, 0.8) !important;
+}
+
+#BuddyToggleModule button, #SubmitterSubscriptionToggleModule button, #GameSubscriptionToggleModule button, #SubmissionSubscriptionToggleModule button, button#WaveformToggle, #MemberSubscriptionToggleModule button {
+  background: rgba(79, 195, 247, 0.4) !important;
+}
+
+#BuddyToggleModule button:hover, #SubmitterSubscriptionToggleModule button:hover, #GameSubscriptionToggleModule button:hover, #SubmissionSubscriptionToggleModule button:hover, button#WaveformToggle:hover, #MemberSubscriptionToggleModule button:hover {
+  background: rgba(79, 195, 247, 0.8) !important;
+}
+
+#PmMeModule button {
+  background: rgba(255, 235, 59, 0.4) !important;
+}
+
+#PmMeModule button:hover {
+  background: rgba(255, 235, 59, 0.8) !important;
+}
+
+#PageFooter #ImportantLinks li #AddIdeaLink {
+  background: rgba(255, 235, 59, 0.4) !important;
+  color: var(--CSUIYellowColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddIdeaLink:hover {
+  background: rgba(255, 235, 59, 0.8) !important;
+}
+
+#PageFooter #ImportantLinks li #AddBugLink {
+  background: rgba(232, 78, 64, 0.4) !important;
+  color: var(--CSUIRedColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddBugLink:hover, #AddModnoteFormRequesterModule button:hover, #IssueAddFormRequesterModule button:hover, button#sbmtgmtrshr:hover {
+  background: rgba(232, 78, 64, 0.8) !important;
+}
+
+#AddModnoteFormRequesterModule button, #IssueAddFormRequesterModule button, button#sbmtgmtrshr {
+  background: rgba(232, 78, 64, 0.4) !important;
+}
+
+#PageFooter #ImportantLinks li #AddTicketLink {
+  background: rgba(79, 195, 247, 0.4) !important;
+  color: var(--CSUIBlueColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddTicketLink:hover {
+  background: rgba(79, 195, 247, 0.8) !important;
+}
+
+#UiThemeInstallerModule button, #AvailableKeysListListToolbarModule button, #InstallFormModule button {
+  background: rgba(156, 204, 101, 0.4) !important;
+}
+
+#UiThemeInstallerModule button:hover, #AvailableKeysListListToolbarModule button:hover, #InstallFormModule button:hover, .ExtendedContentButton:hover, button.Selected {
+  background: rgba(156, 204, 101, 0.8) !important;
+}
+
+#ModlogListAdvancedListSettingsModule button, #SubmissionsListAdvancedListSettingsModule button, #MembersListAdvancedListSettingsModule button, #WithheldSubmissionsListAdvancedListSettingsModule button {
+  background: rgba(128, 203, 196, 0.4) !important;
+}
+
+#ModlogListAdvancedListSettingsModule button:hover, #SubmissionsListAdvancedListSettingsModule button:hover, #MembersListAdvancedListSettingsModule button:hover, #WithheldSubmissionsListAdvancedListSettingsModule button:hover {
+  background: rgba(128, 203, 196, 0.8) !important;
 }
 
 /*		[HEADINGS]		*/
@@ -858,10 +894,6 @@ h5, h6, #TopNav module pane h5, #SideNav module pane h5 {
   text-align: center;
 }
 
-record:hover {
-  opacity: var(--CSUIRecordsHoverOpacity);
-}
-
 [data-_sViewMode=Classic] records {
   width: 100%;
   text-align: center;
@@ -873,7 +905,8 @@ record:hover {
   font-weight: bold;
   text-align: center;
   color: var(--CSUITableHeadingColor);
-  border: var(--CSUITableHeadingBorder);
+  border-top: var(--CSUITableHeadingBorder);
+  border-bottom: var(--CSUITableHeadingBorder);
   font-size: var(--CSUITableHeadingFontSize);
   font-family: var(--CSUIHFF);
   padding: 3px;
@@ -884,12 +917,11 @@ record {
   border: var(--CSUIRecordCellBorder);
   padding: var(--CSUIRecordCellPadding);
   margin: 10px 5px;
-  opacity: var(--CSUIRecordsOpacity);
 }
 
 [data-_sViewMode=Classic] record recordCell {
   padding: var(--CSUIRecordCellPadding);
-  border: var(--CSUIRecordTableViewBorder);
+  border-bottom: var(--CSUIRecordTableViewBorder);
 }
 
 recordcell.Identifiers {
@@ -899,10 +931,11 @@ recordcell.Identifiers {
 recordCell.Stats {
   font-size: var(--CSUISmallFontSize) !important;
   text-align: center !important;
+  margin: 5px 0;
 }
 
 recordCell.Stats statGroup {
-  margin: 5px;
+  margin: 5px 0;
 }
 
 recordcell.PostId, recordcell.PostDate, recordcell.Suspicions.RedColor, recordcell.Poster {
@@ -929,7 +962,12 @@ recordcell.PostId, recordcell.PostDate, recordcell.Suspicions.RedColor, recordce
 }
 
 [data-_sViewMode=Grid] record {
-  padding: 0;
+  padding: 0 0 5px 0;
+}
+
+recordcell.Parent {
+  text-align: center;
+  margin: 5px;
 }
 
 [data-_sViewMode=Grid] recordCell.Ownership {
@@ -957,6 +995,16 @@ recordcell.Stamps {
   padding: 5px;
   border: 1px solid #000;
   background: rgba(158, 158, 158, 0.2);
+}
+
+#LikesModule record, #ThankersLogModule record {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.SubmissionsListModule recordcell.Preview {
+  max-width: initial;
 }
 
 #PostsListModule recordCell.Section {
@@ -1015,7 +1063,6 @@ dd {
 /*		[POSTS]		*/
 .PostsListModule .Posts > li {
   margin: 10px 5px !important;
-  /*  [Version 1.2.0 | Updated]   */
   padding: var(--CSUIPostsPadding) !important;
   background: var(--CSUIPostsBGColor) !important;
   border: var(--CSUIPostsBorder) !important;
@@ -1045,10 +1092,8 @@ dd {
 
 .PostsListModule .Posts > li.IsExemplary {
   background: rgba(156, 204, 101, 0.1) !important;
-  /*  [Version 1.2.0 | Updated] */
   border: 2px solid var(--CSUIGreenColor) !important;
   margin: 0px;
-  /*  [Version 1.2.0 | Addition] */
 }
 
 .PostsListModule .Posts > li article .PostStamps li[data-_sCategory=positive], #StampsLogListModule .Stamps li[data-_sCategory=positive] {
@@ -1102,6 +1147,14 @@ ul.FullStampsDisplay {
   right: 25px !important;
 }
 
+.RichText blockquote {
+  opacity: 0.7;
+  font-size: var(--CSUISmallFontSize) !important;
+  padding: 5px !important;
+  border-left: 2px solid var(--CSUIWhiteColor) !important;
+  background: rgba(158, 158, 158, 0.07) !important;
+}
+
 /*		[TEXT EDITORS | INPUT | FIELDS]		*/
 .MainForm {
   max-width: 1000px;
@@ -1121,10 +1174,6 @@ ul.FullStampsDisplay {
 
 .Editor .Toolbars > div {
   margin: 0 0 10px 0;
-}
-
-.Editor .Toolbars > div button {
-  margin: 0 5px 0 0;
 }
 
 .Modal, #GamesListModule .Content .SteamInfoRollout {
@@ -1529,13 +1578,20 @@ spriteIcon.RightArrowIcon, .SpriteIcon.RightArrowIcon {
   opacity: 1;
 }
 
+maticon.RemoveToggleButton.RedColor {
+  opacity: 0.8;
+}
+
+maticon.RemoveToggleButton.RedColor:hover {
+  opacity: 1;
+}
+
 matIcon {
   opacity: 1;
   text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000 !important;
   font-size: 15px !important;
   color: var(--CSUITealColor);
   vertical-align: middle !important;
-  /*	[Version 1.2.0 | Addition]	*/
 }
 
 /*		[LIGHTBOX]		*/
@@ -1567,13 +1623,11 @@ matIcon {
 
 .lg-toolbar .lg-icon {
   color: var(--CSUIIndigoColor) !important;
-  /*	[Version 1.2.0 | Updated]	*/
 }
 
 .lg-actions .lg-next, .lg-actions .lg-prev {
   background-color: var(--CSUISLBGColor) !important;
   color: var(--CSUIIndigoColor) !important;
-  /*	[Version 1.2.0 | Updated]	*/
 }
 
 .lg-sub-html {
@@ -1676,11 +1730,11 @@ span.Rated9To10 {
 }
 
 /*		[CONTENT CENTER ALIGNMENT]		*/
-#ParticipantsListModule .Entries ul, .PostsListModule .Posts > li article .PostStamps, #FilesModule .Content ul li .DownloadOptions, #ThanksToggleModule .Content, #GameModule .Content a, #StatsModule ul, #MoreBySubmitterSubmissionsListModule records, #MoreInCategorySubmissionsListModule records, #SubmitterModule .Content, #WipsBySubmitterSubmissionsListModule records, .AdvancedElement_Switch.Inline ul, .PostsListModule .Posts > li .PostTools {
+#ParticipantsListModule .Entries ul, .PostsListModule .Posts > li article .PostStamps, #FilesModule .Content ul li .DownloadOptions, #ThanksToggleModule .Content, #GameModule .Content a, #StatsModule ul, #MoreBySubmitterSubmissionsListModule records, #MoreInCategorySubmissionsListModule records, #SubmitterModule .Content, #WipsBySubmitterSubmissionsListModule records, .AdvancedElement_Switch.Inline ul, .PostsListModule .Posts > li .PostTools, .AdvancedListSettingsModule > .Content .ActiveSortsAndFilters {
   justify-content: center !important;
 }
 
-#ShareButtonsModule, #OverviewModule table, #FlagsModule li, #GameSubscriptionToggleModule, #LikeToggleModule, #UiThemeInstallerModule, #PostAddFormRequesterModule, #TodoAddFormRequesterModule, #UpdateAddFormRequesterModule, #SubmissionsListAdvancedListSettingsModule, .InfiniteScroller, #ModlogListAdvancedListSettingsModule, #FlagAddFormRequesterModule, #WithheldSubmissionsListAdvancedListSettingsModule, #NavOptionsNavModule pane wrapper, #PermitsModule recordcell.Identifiers, [data-_sViewMode=Grid] recordCell.Preview, recordcell.Ownership, recordcell.Controls, [data-_sViewMode=Grid] recordCell.Identifiers, #StaffListModule table, #HeadlineWrapper overlay {
+#ShareButtonsModule, #OverviewModule table, #FlagsModule li, #GameSubscriptionToggleModule, #LikeToggleModule, #UiThemeInstallerModule, #PostAddFormRequesterModule, #TodoAddFormRequesterModule, #UpdateAddFormRequesterModule, #SubmissionsListAdvancedListSettingsModule, .InfiniteScroller, #ModlogListAdvancedListSettingsModule, #FlagAddFormRequesterModule, #WithheldSubmissionsListAdvancedListSettingsModule, #NavOptionsNavModule pane wrapper, #PermitsModule recordcell.Identifiers, [data-_sViewMode=Grid] recordCell.Preview, recordcell.Ownership, recordcell.Controls, [data-_sViewMode=Grid] recordCell.Identifiers, #StaffListModule table, #HeadlineWrapper overlay, #SideNav > wrapper module pane article form, .MainForm .Submit {
   text-align: center !important;
 }
 
@@ -1712,7 +1766,6 @@ ol, ul, menu, li {
 #GamesNavModule pane header .SubscriptionBenefitsNotice wrapper placeholder {
   border: 2px dashed var(--CSUIIndigoColor);
   border-radius: 100% !important;
-  /*	[Version 1.2.0 | Addition]	*/
 }
 
 #TopGamesModule .Content .GameTypeFilters li {
@@ -1916,7 +1969,6 @@ select optgroup, .SelectLike optgroup {
   padding: 5px;
   border: 1px solid rgba(156, 204, 101, 0.5);
   color: var(--CSUIGreenColor);
-  /*	[Version 1.2.0 | Addition]	*/
 }
 
 .AdvancedListSettingsModule > .Content .Presets ul li {
@@ -1962,7 +2014,6 @@ itemCount {
 .ScriptPreview code {
   background: rgba(0, 0, 0, 0.3);
   font-size: 10px !important;
-  /*	[Version 1.2.0 | Updated]	*/
 }
 
 code {
@@ -2251,7 +2302,7 @@ fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover {
 #StatsModule ul li {
   margin: 3px !important;
   padding: 5px !important;
-  background: rgba(33, 33, 33, 0.7) !important;
+  background: #212121 !important;
   border: 1px solid #111 !important;
 }
 
@@ -2259,22 +2310,16 @@ fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover {
   margin-bottom: 0;
 }
 
-/*		VERSION 1.1.0 [MINOR UPDATE]		*/
-#FeaturingsModule, #FeaturedListModule, #ContestModule {
-  background: rgba(255, 235, 59, 0.15) !important;
-  border: 1px solid rgba(255, 235, 59, 0.3) !important;
+#Member_Submissions_Update #SubmissionsListModule .UpdateHeader {
+  font-size: var(--CSUIH3FontSize);
+  margin: 5px;
 }
 
-#ContestModule h3 {
-  color: var(--CSUIYellowColor) !important;
+ul.Posts {
+  text-align: left;
 }
 
-#AlertsNavModule pane .Broadcasts > li .Messages li, #ActivityNavModule pane .Broadcasts > li .Messages li {
-  padding: 5px;
-  border-top: 1px solid rgba(158, 158, 158, 0.3);
-  font-size: var(--CSUISmallFontSize);
-}
-
+/*		BananaExchange		*/
 #BexPromoModule .Content > a .MoneyCostOverlay, #BexPromoModule .Content > a .PointCostOverlay, #NewBexGamesModule li a overlay, #GamesListModule .Content > ul > li .Preview .GameName {
   background: rgba(0, 0, 0, 0.8);
   font-size: var(--CSUISmallFontSize) !important;
@@ -2293,27 +2338,7 @@ fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover {
   color: var(--CSUIRedColor) !important;
 }
 
-.AdvancedListSettingsModule > .Content .ActiveSortsAndFilters {
-  justify-content: center !important;
-}
-
-ul.Posts {
-  text-align: left;
-}
-
-.RichText blockquote {
-  opacity: 0.7;
-  font-size: var(--CSUISmallFontSize) !important;
-  padding: 5px !important;
-  border-left: 2px solid var(--CSUIWhiteColor) !important;
-  background: rgba(158, 158, 158, 0.07) !important;
-}
-
-/*		VERSION 1.2.0 [MINOR UPDATE]		*/
-.MainForm .Submit {
-  text-align: center;
-}
-
+/*		Filters		*/
 .AdvancedListSettingsModule > .Content .Presets ul li:last-child {
   margin-bottom: auto;
 }
@@ -2332,16 +2357,13 @@ ul.Posts {
   color: var(--CSUILinkHoverColor) !important;
 }
 
-maticon.RemoveToggleButton.RedColor {
-  opacity: 0.8;
+p#Countdown {
+  color: var(--CSUIRedColor) !important;
+  font-size: var(--CSUIH4FontSize);
 }
 
-maticon.RemoveToggleButton.RedColor:hover {
-  opacity: 1;
-}
-
-#SubNavigator .ActiveEntry a {
-  color: var(--CSUIGreenColor);
+.Modal .Contents > module > .Description, .Modal .Contents > module > .LogMessages {
+  margin-right: 0;
 }
 
 #SectionExplanationsModule #SectionAreas > li .Sections li itemCount.RecentlyAddedItems {
@@ -2356,35 +2378,8 @@ maticon.RemoveToggleButton.RedColor:hover {
   font-size: 14px !important;
 }
 
-.PageModule > .Description {
-  padding: 5px 10px;
-  margin-bottom: 5px auto;
-  color: var(--CSUIWhiteColor);
-  font-size: var(--CSUIH4FontSize);
-  background: rgba(158, 158, 158, 0.3);
-}
-
-#ModeratorNoticeModule article, #PrivateAccessNoticeModule p {
-  color: var(--CSUIWhiteColor) !important;
-}
-
-p#Countdown {
-  color: var(--CSUIRedColor) !important;
-  font-size: var(--CSUIH4FontSize);
-}
-
-.Modal .Contents > module > .Description, .Modal .Contents > module > .LogMessages {
-  margin-right: 0;
-}
-
-#LikesModule record, #ThankersLogModule record {
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
-}
-
-.SubmissionsListModule recordcell.Preview {
-  max-width: initial;
+#HistoryListModule .Content .Changes li .NewVersion, #HistoryListModule .Content .Changes li .PreviousVersion {
+  margin-right: 5px;
 }
 
 /*		VARIABLES		*/
@@ -2436,8 +2431,8 @@ p#Countdown {
   --CSUIPanesCardBorder: 1px solid rgba(158, 158, 158, 0.3);
   --CSUIPanesCardMargin: 5px;
   --CSUIPanesCardPadding: 5px;
-  --CSUIButtonBGColor: rgba(158, 158, 158, 0.3);
-  --CSUIButtonBGHoverColor: rgba(156, 204, 101, 0.8);
+  --CSUIButtonBGColor: #616161;
+  --CSUIButtonBGHoverColor: #9e9e9e;
   --CSUIButtonBorderHover: 1px solid var(--CSUIGreenColor);
   --CSUIButtonTextColor: #fff;
   --CSUIButtonBorder: 1px solid var(--CSUIGreyColor);
@@ -2458,9 +2453,7 @@ p#Countdown {
   --CSUITealColor: #80cbc4;
   --CSUIBlueGreyColor: #263238;
   --CSUIRecordsBGColor: rgba(255, 255, 255, 0.07);
-  --CSUIRecordsOpacity: 0.8;
-  --CSUIRecordsHoverOpacity: 1;
-  --CSUIRecordCellPadding: 5px;
+  --CSUIRecordCellPadding: 10px;
   --CSUIRecordCellBorder: 1px solid rgba(255, 255, 255, 0.3);
   --CSUITableHeadingColor: #fff;
   --CSUITableHeadingBorder: 1px solid rgba(255, 255, 255, 0.7);
@@ -2468,7 +2461,7 @@ p#Countdown {
   --CSUIRecordTableViewBorder: 1px solid #000000;
   --CSUITableTDOpacity: 0.8;
   --CSUITableTDHoverOpacity: 1;
-  --CSUITableTHBGColor: rgba(158, 158, 158, 0.15);
+  --CSUITableTHBGColor: rgba(158, 158, 158, 0.3);
   --CSUIPostsBGColor: rgba(17, 17, 17, 0.4);
   --CSUIPostsBorder: 1px solid rgba(158, 158, 158, 0.3);
   --CSUIPostsPadding: 10px;
@@ -2479,7 +2472,7 @@ p#Countdown {
   --CSUITextAreaBorder: 1px solid #000000;
   --CSUITextAreaHoverBorder: 1px solid var(--CSUIGreenColor);
   --CSUISLBGColor: #212121;
-  --CSUISLBorder: 1px solid rgba(128, 203, 196, 0.7);
+  --CSUISLBorder: 1px solid #9E9E9E;
   --CSUISLFontSize: 12px;
   --CSUIULListBGColor: rgba(179, 229, 252, 0.1);
   --CSUIULListBorder: 2px solid #000000;
