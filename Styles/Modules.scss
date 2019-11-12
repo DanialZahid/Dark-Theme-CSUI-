@@ -37,7 +37,7 @@
 #LicenseModule h3, #WhenModule h3, #WithholdLogModule h3
 {
 	color: var(--CSUIWhiteColor) !important;
-  background: rgba(255, 112, 67, 0.3);
+	background: rgba(255, 112, 67, 0.3);
 }
 
 #WithholdLogModule
@@ -77,6 +77,11 @@
 	background: rgba(121, 134, 203, 0.3);
 }
 
+#FilesModule .Content ul li
+{
+	border-bottom: 1px solid rgba(158, 158, 158, 0.3);
+}
+
 #GlobalSubmissionAnnouncementModule
 {
 	background: rgba(128, 203, 196, 0.15) !important;
@@ -86,7 +91,7 @@
 #GlobalSubmissionAnnouncementModule h3
 {
 	color: var(--CSUIWhiteColor) !important;
- 	background: rgba(128, 203, 196, 0.3);
+	background: rgba(128, 203, 196, 0.3);
 }
 
 #ParticipantsListModule, #VotersListModule
@@ -98,7 +103,7 @@
 #ParticipantsListModule h3, #VotersListModule h3
 {
 	color: var(--CSUIWhiteColor) !important;
- 	background: rgba(79, 195, 247, 0.3);
+	background: rgba(79, 195, 247, 0.3);
 }
 
 #UpdatesModule h3, #ProgressReportModule h3, #AvailableKeysListModule h3, #BountySummaryModule h3, #BoostBountyFormModule h3, #AwardBountyFormModule h3, #PrizesModule h3, #UnseenBroadcastsModule h3, #UnwithholdFormModule h3
@@ -137,7 +142,7 @@
 	background: rgba(186, 104, 200, 0.3);
 }
 
-#UpdatesModule record	/* [Version 1.2.0 | Update]	*/
+#UpdatesModule record
 {
 	padding: 10px !important;
 	margin: 5px !important;
@@ -161,7 +166,7 @@
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
-	border: 1px solid var(--CSUIRedColor) !important;	/*	[Version 1.2.0 | Updated]	*/
+	border: 1px solid var(--CSUIRedColor) !important;
 	background: rgba(232, 78, 64, 0.1) !important;
 }
 
@@ -169,4 +174,20 @@
 {
 	text-align: center !important;
 	justify-content: center !important;
+}
+
+#FeaturingsModule, #FeaturedListModule, #ContestModule
+{
+	background: rgba(255, 235, 59, 0.15) !important;
+	border: 1px solid rgba(255, 235, 59, 0.3) !important;
+}
+
+#ContestModule h3
+{
+	color: var(--CSUIYellowColor) !important;
+}
+
+#ModeratorNoticeModule article, #PrivateAccessNoticeModule p
+{
+	color: var(--CSUIWhiteColor) !important;
 }

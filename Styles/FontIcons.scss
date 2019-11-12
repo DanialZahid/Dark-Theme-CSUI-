@@ -85,7 +85,17 @@ html.Member_Submissions_Todo #SubmissionsListModule .Identifiers>matIcon, #Todos
 
 spriteIcon.RightArrowIcon, .SpriteIcon.RightArrowIcon
 {
-  opacity: 1;
+	opacity: 1;
+}
+
+maticon.RemoveToggleButton.RedColor
+{
+	opacity: 0.8;
+}
+
+maticon.RemoveToggleButton.RedColor:hover
+{
+	opacity: 1;
 }
 
 matIcon
@@ -94,5 +104,5 @@ matIcon
 	text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000 !important;
 	font-size: 15px !important;
 	color: var(--CSUITealColor);
-	vertical-align: middle !important;	/*	[Version 1.2.0 | Addition]	*/
+	vertical-align: middle !important;
 }
