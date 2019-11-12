@@ -2,7 +2,7 @@
 
 .PostsListModule .Posts>li
 {
-    margin: 10px 5px !important; /*  [Version 1.2.0 | Updated]   */
+	margin: 10px 5px !important;
 	padding: var(--CSUIPostsPadding) !important;
 	background: var(--CSUIPostsBGColor) !important;
 	border: var(--CSUIPostsBorder) !important;
@@ -37,9 +37,9 @@
 
 .PostsListModule .Posts>li.IsExemplary
 {
-	background: rgba(156, 204, 101, 0.1) !important;   /*  [Version 1.2.0 | Updated] */
+	background: rgba(156, 204, 101, 0.1) !important;
 	border: 2px solid var(--CSUIGreenColor) !important;
-    margin: 0px;    /*  [Version 1.2.0 | Addition] */
+	margin: 0px;
 }
 
 .PostsListModule .Posts>li article .PostStamps li[data-_sCategory=positive], #StampsLogListModule .Stamps li[data-_sCategory=positive]
@@ -69,18 +69,18 @@
 
 @media only screen and (min-width: 400px)
 {
-    #PostsListModule_0>.Content>.Posts>.Post>.PostReplies>.PostsListModule
-    {
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-    }
+	#PostsListModule_0>.Content>.Posts>.Post>.PostReplies>.PostsListModule
+	{
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+	}
 }
 
 @media only screen and (min-width: 400px)
 {
-    .PostsListModule .Posts>li .PostReplies.Focussed>.PostsListModule
-    {
-        border-left: 1px solid var(--CSUIWhiteColor);
-    }
+	.PostsListModule .Posts>li .PostReplies.Focussed>.PostsListModule
+	{
+		border-left: 1px solid var(--CSUIWhiteColor);
+	}
 }
 
 .PostsListModule .Posts>li .PostTools .PostUrlForm>*
@@ -88,9 +88,9 @@
 	font-size: var(--CSUISmallFontSize) !important;
 }
 
-.PostsListModule .Posts>li .PostTools   /*  [Version 1.2.0 | Addition]  */
+.PostsListModule .Posts>li .PostTools
 {
-    transition: opacity .15s ease-in-out !important;
+	transition: opacity .15s ease-in-out !important;
 }
 
 ul.FullStampsDisplay
@@ -99,8 +99,17 @@ ul.FullStampsDisplay
 	padding: 5px;
 }
 
-.PostsListModule .Posts>li .PostLabels>.SolvedIcon_32	/*	[Version 1.2.0 | Addition] */
+.PostsListModule .Posts>li .PostLabels>.SolvedIcon_32
 {
 	top: 25px !important;
 	right: 25px !important;
+}
+
+.RichText blockquote
+{
+	opacity: 0.7;
+	font-size: var(--CSUISmallFontSize) !important;
+	padding: 5px !important;
+	border-left: 2px solid var(--CSUIWhiteColor) !important;
+	background: rgba(158, 158, 158, 0.07) !important;
 }
