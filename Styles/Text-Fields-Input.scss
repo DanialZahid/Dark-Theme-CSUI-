@@ -8,7 +8,7 @@
 	border: 1px solid #000000;
 }
 
-#EditFormModule .MainForm, #AddFormModule .MainForm	/*	[Version 1.2.0 | Addition]	*/
+#EditFormModule .MainForm, #AddFormModule .MainForm
 {
 	margin: auto;
 }
@@ -22,11 +22,6 @@
 .Editor .Toolbars>div
 {
 	margin: 0 0 10px 0;
-}
-
-.Editor .Toolbars>div button
-{
-	margin: 0 5px 0 0;
 }
 
 .Modal, #GamesListModule .Content .SteamInfoRollout
@@ -143,10 +138,10 @@ pre, #HistoryListModule .Content .Changes li .NewVersion .ValueWrapper, #History
 
 #CodeViewerModule .CodeWithLineNumbers
 {
-  border: 2px solid rgba(156, 204, 101, 0.2) !important;
-  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
-  background: var(--CSUITextAreaBGColor) !important;
-  font-family: var(--CSUIMonoFF) !important;
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+	font-family: var(--CSUIMonoFF) !important;
 }
 
 #HistoryListModule .Content .Changes li .NewVersion .ValueWrapper del, #HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper del

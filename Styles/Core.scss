@@ -10,18 +10,18 @@
 
 	[DETAILS]
 
-	Website: GameBanana (https://gamebanana.com/) >>> UI Themes (https://gamebanana.com/scripts/cats/2238/)
-	Submission profile page: https://gamebanana.com/scripts/10441/
-	GitHub repository page: https://github.com/DanialZahid/Dark-Theme-CSUI-
-	Browsers tested: Google Chrome [version 78.0.3904.87 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
+	Website: GameBanana (https://gamebanana.com/) > UI Themes (https://gamebanana.com/scripts/cats/2238/)
+	Submission profile: https://gamebanana.com/scripts/10441/
+	GitHub repository: https://github.com/DanialZahid/Dark-Theme-CSUI-
+	Browsers tested: Google Chrome [version 78.0.3904.97 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
 	Date released: 2019-07-17
-	Last updated: 2019-11-04
-	Current version: 1.2.0
+	Last updated: 2019-11-12
+	Current version: 1.3.0
 	-----------------------------
 
 	[AUTHORS]
 
-	## Author / Ownership
+	## Original Author
 
 	* Danial Zahid [Coder]
 
@@ -34,7 +34,7 @@
 
 	[CONTACT DETAILS]
 
-	## Author / Owner
+	## Danial Zahid
 
 	> Email address: danialz@pm.me
 	> Portfolio: http://danialzahid.ga/
@@ -57,7 +57,19 @@
 
 	[CHANGELOG]
 
-	## Version 1.2.0 [Minor Update] [2019-10-04]
+	## Version 1.3.0 [Minor Update] [2019-11-12]
+
+	* [Fixed] Opacity flickering issue on records table.
+	* [Removed] Low opacity from the records.
+	* [Revamped] Buttons UI.
+	* [Tweaked] Member profile > Updates section records.
+	* [Tweaked] Member profile > Game Keys section records.
+	* [Tweaked] Submission profile > History section.
+	* [Tweaked] Records table header and cells border.
+	* [Tweaked] Center aligned most of the buttons to match with the rest of the theme.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.2.0 [Minor Update] [2019-11-04]
 
 	* [Fixed] Next and previous button icons in the lightbox.
 	* [Fixed] Attributes module links color to match with the default UI link color.
@@ -111,14 +123,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Arimo|Aldrich|Fira+Mono|Doppio+One&display=swap');
 
-*   /*  [Version 1.2.0 | Addition]  */
+*
 {
-    border-radius: 0 !important;
+	border-radius: 0 !important;
 }
 
 html
 {
-  background: #212121;
+	background: #212121;
 }
 
 #BodyWrapper
@@ -153,10 +165,10 @@ a, .Linklike, .RichText .TableOfContents ul li
 #AttributesModule a
 {
 	color: var(--CSUILinkColor) !important;
-  text-shadow: var(--CSUILinkShadow) !important;
+	text-shadow: var(--CSUILinkShadow) !important;
 }
 
-#ContentGrid.HiddenColumnMode.xs row>column.xs-h	/*	[Version 1.2.0 | Updated]	*/
+#ContentGrid.HiddenColumnMode.xs row>column.xs-h
 {
 	background: #212121;
 	border-left: 1px solid var(--CSUIGreyColor);
@@ -176,7 +188,7 @@ a, .Linklike, .RichText .TableOfContents ul li
 moduleGroup
 {
 	margin: 10px;
-  padding: initial;
+	padding: initial;
 	border: none;
 }
 
@@ -221,7 +233,7 @@ moduleGroup>.PageModule
 
 #Loader span, #Loader span:after
 {
-    border-radius: 50% !important;
+	border-radius: 50% !important;
 	width: 22px;
 	height: 22px;
 }
@@ -237,4 +249,13 @@ moduleGroup>.PageModule
 	font-size: 10px;
 	text-align: center;
 	margin-top: 1px;
+}
+
+.PageModule>.Description
+{
+	padding: 5px 25px 5px 5px;
+	margin: 5px auto;
+	color: var(--CSUIWhiteColor);
+	font-size: var(--CSUIH4FontSize);
+	background: rgba(158, 158, 158, 0.3);
 }

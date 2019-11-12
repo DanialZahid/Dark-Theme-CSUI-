@@ -29,7 +29,7 @@
 	border: 1px solid rgba(158, 158, 158, 0.2);
 }
 
-#ManageNavModule pane .PaneTabs	/*	[Version 1.2.0 | Updated]	*/
+#ManageNavModule pane .PaneTabs
 {
 	background: rgba(158, 158, 158, 0.1);
 }
@@ -199,7 +199,7 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 	padding: 0px 5px 0 0;
 }
 
-#MessagesNavModule pane #LatestPmsColumn li	/*	[Version 1.2.0 | Updated]	*/
+#MessagesNavModule pane #LatestPmsColumn li
 {
 	border-bottom: 1px solid rgba(158, 158, 158, 0.3);
 }
@@ -207,6 +207,13 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 #TopNav #StatsNavModule pane column:first-child stat rank, #TopNav #StatsNavModule pane column:first-child stat itemCount, #SideNav #StatsNavModule pane column:first-child stat rank, #SideNav #StatsNavModule pane column:first-child stat itemCount
 {
 	font-size: var(--CSUIH4FontSize);
+}
+
+#AlertsNavModule pane .Broadcasts>li .Messages li, #ActivityNavModule pane .Broadcasts>li .Messages li
+{
+	padding: 5px;
+	border-top: 1px solid rgba(158, 158, 158, 0.3);
+	font-size: var(--CSUISmallFontSize);
 }
 
 /*		[SUBNAVIGATOR]		*/
@@ -221,7 +228,7 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 	border-bottom: var(--CSUISNBorderBottom);
 	text-align: center;
 	font-family: var(--CSUIHFF) !important;
-	justify-content: center;	/* [Version 1.2.0 | Addition] */
+	justify-content: center;
 }
 
 #SubNavigator .ActiveEntry, .MainForm .InputsWrapper .CategoryTabs li.Selected
@@ -273,4 +280,14 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed
 {
 	font-size: var(--CSUIFontSize);
 	color: var(--CSUIGreenColor);
+}
+
+#SubNavigator .ActiveEntry a
+{
+	color: var(--CSUIGreenColor);
+}
+
+.AdvancedElement_Tabs li
+{
+	transition: all 0.15s ease-in-out;
 }

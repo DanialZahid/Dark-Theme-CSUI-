@@ -2,9 +2,38 @@
 
 ## Versions List
 
-* [Version 1.2.0](#version-120-minor-update-2019-11-04) (**Current version - released**)
+* [Version 1.3.0](#version-130-minor-update-2019-11-12) (**Current version - released**)
+* [Version 1.2.0](#version-120-minor-update-2019-11-04)
 * [Version 1.1.0](#version-110-minor-update-2019-07-24)
 * [Version 1.0.0](#version-100-2019-07-17)
+
+---
+
+## Version 1.3.0 [Minor Update] [2019-11-12]
+
+### Fixed
+
+* Opacity flickering issue on records table.
+
+### Removed
+
+* Low opacity from the records.
+
+### Revamped
+
+* Buttons UI.
+
+### Tweaked
+
+* Member profile > **Updates** section records.
+* Member profile > **Game Keys** section records.
+* Submission profile > **History** section.
+* Records table header and cells border.
+* Center aligned most of the buttons to match with the rest of the theme.
+
+### Miscellaneous
+
+* Several other minor changes and bug fixes.
 
 ---
 
@@ -39,7 +68,7 @@
 
 ### Tweaked
 
-* Mmber profile > **Stamps Log** and **Posts** sections.
+* Member profile > **Stamps Log** and **Posts** sections records.
 * **Updates** module record UI.
 * Posts (comments) list.
 
