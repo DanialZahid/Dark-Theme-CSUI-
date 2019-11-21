@@ -1,5 +1,3 @@
-/*		[RECORDS AND TABLES]		*/
-
 .Paginator, .AjaxPaginator
 {
 	padding: 5px;
@@ -123,6 +121,11 @@ recordcell.Parent
 	border-bottom: 1px solid #000000;
 }
 
+[data-_sViewMode=Grid] record .Category, [data-_sViewMode=Grid] record .Ownership
+{
+	transition: opacity 0.15s ease-in-out;
+}
+
 recordcell.Stamps
 {
 	margin: 5px;
@@ -168,23 +171,14 @@ StampsLogListModule .Direction, #StampsLogListModule .PostInfo
 
 table
 {
+	border-spacing: 0;
 	width: 100%;
-}
-
-td:hover
-{
-	opacity: var(--CSUITableTDHoverOpacity);
 }
 
 td
 {
+	border-bottom: var(--CSUIRecordTableViewBorder);
 	background: var(--CSUIRecordsBGColor);
-	opacity: var(--CSUITableTDOpacity);
-}
-
-table td, table th
-{
-	border: var(--CSUIRecordTableViewBorder);
 }
 
 table thead th
@@ -192,14 +186,16 @@ table thead th
 	font-weight: bold;
 	text-align: center;
 	color: var(--CSUITableHeadingColor);
-	border: var(--CSUITableHeadingBorder);
+	border-top: var(--CSUITableHeadingBorder);
+	border-bottom: var(--CSUITableHeadingBorder);
 	font-size: var(--CSUITableHeadingFontSize);
 	background: var(--CSUITableTHBGColor);
 }
 
 table thead th:empty
 {
-	border: var(--CSUITableHeadingBorder);
+	border-top: var(--CSUITableHeadingBorder);
+	border-bottom: var(--CSUITableHeadingBorder);
 }
 
 dd

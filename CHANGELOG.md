@@ -2,12 +2,42 @@
 
 ## Versions List
 
-* [Version 1.3.0](#version-130-minor-update-2019-11-12) (**Current version - released**)
+* [Version 1.4.0](#version-140-minor-update-2019-11-21) (**Current version - released**)
+* [Version 1.3.0](#version-130-minor-update-2019-11-12) 
 * [Version 1.2.0](#version-120-minor-update-2019-11-04)
 * [Version 1.1.0](#version-110-minor-update-2019-07-24)
 * [Version 1.0.0](#version-100-2019-07-17)
 
 ---
+
+## Version 1.4.0 [Minor Update] [2019-11-21]
+
+### Changed
+
+* Transition duration for most of the elements has been lowered (to `0.15s`).
+
+### Removed
+
+* Low opacity from table cells.
+
+### Revamped
+
+* SubNavigator and form tabs.
+* Floating header.
+
+### Tweaked
+
+* Features module on the home page.
+* Features module on the game section.
+* Advanced elements tab on the home page (**Trending**, **Classics**, and **New** games toggle module tabs).
+* **Manage** pane.
+* Table header and cell border.
+* Style of certain triggered elements to match with the rest of the theme.
+
+### Miscellaneous
+
+* Removed the redundant code.
+* Several other minor changes and bug fixes.
 
 ## Version 1.3.0 [Minor Update] [2019-11-12]
 

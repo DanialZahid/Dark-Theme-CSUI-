@@ -1,11 +1,9 @@
-/*		[STATE LABELS]		*/
-
-stateLabel.SupportResolution_unresolved, stateLabel.QuestionState_Unanswered, .QuestionPreview blockquote.Unanswered
+stateLabel.QuestionState_Unanswered, .QuestionPreview blockquote.Unanswered
 {
 	color: var(--CSUIRedColor) !important;
 }
 
-stateLabel.SupportResolution_resolved, stateLabel.IdeaResolution_addressed, stateLabel.RequestResolution_delivered, stateLabel[data-_sThreadState="Done"], stateLabel.BugResolution_resolved, stateLabel.ContestState_Running, #BuddiesListModule recordCell.Status stateLabel.Online, .AvatarTooltip .Column .OnlineStatus stateLabel.Online, stateLabel.QuestionState_Solved, .QuestionPreview blockquote.Solved
+stateLabel.IdeaResolution_addressed, stateLabel.RequestResolution_delivered, stateLabel[data-_sThreadState="Done"], stateLabel.ContestState_Running, #BuddiesListModule recordCell.Status stateLabel.Online, .AvatarTooltip .Column .OnlineStatus stateLabel.Online, stateLabel.QuestionState_Solved, .QuestionPreview blockquote.Solved
 {
 	color: var(--CSUIGreenColor) !important;
 }
@@ -15,7 +13,7 @@ stateLabel.SupportResolution_feedback, stateLabel.BugResolution_feedback
 	color: var(--CSUIPurpleColor) !important;
 }
 
-stateLabel.SupportResolution_closed, stateLabel.RequestResolution_cancelled, stateLabel.RequestResolution_expired, stateLabel.RequestResolution_duplicate, stateLabel.BugResolution_duplicate, stateLabel.SupportResolution_duplicate, stateLabel.IdeaResolution_duplicate, stateLabel.BugResolution_wont_fix, stateLabel.ContestState_Ended, stateLabel[data-_sThreadState="Closed"], #BuddiesListModule recordCell.Status stateLabel.Offline, .AvatarTooltip .Column .OnlineStatus stateLabel.Offline
+stateLabel.SupportResolution_closed, stateLabel.RequestResolution_cancelled, stateLabel.RequestResolution_expired, stateLabel.RequestResolution_duplicate, stateLabel.IdeaResolution_duplicate, stateLabel.ContestState_Ended, stateLabel[data-_sThreadState="Closed"], #BuddiesListModule recordCell.Status stateLabel.Offline, .AvatarTooltip .Column .OnlineStatus stateLabel.Offline
 {
 	color: var(--CSUIGreyColor) !important;
 }
