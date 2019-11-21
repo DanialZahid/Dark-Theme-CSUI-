@@ -13,10 +13,10 @@
 	Website: GameBanana (https://gamebanana.com/) > UI Themes (https://gamebanana.com/scripts/cats/2238/)
 	Submission profile: https://gamebanana.com/scripts/10441/
 	GitHub repository: https://github.com/DanialZahid/Dark-Theme-CSUI-
-	Browsers tested: Google Chrome [version 78.0.3904.97 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
+	Browsers tested: Google Chrome [version 78.0.3904.108 (Official Build) (64-bit)] | Mozilla Firefox [version 68.0 (64-bit)] | Opera [version 62.0.3331.72]
 	Date released: 2019-07-17
-	Last updated: 2019-11-12
-	Current version: 1.3.0
+	Last updated: 2019-11-21
+	Current version: 1.4.0
 	-----------------------------
 
 	[AUTHORS]
@@ -56,6 +56,21 @@
 	-----------------------------
 
 	[CHANGELOG]
+
+	## Version 1.4.0 [Minor Update] [2019-11-21]
+
+	* [Changed] Transition duration for most of the elements has been lowered (to 0.15s).
+	* [Removed] Low opacity from table cells.
+	* [Revamped] SubNavigator and form tabs.
+	* [Revamped] Floating header.
+	* [Tweaked] Features module on the home page.
+	* [Tweaked] Features module on the game section.
+	* [Tweaked] Advanced elements tab on the home page (Trending, Classics, and New games toggle module tabs).
+	* [Tweaked] Manage pane.
+	* [Tweaked] Table header and cell border.
+	* [Tweaked] Style of certain triggered elements to match with the rest of the theme.
+	* [Miscellaneous] Removed the redundant code.
+	* [Miscellaneous] Several other minor changes and bug fixes.
 
 	## Version 1.3.0 [Minor Update] [2019-11-12]
 
@@ -118,8 +133,6 @@
 	6. Use this UI theme or its components for commercial purposes.
 	-----------------------------
 */
-
-/*		[CORE]		*/
 
 @import url('https://fonts.googleapis.com/css?family=Arimo|Aldrich|Fira+Mono|Doppio+One&display=swap');
 

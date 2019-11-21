@@ -1,5 +1,3 @@
-/*		[HEADINGS]		*/
-
 h1, h2, h3, h4, h5, h6, fieldset legend
 {
 	font-family: var(--CSUIHFF) !important;
@@ -12,7 +10,7 @@ h3, #SubmissionsListModuleGroup h3
 	text-align: center;
 }
 
-h4, #FeaturesSliderModule .Slides .Slide .Info .Name small, #FeaturesSliderModule .Slides .ExpandedSlide .Info .Name small
+h4
 {
 	font-size: var(--CSUIH4FontSize) !important;
 }
@@ -32,16 +30,10 @@ h4, #FeaturesSliderModule .Slides .Slide .Info .Name small, #FeaturesSliderModul
 
 #FeaturesSliderModule .Slides .Slide .Info .Name h4, #FeaturesSliderModule .Slides .ExpandedSlide .Info .Name h4, #FeaturesSliderModule .Slides .Slide .FeatureType, #FeaturesSliderModule .Slides .ExpandedSlide .FeatureType
 {
-	background: var(--CSUISLBGColor) !important;
+	background: var(--CSUIDBGColor) !important;
 	color: var(--CSUIWhiteColor) !important;
 	font-size: 24px !important;
 	padding: 0 10px !important;
-}
-
-#FeaturesSliderModule .Slides .Slide .Info .Name small, #FeaturesSliderModule .Slides .ExpandedSlide .Info .Name small
-{
-	background: var(--CSUISLBGColor) !important;
-	color: var(--CSUIWhiteColor) !important;
 }
 
 h5, h6, #TopNav module pane h5, #SideNav module pane h5

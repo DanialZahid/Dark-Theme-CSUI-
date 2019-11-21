@@ -1,5 +1,3 @@
-/*		[TOP AND SIDE NAVIGATOR]		*/
-
 #TopNav, #SideNav, #PageFooter
 {
 	background: var(--CSUITopSideFooterColor);
@@ -27,11 +25,6 @@
 {
 	background: rgba(158, 158, 158, 0.1);
 	border: 1px solid rgba(158, 158, 158, 0.2);
-}
-
-#ManageNavModule pane .PaneTabs
-{
-	background: rgba(158, 158, 158, 0.1);
 }
 
 body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
@@ -96,7 +89,7 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 
 #SearchNavModule #SearchForm button
 {
-	transition: opacity 0.15s ease-in-out;
+	transition: opacity 0.15s ease-in-out !important;
 	margin-left: 10px;
 }
 
@@ -183,20 +176,20 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 	border: 2px solid var(--CSUIGreenColor);
 }
 
-#ManageNavModule pane .PaneTabs .Selected
+#ManageNavModule pane .PaneTabs .Selected, #ManageNavModule pane .Panes .Pane.Selected
 {
-	background: var(--CSUIButtonSelectedBGColor) !important;
-}
-
-#ManageNavModule pane .Panes .Pane.Selected
-{
-	background: var(--CSUIButtonSelectedBGColor) !important;
+	background: #9e9e9e4d !important;
 }
 
 #ManageNavModule pane .Panes
 {
-	background: var(--CSUIDBGColor);
-	padding: 0px 5px 0 0;
+	background: 0;
+	padding: 0;
+}
+
+#ManageNavModule ul.PaneTabs
+{
+	padding: 0;
 }
 
 #MessagesNavModule pane #LatestPmsColumn li
@@ -218,29 +211,41 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 
 /*		[SUBNAVIGATOR]		*/
 
+#SubNavigator
+{
+	margin: 10px 50px;
+}
+
 #SubNavigator .BasicSubNavigator, #SubNavigator .DropdownMenuSubNavigator, #Breadcrumb
 {
 	font-family: var(--CSUIHFF) !important;
+	margin-right: 0;
 }
 
 #SubNavigator, .AdvancedElement_Tabs
 {
-	border-bottom: var(--CSUISNBorderBottom);
+	background: var(--CSUICardBGColor);
+	border: var(--CSUICardBorder) !important;
 	text-align: center;
 	font-family: var(--CSUIHFF) !important;
 	justify-content: center;
 }
 
-#SubNavigator .ActiveEntry, .MainForm .InputsWrapper .CategoryTabs li.Selected
+#SubNavigator .ActiveEntry, .MainForm .InputsWrapper .CategoryTabs li.Selected, .AdvancedElement_Tabs li.Selected
 {
-	border-bottom: var(--CSUISNActiveEntryBorderBottom) !important;
-	background: var(--CSUISNActiveEntryBGColor) !important;
+	border: 0 !important;
+	background: var(--CSUIButtonSelectedBGColor) !important;
 }
 
-#SubNavigator .DropdownMenuSubNavigator>li:hover, .AdvancedElement_Tabs li:hover, .AdvancedElement_Tabs li.Selected, .MainForm .InputsWrapper .CategoryTabs li:hover
+#SubNavigator .DropdownMenuSubNavigator > li:hover, .AdvancedElement_Tabs li:hover, .AdvancedElement_Tabs li.Selected, .MainForm .InputsWrapper .CategoryTabs li:hover, #SubNavigator .BasicSubNavigator li:hover, .AdvancedElement_Tabs.Minimal li:hover
 {
-	background: var(--CSUISNEntryHoverBGColor);
-	border-bottom: var(--CSUISNEntryHoverBorderBottom);
+	background: #9e9e9e4d;
+	border: 0;
+}
+
+.AdvancedElement_Tabs li:hover, .AdvancedElement_Tabs li.Selected, #SubNavigator .ActiveEntry
+{
+	margin-bottom: 0;
 }
 
 .MainForm .InputsWrapper .CategoryTabs li:hover, .MainForm .InputsWrapper .CategoryTabs li.Selected
@@ -248,32 +253,39 @@ body[data-_sSideNavMode=Collapsed] #SideNav.Expanded
 	color: var(--CSUIWhiteColor);
 }
 
-#SubNavigator .BasicSubNavigator li:hover
+#SubNavigator .DropdownMenuSubNavigator>li ul
 {
-	background: var(--CSUISNEntryHoverBGColor);
-	border-bottom: var(--CSUISNEntryHoverBorderBottom);
+	border: 1px solid #000;
+	border-top: 0;
 }
 
-#SubNavigator .DropdownMenuSubNavigator>li ul>li
+#SubNavigator .DropdownMenuSubNavigator > li ul > li
 {
-	background: var(--CSUISNListBGColor);
-	border: var(--CSUISNListBorderColor);
+	background: var(--CSUIDBGColor);
+	border: 0;
 }
 
-#SubNavigator .DropdownMenuSubNavigator>li ul>li:last-child
+#SubNavigator .DropdownMenuSubNavigator > li ul > li:last-child, .AdvancedElement_Tabs.Minimal
 {
-	border: var(--CSUISNListBorderColor);
+	border: 0 !important;
+}
+
+body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed #SubNavigator
+{
+	font-size: 12px;
+	background: var(--CSUIDBGColor);
 }
 
 body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed
 {
-	background: var(--CSUISNListBGColor);
+	background: none;
+	margin: -10px -50px;
 }
 
-#SubNavigator .DropdownMenuSubNavigator>li ul>li:hover
+#SubNavigator .DropdownMenuSubNavigator > li ul > li:hover
 {
-	background: var(--CSUISNListBGHoverColor);
-	border: var(--CSUISNListBorderHover);
+	background: #9e9e9e;
+	border: 0;
 }
 
 #SubNavigator li itemCount
@@ -282,12 +294,12 @@ body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed
 	color: var(--CSUIGreenColor);
 }
 
-#SubNavigator .ActiveEntry a
-{
-	color: var(--CSUIGreenColor);
-}
-
 .AdvancedElement_Tabs li
 {
-	transition: all 0.15s ease-in-out;
+	transition: none;
+}
+
+#SubNavigator .ActiveEntry a, .AdvancedElement_Tabs li>span
+{
+	color: var(--CSUIWhiteColor) !important;
 }

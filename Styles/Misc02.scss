@@ -1,5 +1,3 @@
-/*		[MISCELLANEOUS]		*/
-
 .PageModule>.RelatedLinksButton
 {
 	color: var(--CSUIYellowColor);
@@ -13,10 +11,10 @@
 
 .MainForm .InputsWrapper fieldset>legend:after
 {
-	height: var(--CSUIPMH3UnderlineHeight);
-	margin: var(--CSUIPMH3UnderlineMargin);
-	width: var(--CSUIPMH3UnderlineWidth);
-	background: var(--CSUIPMH3UnderlineColor);
+	height: 2px;
+	margin-top: 3px;
+	width: 100%;
+	background: #fff;
 }
 
 #ManagersListModule ul li .SeniorPermitHolder
@@ -31,7 +29,7 @@ ol, ul, menu, li
 
 #GamesNavModule pane header .SubscriptionBenefitsNotice wrapper placeholder
 {
-	border: 2px dashed var(--CSUIIndigoColor);
+	border: 2px dashed var(--CSUIPurpleColor);
 	border-radius: 100% !important;
 }
 
@@ -46,20 +44,6 @@ ol, ul, menu, li
 	font-family: var(--CSUIHFF) !important;
 }
 
-.AdvancedElement_Tabs li.Selected
-{
-	background: var(--CSUISNActiveEntryBGColor) !important;
-	color: var(--CSUIGreenColor);
-	border-bottom: var(--CSUISNActiveEntryBorderBottom);
-	border-bottom-width: 5px;
-}
-
-.AdvancedElement_Tabs.Minimal li:hover
-{
-	background: var(--CSUISNEntryHoverBGColor);
-	border-bottom: var(--CSUISNEntryHoverBorderBottom);
-	border-bottom-width: 5px;
-}
 
 #TopGamesModule .Content .AdditionalLinks a, #GamesListModule .Endnote a
 {
@@ -165,8 +149,8 @@ option, .OptionLike
 
 #ProfileWysiwygEditor .InputWrapper #TemplateGrid row column
 {
-	background: var(--CSUIULColumnBGColor) !important;
-	border: var(--CSUIULColumnBorder) !important;
+	background: #101010e6 !important;
+	border: 1px solid #000 !important;
 }
 
 .meter1
@@ -298,12 +282,13 @@ select optgroup, .SelectLike optgroup
 	background: var(--CSUIDBGColor);
 	border: var(--CSUIDBorder);
 	margin: 3px;
+	transition: all 0.15s ease-in-out !important;
 }
 
 #ContentGrid.HiddenColumnMode.md row>column.md-h
 {
-	border: var(--CSUIContentColumnBorder);
-	background: var(--CSUIContentColumnBGColor);
+	border: 2px solid #000;
+	background: #101010cc;
 }
 
 .MainForm .InputsWrapper .InputHasError .InputHelp, .MainForm .InputsWrapper .InputHasError .InputError, .MainForm .InputsWrapper .InputHasError .InputWrapper
@@ -381,9 +366,15 @@ p.NoRecordsFound
 	color: var(--CSUIRedColor);
 }
 
-#EmbeddableImagesListModule li input, #EmbeddableImagesListModule li label
+#EmbeddableImagesListModule li input
 {
 	font-size: var(--CSUISmallFontSize) !important;
+	color: var(--CSUIGreenColor);
+}
+
+#EmbeddableImagesListModule li label
+{
+	font-size: var(--CSUISmallFontSize);
 }
 
 #Recipients .RecipientGroup>div ul li
@@ -536,21 +527,21 @@ img.PreviewImage
 #DiscussionSectionsSummaryModule li
 {
 	border: 1px solid rgba(158, 158, 158, 0.5) !important;
-	margin: 0px 0px 5px 0 !important;
-	padding: 3px 0px 3px 5px !important;
+	margin-bottom: 5px !important;
+	padding: 5px !important;
 	background: rgba(158, 158, 158, 0.08) !important;
+	opacity: 0.8;
 }
 
 #DiscussionSectionsSummaryModule li:hover
 {
-	background: var(--CSUIButtonBGHoverColor) !important;
-	border: var(--CSUIButtonBorderHover) !important;
+	opacity: 1;
 }
 
 #DiscussionSectionsSummaryModule li.ActiveSection
 {
 	background: var(--CSUIButtonSelectedBGColor) !important;
-	border: var(--CSUIButtonSelectedBorder) !important;
+	opacity: 1;
 }
 
 .QuickDlTooltip li small
@@ -638,7 +629,21 @@ html.Member_Submissions_Flag #SubmissionsListModule .Preview ul, #FlagsModule .P
 
 .Editor .WysiwygPalettes .UsernameInserter ul li:hover, .Editor .WysiwygPalettes .BitpitFileInserter ul li:hover
 {
-	outline: 1px dashed var(--CSUIGreenColor) !important;
+	outline: 2px dotted var(--CSUIPurpleColor) !important;
+}
+
+.Editor.DragInProgress .ViewModes .Wysiwyg
+{
+	outline: 2px dashed var(--CSUIPurpleColor);
+}
+
+.Editor.DragInProgress .ViewModes .Wysiwyg:after
+{
+	font-size: 12px;
+	background: var(--CSUIPurpleColor);
+	border-radius: 0 !important;
+	padding: 5px;
+	color: #000;
 }
 
 .AdvancedElement_InputSuggestionsList
@@ -695,7 +700,7 @@ ul.Posts
 	text-align: left;
 }
 
-/*		BananaExchange		*/
+/*		BANANAEXCHANGE		*/
 
 #BexPromoModule .Content>a .MoneyCostOverlay, #BexPromoModule .Content>a .PointCostOverlay, #NewBexGamesModule li a overlay, #GamesListModule .Content>ul>li .Preview .GameName
 {
@@ -719,7 +724,7 @@ ul.Posts
 	color: var(--CSUIRedColor) !important;
 }
 
-/*		Filters		*/
+/*		FILTERS		*/
 
 .AdvancedListSettingsModule>.Content .Presets ul li:last-child
 {
@@ -771,4 +776,24 @@ p#Countdown
 #HistoryListModule .Content .Changes li .NewVersion, #HistoryListModule .Content .Changes li .PreviousVersion
 {
 	margin-right: 5px;
+}
+
+#TopGamesModule .Content .GamesList li a .Banner, #GamesListModule record .Icon, #SectionExplanationsModule #SectionAreas>li .Sections li spriteIcon, #NewBexGamesModule li, #GamesListModule .Content>ul>li .Preview
+{
+	transition: opacity 0.15s ease-in-out !important;
+}
+
+/*		FEATURES MODULE		*/
+
+#FeaturesSliderModule .Slides .Slide .Info .Name small, #FeaturesSliderModule .Slides .ExpandedSlide .Info .Name small, #FeaturesSliderModule #ExpandedSlide .FeatureType, #FeaturesSliderModule #ExpandedSlide .Info .Name h4, #FeaturesSliderModule #ExpandedSlide .Info .Name small
+{
+	background: var(--CSUIDBGColor) !important;
+	color: var(--CSUIWhiteColor) !important;
+	padding: 5px !important;
+	font-size: var(--CSUIH4FontSize) !important;
+}
+
+#FeaturesSliderModule #SlideShortcuts .Slide.Selected
+{
+	border-top-color: var(--CSUIGreenColor) !important;
 }

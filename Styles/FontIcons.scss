@@ -1,5 +1,3 @@
-/*		[FONT ICONS]		*/
-
 maticon.WasFeatured
 {
 	color: var(--CSUIYellowColor) !important;
@@ -18,6 +16,7 @@ statwrapper.Progress maticon, #SubmissionsListAdvancedListSettingsModule .Recent
 #SectionExplanationsModule #SectionAreas>li .Sections li matIcon
 {
 	color: var(--CSUIGreenColor);
+	transition: all 0.15s ease-in-out !important;
 }
 
 #SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon, #SubmissionsListAdvancedListSettingsModule .SelectedGames li matIcon
@@ -101,7 +100,7 @@ maticon.RemoveToggleButton.RedColor:hover
 matIcon
 {
 	opacity: 1;
-	text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000 !important;
+	text-shadow: 1px 1px 1px #000, 1px 1px 1px #000 !important;
 	font-size: 15px !important;
 	color: var(--CSUITealColor);
 	vertical-align: middle !important;
