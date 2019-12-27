@@ -1,0 +1,179 @@
+.PageModule
+{
+	background: var(--CSUICardBG);
+	border: var(--CSUICardBorder) !important;
+	margin: 10px;
+	padding: 0;
+}
+
+#ResponsibilitiesModule li
+{
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 1px solid var(--CSUIRedColor) !important;
+	background: rgba(232, 78, 64, 0.1) !important;
+}
+
+#LicenseModule article
+{
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+}
+
+#SubmissionsListModule .SubmissionCounts ul li
+{
+	font-size: smaller;
+	span {color: var(--CSUIGreenColor);}
+}
+
+.PageModule > .Description
+{padding: 5px 30px 5px 5px; margin: 5px auto; color: var(--CSUIWhiteColor); font-size: medium; background: linear-gradient(45deg, #9e9e9e4d, transparent);}
+
+#WithholdNoticeModule
+{color: var(--CSUIWhiteColor) !important; padding-bottom: 20px; background: rgba(232, 78, 64, 0.15); border: 1px solid rgba(232, 78, 64, 0.3);}
+
+.PageModule>h3:after,
+moduleGroup>h3:after {display: none;}
+
+moduleGroup {margin: 10px; padding: initial; border: none;}
+moduleGroup>.PageModule {text-align: center; margin: 0 0 10px 0;}
+#PurchasesListModule {margin: 10px !important; text-align: center !important; max-width: 100% !important}
+
+// UNIQUE MODULES CONTENT AREA
+
+#UpdatesModule,
+#ProgressReportModule,
+#BountySummaryModule,
+#BoostBountyFormModule,
+#AwardBountyFormModule,
+#PrizesModule,
+#UnwithholdFormModule
+{color: var(--CSUIWhiteColor) !important; background: rgba(156, 204, 101, 0.15);}
+
+#UnwithholdInstructionsModule,
+#PrivateAccessNoticeModule,
+#FlagNoticeModule,
+#ModeratorNoticeModule,
+#IssuesModule,
+#RequirementsModule,
+#RulesModule
+{color: var(--CSUIWhiteColor) !important; background: rgba(232, 78, 64, 0.15) !important;}
+
+#WithholdFormModule,
+#TrashFormModule,
+#FlagsModule,
+#ManagersListModule,
+#TrashNoticeModule,
+#PermitsModule,
+#AddModnoteFormModule
+{background: rgba(232, 78, 64, 0.07) !important;}
+
+#LicenseModule,
+#WhenModule
+{background: rgba(255, 112, 67, 0.15) !important; color: var(--CSUIOrangeColor) !important;}
+
+#FilesModule,
+#AlternateFileSourcesModule
+{background: rgba(121, 134, 203, 0.15) !important; text-align: center !important;}
+
+#CategoryModule,
+#CategoryModule .Content a
+{text-align: center !important;justify-content: center !important;}
+
+#FeaturingsModule,
+#FeaturedListModule,
+#ContestModule
+{background: rgba(255, 235, 59, 0.15) !important;}
+
+#ModeratorNoticeModule article,
+#PrivateAccessNoticeModule p
+{color: var(--CSUIWhiteColor) !important;}
+
+#ParticipantsListModule,
+#VotersListModule,
+#WhereModule
+{background: rgba(79, 195, 247, 0.15) !important;}
+
+#ParticipantsListModule h3,
+#VotersListModule h3,
+#WhereModule h3
+{color: var(--CSUIWhiteColor) !important; background: rgba(79, 195, 247, 0.3);}
+
+#WithholdLogModule {background: rgba(255, 112, 67, 0.15) !important;}
+.PageModule>.LogMessages {color: var(--CSUIGreyColor) !important;}
+#ResponsibilitiesModule {background: rgba(232, 78, 64, 0.15) !important; text-align: center !important;}
+#IdentityModule .KeyInfo small {color: var(--CSUIGreyColor); margin: auto; display: block; font-size: smaller !important;}
+#CoreStatsModule {padding: 10px 0;}
+#CoreStatsModule .Content {padding: 0 !important;}
+#CoreStatsModule ul {margin: auto; text-align: center; padding: 0 !important;}
+#CoreStatsModule ul li {margin: auto 5px; padding: 10px !important; background: rgba(17, 17, 17, 0.7) !important;}
+#CoreStatsModule ul small {font-size: smaller !important; color: var(--CSUIWhiteColor) !important;}
+#LicenseModule article footer {color: var(--CSUIRedColor) !important; text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000, 1px 1px 1px #000000;}
+#LicenseModule .Content {font-family: var(--CSUIFF) !important; color: var(--CSUITextColor) !important; padding: 10px !important; font-size: small !important}
+
+#UpdatesModule record {padding: 10px !important; margin: 5px !important; background: rgba(17, 17, 17, 0.8); border: var(--CSUIDBorder);}
+#FlagsModule recordCell.Preview {text-align: left;}
+#UpdatesModule .Details>ul>li code {color: var(--CSUIWhiteColor) !important;}
+
+// UNIQUE MODULES H3
+
+#WithholdNoticeModule h3,
+#UnwithholdInstructionsModule h3,
+#PrivateAccessNoticeModule h3,
+#ModeratorNoticeModule h3,
+#TrashNoticeModule h3,
+#FlagNoticeModule h3,
+#RequirementsModule h3,
+#RulesModule h3,
+#ResponsibilitiesModule h3,
+#ManagersListModule h3,
+#TrashNoticeModule h3,
+#FlagsModule h3
+{color: var(--CSUIWhiteColor) !important; background: rgba(232, 78, 64, 0.3);}
+
+#FilesModule h3,
+#AlternateFileSourcesModule h3
+{color: var(--CSUIWhiteColor) !important; background: rgba(121, 134, 203, 0.3);}
+
+#LicenseModule h3,
+#WhenModule h3,
+#WithholdLogModule h3
+{color: var(--CSUIWhiteColor) !important; background: rgba(255, 112, 67, 0.3);}
+
+#UpdatesModule h3,
+#ProgressReportModule h3,
+#AvailableKeysListModule h3,
+#BountySummaryModule h3,
+#BoostBountyFormModule h3,
+#AwardBountyFormModule h3,
+#PrizesModule h3,
+#UnseenBroadcastsModule h3,
+#UnwithholdFormModule h3
+{color: var(--CSUIWhiteColor) !important; background: rgba(156, 204, 101, 0.3);}
+
+#EditFormModule,
+#AddFormModule,
+#ReplyFormModule
+{background: rgba(156, 204, 101, 0.07); border: 1px solid rgba(156, 204, 101, 0.3) !important;}
+
+#GlobalSubmissionAnnouncementModule h3 {color: var(--CSUIWhiteColor) !important;background: rgba(128, 203, 196, 0.3);}
+#TodosModule h3 {color: var(--CSUIWhiteColor) !important; background: rgba(186, 104, 200, 0.3);}
+#ContestModule h3 {color: var(--CSUIWhiteColor) !important;}
+#WhereModule h3 {color: var(--CSUIGreyColor);}
+#FilesModule .Content ul li {border-bottom: 1px solid rgba(158, 158, 158, 0.3);}
+#GlobalSubmissionAnnouncementModule {background: rgba(128, 203, 196, 0.15) !important;}
+#StampsFormModule {border: 1px solid rgba(79, 195, 247, 0.3) !important; background: rgba(79, 195, 247, 0.07) !important;}
+#TodosModule {background: rgba(186, 104, 200, 0.15) !important;}
+
+// POINTS MODULE
+
+#PointsModule span#PointsLeader {font-size: var(--CSUISmallFontSize);}
+#PointsModule span.ClimbedRank {color: var(--CSUIGreenColor) !important;}
+#PointsModule span.DroppedRank {color: var(--CSUIRedColor) !important;}
+
+// STATS MODULE
+
+#StatsModule ul li {margin: 3px !important; padding: 5px !important; background: #212121 !important; border: 1px solid #111 !important;}
+#StatsModule ul {margin-bottom: auto !important;}

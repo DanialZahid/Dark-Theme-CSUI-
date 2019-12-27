@@ -1,0 +1,425 @@
+#TopGamesModule .Content .AdditionalLinks a,
+#GamesListModule .Endnote a
+{
+	padding: 10px !important;
+	background: var(--CSUIDBGColor) !important;
+	border: 1px solid var(--CSUIPurpleColor) !important;
+	font-size: var(--CSUIFontSize) !important;
+	font-family: var(--CSUIHFF) !important;
+}
+
+#SectionsModule .Info .CategoriesListWrapper,
+#CategoriesListModule record .Info .SubcategoriesListWrapper
+{
+	margin: 10px 0 5px 0 !important;
+	font-size: var(--CSUISmallFontSize) !important;
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+}
+
+#DiscussionSectionsSummaryModule li
+{
+	border: 1px solid rgba(158, 158, 158, 0.5) !important;
+	margin-bottom: 5px !important;
+	padding: 5px !important; background: rgba(158, 158, 158, 0.08) !important;
+	opacity: 0.8;
+}
+
+.AdvancedElement_InputSuggestionsList
+{
+	font-family: var(--CSUIMonoFF) !important;
+	color: var(--CSUIWhiteColor) !important;
+	padding: 5px !important; font-size: var(--CSUISmallFontSize) !important;
+	background: rgba(0, 0, 0, 0.9) !important;
+	border: 1px solid #000 !important;
+}
+
+.AdvancedElement_InputSuggestionsList li
+{
+	padding: 2px !important;
+	background: var(--CSUIButtonBGColor);
+	border: var(--CSUIButtonBorder) !important;
+	font-family: var(--CSUIMonoFF) !important;
+	color: var(--CSUIButtonTextColor) !important;
+	font-size: var(--CSUISmallFontSize) !important;
+}
+
+#ModInstallerPromoModule ul li a
+{
+	padding: 10px !important;
+	background: var(--CSUIDBGColor) !important;
+	border: 1px solid var(--CSUIPurpleColor) !important;
+	font-family: var(--CSUIHFF) !important;
+}
+
+.RichText h1 .IndexNumber,
+.RichText h2 .IndexNumber,
+.RichText h3 .IndexNumber,
+.RichText h4 .IndexNumber,
+.RichText h5 .IndexNumber,
+.RichText h6 .IndexNumber,
+.RichText .TableOfContents ul li .IndexNumber
+{font-weight: bold !important; color: var(--CSUIGreyColor) !important;}
+
+.MainForm fieldset#LicenseChecklist #ChecklistWrapper ul li span,
+.MainForm fieldset#LicenseChecklist #ChecklistWrapper ul li select
+{font-size: var(--CSUIFontSize);}
+
+.Content .DefinitionListEntries ul,
+#ProfileWysiwygEditor .InputWrapper #AvailableModules,
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row
+{background: var(--CSUIULListBGColor) !important; border: var(--CSUIULListBorder) !important;}
+
+#SubmissionsListAdvancedListSettingsModule .RecentGames li,
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li
+{padding: 5px; background: var(--CSUIDBGColor); border: var(--CSUIDBorder); margin: 3px; transition-duration: 0.15s !important;}
+
+.MainForm .InputsWrapper .InputHasError .InputHelp,
+.MainForm .InputsWrapper .InputHasError .InputError,
+.MainForm .InputsWrapper .InputHasError .InputWrapper
+{border-left: 5px solid var(--CSUIRedColor);}
+
+#HistoryListModule .Content .Changes li .NewVersion,
+#HistoryListModule .Content .Changes li .PreviousVersion
+{margin-right: 5px;}
+
+#TopGamesModule .Content .GamesList li a .Banner,
+#GamesListModule record .Icon,
+#SectionExplanationsModule #SectionAreas>li .Sections li spriteIcon,
+#NewBexGamesModule li,
+#GamesListModule .Content>ul>li .Preview,
+.PostsListModule .Posts>li .PostReplies .PostsListModule,
+.lg-toolbar .lg-icon,
+.RichText .Spoiler
+{transition-duration: var(--CSUIDTransition) !important;}
+
+html.Member_Submissions_Todo #SubmissionsListModule .Identifiers.Status_Complete>span,
+#TodosModule .Identifiers.Status_Complete>span
+{color: var(--CSUIGreenColor) !important;}
+
+.Editor .WysiwygPalettes .UsernameInserter ul li:hover,
+.Editor .WysiwygPalettes .BitpitFileInserter ul li:hover
+{outline: 2px dotted var(--CSUIPurpleColor) !important;}
+
+select optgroup,
+.SelectLike optgroup
+{color: var(--CSUIBlueColor);}
+
+option,
+.OptionLike
+{background: var(--CSUIDBGColor) !important;}
+
+.Modal .Contents > module > .Description,
+.Modal .Contents > module > .LogMessages
+{margin-right: 0;}
+
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a
+{margin: 5px; padding: 10px; background: rgba(17, 17, 17, 0.5); border: var(--CSUIDBorder);}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options .Selected
+{color: var(--CSUIWhiteColor) !important; background: #616161 !important; border: 2px solid var(--CSUIGreenColor) !important;}
+
+.AdvancedListSettingsModule>.Content .ActiveSortsAndFilters toggle
+{background: var(--CSUIPanesCardBGColor); padding: 5px; border: 1px solid rgba(156, 204, 101, 0.5); color: var(--CSUIGreenColor);}
+
+.AdvancedListSettingsModule>.Content .Presets ul li
+{background: var(--CSUIPanesCardBGColor); padding: 5px; border: 1px solid rgba(128, 203, 196, 0.5);}
+
+#SubmissionsListAdvancedListSettingsModule .SelectedGames:empty:after
+{color: var(--CSUIRedColor); font-size: var(--CSUISmallFontSize);}
+
+#ContentGrid.HiddenColumnMode.md row>column.md-h
+{border: 2px solid #000; background: #101010cc;}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li itemCount
+{color: var(--CSUIGreyColor); font-size: var(--CSUISmallFontSize); font-family: var(--CSUIMonoFF);}
+
+.Editor.DragInProgress .ViewModes .Wysiwyg:after
+{font-size: 12px; background: var(--CSUIPurpleColor); border-radius: 0 !important; padding: 5px; color: #000;}
+
+fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover
+{background: var(--CSUIButtonBGHoverColor) !important; border: var(--CSUIButtonBorderHover) !important;}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li itemCount.RecentlyAddedItems
+{color: var(--CSUIGreenColor) !important; font-weight: bold !important; font-size: 14px !important;}
+
+#SectionExplanationsModule #SectionAreas>li .Sections li itemCount.RecentlyUpdatedItems
+{color: var(--CSUIBlueColor) !important; font-weight: bold !important; font-size: 14px !important;}
+
+.Editor .ViewModes .Wysiwyg .RichText .HoveredElement,
+.Editor .WysiwygPalettes .CannedResponseInserter ul li:hover
+{outline: 2px dotted var(--CSUIPurpleColor);}
+
+.meter1 {color: var(--CSUIRedColor) !important;}
+.meter2 {color: var(--CSUIOrangeColor) !important;}
+.meter3 {color: var(--CSUIYellowColor) !important;}
+.meter4 {color: var(--CSUIGreenColor) !important;}
+.meter5 {color: var(--CSUIBlueColor) !important;}
+.Content #AvailableDefinitionListEntries li {color: var(--CSUIRedColor) !important;}
+.Content #EnabledDefinitionListEntries li {color: var(--CSUIGreenColor) !important;}
+#ProfileTemplate textarea {color: var(--CSUIGreenColor);}
+#UnlocksEditFormModule .Content .InputsWrapper .InputWrapper .SalePromo {color: var(--CSUIYellowColor);}
+#SectionAddFormSelectorModule .Content #SelectGameStep .GamesList .LetterGroup {color: var(--CSUIBlueColor); font-size: var(--CSUILargeFontSize);}
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row column {background: #101010e6 !important; border: 1px solid #000 !important;}
+.MainForm .InputsWrapper fieldset>legend:after {height: 2px; margin-top: 3px; width: 100%; background: #fff;}
+#ManagersListModule ul li .SeniorPermitHolder {color: var(--CSUIRedColor);}
+#GamesNavModule pane header .SubscriptionBenefitsNotice wrapper placeholder {border: 2px dashed var(--CSUIPurpleColor); border-radius: 100% !important;}
+#TopGamesModule .Content .GameTypeFilters li {padding: 5px;}
+#TopGamesModule .Content .GameTypeFilters {font-size: var(--CSUILargeFontSize) !important; font-family: var(--CSUIHFF) !important;}
+.RecipientGroups .RecipientGroup .MasterSwitch .CustomOptionsToggle {color: var(--CSUILinkColor) !important;}
+.RecipientGroups .RecipientGroup .MasterSwitch .CustomOptionsToggle:hover {color: var(--CSUILinkHoverColor) !important;}
+#EmbeddableImagesListModule li {padding: 10px; margin: 10px 0 10px 0;}
+.AdvancedListSettingsModule>.Content .OrderAndSortControls fieldset legend {font-size: var(--CSUISmallFontSize); color: var(--CSUILinkColor);}
+itemCount {font-family: var(--CSUIMonoFont) !important; color: var(--CSUIGreenColor) !important;}
+#RulesModule ol li {font-size: var(--CSUISmallFontSize); color: var(--CSUIRedColor);}
+#SearchSuggesterModule .GeneralSuggestions li {color: var(--CSUIBlueColor);}
+#OverviewModule .Content .StatBlock dl dd.Type_number {font-family: var(--CSUIMonoFF);}
+.Editor .ViewModes .Wysiwyg .RichText .SelectedElement {outline: 2px solid var(--CSUIPurpleColor);}
+p.NoRecordsFound {color: var(--CSUIRedColor);}
+#EmbeddableImagesListModule li input {font-size: var(--CSUISmallFontSize) !important; color: var(--CSUIGreenColor);}
+#EmbeddableImagesListModule li label {font-size: var(--CSUISmallFontSize);}
+#Recipients textarea {color: var(--CSUIGreenColor) !important; font-family: var(--CSUIMonoFF) !important;}
+#CategoriesListModule record .Icon {opacity: 1; margin: 0 10px 0 5px;}
+#RulesModule ol li {font-size: var(--CSUISmallFontSize) !important; color: var(--CSUIWhiteColor) !important; margin: 10px 3px 10px 3px !important;}
+.QuestionPreview blockquote {padding: 10px; font-size: var(--CSUISmallFontSize); color: var(--CSUITextColor); background: rgba(0, 0, 0, 0.3) !important;}
+#Member_Submissions_Update #SubmissionsListModule .UpdateHeader {font-size: var(--CSUIH3FontSize); margin: 5px;}
+p#Countdown {color: var(--CSUIRedColor) !important; font-size: var(--CSUIH4FontSize);}
+#DiscussionSectionsSummaryModule li:hover {opacity: 1;}
+#DiscussionSectionsSummaryModule li.ActiveSection {background: var(--CSUIButtonSelectedBGColor) !important; opacity: 1;}
+#RatingsSummaryModule #OverallRating itemcount {font-size: 30px;}
+progress {border: 1px solid rgba(156, 204, 101, 0.3);}
+.RangeSlider span {font-family: var(--CSUIMonoFF) !important; color: var(--CSUIGreenColor) !important;}
+html.Member_Submissions_Flag #SubmissionsListModule .Preview ul, #FlagsModule .Preview ul{color: var(--CSUIRedColor) !important;}
+#WaveformVisualizerModule .Content #SliderWrapper {padding: 5px; background: var(--CSUIPanesCardBGColor); border: 1px solid rgba(79, 195, 247, 0.5);}
+#ModlogListModule .Action.Severity_positive span {color: var(--CSUIGreenColor) !important;}
+#ModlogListModule .Action.Severity_negative span {color: var(--CSUIRedColor) !important;}
+#ItemProfileModule article.IsUnavailable {text-decoration: line-through; color: var(--CSUIGreyColor);}
+img.PreviewImage {box-shadow: none !important; border: 1px solid #000 !important;}
+#SearchSuggesterModule .GameIndexes {background: var(--CSUIDBGColor) !important; border: var(--CSUIDBorder) !important;}
+#GamesNavModule pane article .TrendingGames li span small {color: var(--CSUIGreyColor);}
+rank {font-family: var(--CSUIMonoFF) !important;}
+#OverviewModule .Content .StatBlock dl dd .ChangeResult_positive {color: var(--CSUIGreenColor);}
+html.Member_Submissions_Todo #SubmissionsListModule recordCell, #TodosModule recordCell {text-align: left;}
+#PortfolioEntriesListModule recordcell.Identifiers a {font-size: var(--CSUIH3FontSize);}
+.Editor.DragInProgress .ViewModes .Wysiwyg {outline: 2px dashed var(--CSUIPurpleColor);}
+.AdvancedElement_InputSuggestionsList:hover{background: rgba(0, 0, 0, 0.9) !important;}
+#ProsAndConsModule {font-size: 18px;}
+.ThreadPreview blockquote {font-size: var(--CSUISmallFontSize); background: rgba(0, 0, 0, 0.3); color: var(--CSUIWhiteColor);}
+dd {color: var(--CSUIWhiteColor);}
+.RichText .Spoiler {text-shadow: 0.125em 0 12px var(--CSUIPurpleColor),-1px 0 12px var(--CSUIPurpleColor);}
+
+// LISTS
+
+.MainForm fieldset .UploadedFiles,
+.Editor .WysiwygPalettes .UsernameInserter ul,
+.MainForm fieldset#EmbeddedMedia ul,
+.MainForm fieldset#Attributes .SelectedAttributes > div,
+.MainForm fieldset#Attributes .AvailableAttributes > div,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .AuthorsList,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .BulkAddAuthorInput,
+.MainForm fieldset#AlternateFileSources ul,
+.MainForm fieldset#Requirements ul,
+.Editor .WysiwygPalettes .ImageInserter ul,
+.MainForm fieldset#Attributes .AvailableAttributes ul .AttributesGroup,
+#NavOptionsNavModule pane #NavOptionsUiThemeList,
+.WysiwygList ul,
+fieldset#OfficialAttributes wrapper .SectionsMenu,
+fieldset#OfficialAttributes wrapper .Sections,
+fieldset#OfficialAttributes wrapper .Sections .Section ul,
+#Recipients .RecipientGroup>div ul,
+#EmbeddableImagesListModule li,
+.MainForm fieldset#ChangeLog ul,
+.Editor .WysiwygPalettes .BitpitFileInserter ul
+.Editor .WysiwygPalettes .CannedResponseInserter ul
+{background: var(--CSUIULListBGColor) !important; border: var(--CSUIULListBorder) !important;}
+
+.MainForm fieldset .UploadedFiles li,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li,
+.MainForm fieldset#AlternateFileSources ul li,
+.MainForm fieldset#EmbeddedMedia ul li,
+.MainForm fieldset#Requirements ul li,
+#NavOptionsNavModule pane #NavOptionsUiThemeList li,
+.WysiwygList ul li,
+.MainForm fieldset#Attributes .SelectedAttributes ul li,
+fieldset#OfficialAttributes wrapper .SectionsMenu li,
+fieldset#OfficialAttributes wrapper .Sections .Section ul li,
+.Editor .WysiwygPalettes .UsernameInserter ul li,
+#Recipients .RecipientGroup>div ul li,
+#EmbeddableImagesListModule li .Codes,
+.MainForm fieldset#ChangeLog ul li,
+.Editor .WysiwygPalettes .BitpitFileInserter ul li
+.Editor .WysiwygPalettes .CannedResponseInserter ul li
+{background: var(--CSUIULListLIBGColor) !important; border: var(--CSUIULListLIBorder) !important;}
+
+.Content #EnabledDefinitionListEntries li,
+.Content #AvailableDefinitionListEntries li,
+#ProfileWysiwygEditor .InputWrapper #AvailableModules .TemplateModule,
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row column placeholder,
+.Editor .WysiwygPalettes>palette
+{background: var(--CSUIULListLIBGColor) !important; border: var(--CSUIULListLIBorder) !important;}
+
+#SettingsPortalModule ul li
+{margin: 5px !important; padding: 10px; background: rgba(17, 17, 17, 0.5); border: var(--CSUIDBorder);}
+
+ol,
+ul,
+menu,
+li {list-style-position: inside;}
+
+article>ul {padding: 5px;}
+ul.Posts {text-align: left;}
+#Recipients .RecipientGroup>div ul li {margin: 5px !important; padding: 5px !important;}
+#ParticipantsListModule .Entries ul li {font-size: var(--CSUISmallFontSize) !important; max-width: 125px !important;}
+li.OptionLike:hover {background: #424242 !important;}
+
+// BANANAEXCHANGE
+
+#BexPromoModule .Content>a .MoneyCostOverlay,
+#BexPromoModule .Content>a .PointCostOverlay,
+#NewBexGamesModule li a overlay,
+#GamesListModule .Content>ul>li .Preview .GameName
+{background: rgba(0, 0, 0, 0.8); font-size: var(--CSUISmallFontSize) !important;}
+
+#BexPromoModule .Content>a .PointCostOverlay,
+#NewBexGamesModule li a overlay.PointsCost,
+#GamesListModule .Content>ul>li .Preview .PointCost
+{color: var(--CSUIGreenColor) !important;}
+
+#AvailableKeysListListToolbarModule button span
+{font-size: var(--CSUIFontSize) !important; color: var(--CSUIGreenColor) !important;}
+
+#NewBexGamesModule li a overlay.Availability {color: var(--CSUIRedColor) !important;}
+
+// FILTERS
+
+.AdvancedListSettingsModule>.Content .Presets ul li:last-child {margin-bottom: auto;}
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected {background: var(--CSUIDBGColor); padding: 5px; border: 1px solid rgba(156,204,101,0.5);}
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected a {color: var(--CSUIGreenColor) !important;}
+.AdvancedListSettingsModule>.Content .Presets ul li.Selected a:hover {color: var(--CSUILinkHoverColor) !important;}
+
+// AVATAR
+
+.Avatar.Online:after,
+.MemberLink.Online:after {box-shadow: none; border: 1px solid #000000; background: var(--CSUIGreenColor);}
+
+.Avatar.HasClearanceLevel {box-shadow: none; border: 2px solid var(--CSUIRedColor);}
+.Avatar.IsRipeSupporter {background: linear-gradient(to bottom, #e84e40, #FFEB3B, #9CCC65, #4FC3F7, #BA68C8); padding: 5px !important;}
+
+// HOME PAGE GAMES TOGGLE MODULE
+
+.AdvancedElement_Switch.List ul li:hover,
+.AdvancedElement_Switch.List ul li.Selected {font-weight: bold !important; color: var(--CSUIGreenColor) !important;}
+
+.AdvancedElement_Switch.List span {margin: 0 5px;}
+.AdvancedElement_Switch.List ul li {color: var(--CSUIGreyColor) !important;}
+
+// TOOLTIP
+
+.tooltipster-base .Title,
+body>.BananaTip .Title
+{padding: 5px; color: var(--CSUIWhiteColor); font-size: small; background: linear-gradient(45deg, #9e9e9e4d, transparent);}
+
+.tooltipster-sidetip .tooltipster-box,
+body>.BananaTip,
+#BuddiesNavModule pane article #BuddyChatInitiators.Active li:hover span
+{background: rgba(17, 17, 17, 0.9); border: 1px solid var(--CSUIGreyColor);}
+
+.tooltipster-base .Title:after,
+body > .BananaTip .Title:after {display: none;}
+
+.HelpBeaconTooltip {color: var(--CSUIGreenColor);}
+.QuickDlTooltip li small {font-size: var(--CSUISmallFontSize); margin: 5px 0px 0px 0px; color: var(--CSUIGreyColor);}
+
+// FORMS
+
+#EditFormModule .MainForm,
+#AddFormModule .MainForm {margin: auto;}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover
+{color: var(--CSUILinkHoverColor); background: #424242 !important; border: 1px solid var(--CSUIGreenColor);}
+
+.MainForm {max-width: 1000px; padding: 10px; background: rgba(0, 0, 0, 0.7); border: 1px solid #000000;}
+.MainForm .InputsWrapper fieldset>legend .Title {font-size: var(--CSUIH4FontSize); color: var(--CSUIHColor);}
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options {background: var(--CSUIDBGColor) !important;}
+
+// INPUT
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=num]:focus,
+input[type=tel]:focus,
+select:focus,
+.SelectLike:focus,
+option:focus,
+.OptionLike:focus,
+optgroup:focus,
+textarea:focus,
+.TextareaLike:focus
+{background: var(--CSUITextAreaBGColor) !important; border: var(--CSUITextAreaHoverBorder) !important;}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=password]:hover,
+input[type=number]:hover,
+input[type=email]:hover,
+input[type=num]:hover,
+input[type=tel]:hover,
+select:hover,
+.SelectLike:hover,
+option:hover,
+.OptionLike:hover,
+optgroup:hover,
+textarea:hover,
+.TextareaLike:hover
+{background: var(--CSUITextAreaBGColor) !important; border: var(--CSUITextAreaHoverBorder) !important;}
+
+input[type=text],
+input[type=password],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=num],
+input[type=tel],
+select,
+.SelectLike,
+optgroup,
+textarea,
+.TextareaLike
+{border: var(--CSUITextAreaBorder) !important; background: var(--CSUITextAreaBGColor) !important;}
+
+input#GameFinder {color: var(--CSUIWhiteColor);}
+
+// EDITOR
+
+.Modal,
+#GamesListModule .Content .SteamInfoRollout {background: rgba(0, 0, 0, 0.4) !important; border: none !important;}
+
+.Editor .WysiwygPalettes .ImageInserter ul:empty:after,
+.Editor .WysiwygPalettes .ElementConfig.Active:empty:after
+{color: var(--CSUIRedColor) !important;}
+
+.Editor .ViewModes .Wysiwyg .RichText,
+.Editor .ViewModes .Source textarea,
+.Editor .ViewModes .Backup .RichText
+{background: var(--CSUITextAreaBGColor); border: var(--CSUITextAreaBorder); font-size: var(--CSUIFontSize);}
+
+.Editor .Toolbars>div {margin: 0 0 10px 0;}
+.Editor .ViewModes .Wysiwyg .RichText {font-family: var(--CSUITextFF); color: var(--CSUIWhiteColor);}
+.Editor .ViewModes .Source textarea {font-family: var(--CSUIMonoFF); color: var(--CSUIGreenColor); font-size: 12px !important;}
+.Editor .ViewModes .Backup .RichText {box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5); color: var(--CSUIGreyColor);}
+.Editor .ViewModes .Wysiwyg .RichText:focus {background: var(--CSUITextAreaBGColor); border: var(--CSUITextAreaHoverBorder);}
+.Editor .ViewModes .Wysiwyg .RichText:hover {background: var(--CSUITextAreaBGColor); border: var(--CSUITextAreaHoverBorder);}
+.Editor .ViewModeSwitchers span.Wysiwyg {color: var(--CSUIWhiteColor); background: rgba(186, 104, 200, 0.5); border: 1px solid var(--CSUIPurpleColor);}
+.Editor .ViewModeSwitchers span.Source {color: var(--CSUIWhiteColor); background: rgba(156, 204, 101, 0.5); border: 1px solid var(--CSUIGreenColor);}
+.Editor .ViewModeSwitchers span.Backup {color: var(--CSUIWhiteColor); background: rgba(79, 195, 247, 0.5); border: 1px solid var(--CSUIBlueColor);}
+.Editor .ViewModeSwitchers span {font-family: var(--CSUIMonoFF); font-size: 10px; opacity: 0.6;}
+.Editor .ViewModeSwitchers span.Active {opacity: 1;}
+.Editor .WysiwygPalettes {background: rgba(79, 195, 247, 0.05); border: 1px solid rgba(79, 195, 247, 0.3);}
+
+.Editor .WysiwygPalettes>h4
+{font-family: var(--CSUIMonoFF) !important; font-size: 10px !important; background: rgba(66, 66, 66, 0.7); opacity: 0.6;}

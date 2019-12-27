@@ -1,0 +1,134 @@
+/*
+	# Dark Theme (CSUI)
+
+	[DESCRIPTION]
+
+	A UI theme (custom CSS) for GameBanana website.
+
+	The UI theme is focused on changing the site-wide UI into a darker one (black), as well as tweaking almost all of the aspects of the site.
+	-----------------------------
+
+	[DETAILS]
+	
+	Browsers tested:
+	
+	* Google Chrome (version 79.0.3945.88 (Official Build) (64-bit))
+	* Mozilla Firefox (version 68.0 (64-bit))
+	* Opera (version 62.0.3331.72)
+
+	Date released: 2019-07-17
+	Last updated: 2019-12-27
+	Current version: 1.5.0
+
+	On my portfolio: http://danialzahid.ga/dark-theme-csui-
+	On GameBanana: https://gamebanana.com/scripts/10441
+	On GitHub: https://github.com/DanialZahid/Dark-Theme-CSUI-
+	-----------------------------
+
+	[AUTHORS]
+
+	* Danial Zahid [Code] (danialz@pm.me)
+
+	Special Thanks to:
+
+	* tom [QuickDL material icon class addition]
+	* Ring-A-Ding Rampage [Helped with a few issues]
+	* Daniil Silantev [Background image]
+	-----------------------------
+
+	[CHANGELOG]
+
+	## Version 1.5.0 [2019-12-27]
+
+	* Updated the code to match with the Dark Theme (CSUI) [Frost] theme's code.
+
+	## Version 1.4.0 [2019-11-21]
+
+	* [Changed] Transition duration for most of the elements has been lowered (to 0.15s).
+	* [Removed] Low opacity from table cells.
+	* [Revamped] SubNavigator and form tabs.
+	* [Revamped] Floating header.
+	* [Tweaked] Features module on the home page.
+	* [Tweaked] Features module on the game section.
+	* [Tweaked] Advanced elements tab on the home page (Trending, Classics, and New games toggle module tabs).
+	* [Tweaked] Manage pane.
+	* [Tweaked] Table header and cell border.
+	* [Tweaked] Style of certain triggered elements to match with the rest of the theme.
+	* [Miscellaneous] Removed the redundant code.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.3.0 [2019-11-12]
+
+	* [Fixed] Opacity flickering issue on records table.
+	* [Removed] Low opacity from the records.
+	* [Revamped] Buttons UI.
+	* [Tweaked] Member profile > Updates section records.
+	* [Tweaked] Member profile > Game Keys section records.
+	* [Tweaked] Submission profile > History section.
+	* [Tweaked] Records table header and cells border.
+	* [Tweaked] Center aligned most of the buttons to match with the rest of the theme.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.2.0 [2019-11-04]
+
+	* [Fixed] Next and previous button icons in the lightbox.
+	* [Fixed] Attributes module links color to match with the default UI link color.
+	* [Fixed] Uneven margin on the presets in the filters area.
+	* [Fixed] Scripts section code viewer UI.
+	* [Added] Blue color UI to the stamps form.
+	* [Changed] Main background color with an image.
+	* [Changed] Add, edit, and reply forms UI color from blue to green. Also, reduced their color alpha a bit.
+	* [Changed] Avatar border style (for members with clearance level) to solid.
+	* [Changed] Top and side navigator background color as well as their panes color to be more dark.
+	* [Changed] Lightbox icon colors from teal to indigo.
+	* [Changed] Several module buttons position aligned to center to match with the rest of the UI style.
+	* [Changed] Add and edit forms as well as their tabs aligned to center.
+	* [Revamped] Modules UI.
+	* [Revamped] Subtitle.
+	* [Revamped] Record UI in various sections/areas.
+	* [Tweaked] Member profile > Stamps Log and Posts sections.
+	* [Tweaked] Updates module records UI.
+	* [Tweaked] Posts (comments) list.
+	* [Miscellaneous] A couple of other tweaks and bug fixes.
+
+	## Version 1.1.0 [2019-07-24]
+
+	* [Fixed] SubjectShaper style is no longer overridden by the theme.
+	* [Fixed] Posts are now left-aligned in the Questions section.
+	* [Tweaked] Blockquote styling.
+	* [Tweaked] Messages styling in the Alerts and the Activity panes.
+	* [Miscellaneous] A few other minor changes.
+
+	## Version 1.0.0 [2019-07-17]
+
+	* Initial release.
+
+	[LICENSE]
+
+	You are allowed to install this UI theme.
+
+	You are not allowed to:
+
+	1. Redistribute this UI theme on the Internet.
+	2. Use this UI theme in your own work (either, published or not).
+	3. Modify and publish the modified version of this UI theme on the Internet.
+	4. Take or use any components (either, modified or not) of this UI theme and use in your own work (either, published or not).
+	5. Take or use any components (either, modified or not) of this UI theme and publish on the Internet.
+	6. Use this UI theme or its components for commercial purposes.
+	-----------------------------
+*/
+
+@import "../styles/core.scss";
+@import "../styles/navs.scss";
+@import "../styles/modules.scss";
+@import "../styles/buttons.scss";
+@import "../styles/records-tables.scss";
+@import "../styles/posts.scss";
+@import "../styles/statelabels.scss";
+@import "../styles/font-icons.scss";
+@import "../styles/lightbox.scss";
+@import "../styles/features-slider.scss";
+@import "../styles/code.scss";
+@import "../styles/misc01.scss";
+@import "../styles/misc02.scss";
+@import "../styles/variables.scss";

@@ -1,0 +1,34 @@
+#FeaturesSliderModule .Slides .Slide .Info .Name small
+{
+	background: var(--CSUIPurpleColor) !important;
+	color: var(--CSUIWhiteColor) !important;
+	padding: 5px !important;
+	font-size: var(--CSUIH4FontSize) !important;
+}
+
+#FeaturesSliderModule #SlideShortcuts .Slide.Selected {border-top-color: var(--CSUIPurpleColor) !important;}
+
+#HeadlineWrapper overlay h1 {font-size: 40px; text-shadow: 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000;}
+#HeadlineWrapper overlay h2 {font-size: 20px !important; text-shadow: 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000 !important;}
+
+#FeaturesSliderModule .Slides .Slide .Info .Name h4,
+#FeaturesSliderModule .Slides .Slide .FeatureType
+{background: var(--CSUIPurpleColor) !important; color: var(--CSUIWhiteColor) !important; font-size: 24px !important; padding: 0 10px !important;}
+
+// SUBMISSION NAME
+
+#FeaturesSliderModule .Slides .ExpandedSlide .Info .Name h4,
+#FeaturesSliderModule #ExpandedSlide .Info .Name h4
+{background: var(--CSUIPurpleColor) !important; color: var(--CSUIWhiteColor) !important; padding: 0 5px !important; font-size: x-large !important;}
+
+// GAME AND SECTION INFORMATION
+
+#FeaturesSliderModule .Slides .ExpandedSlide .Info .Name small,
+#FeaturesSliderModule #ExpandedSlide .Info .Name small
+{background: var(--CSUIDBGColor) !important; color: var(--CSUIWhiteColor) !important; font-size: large !important; padding: 5px !important;}
+
+// FEATURE TYPE
+
+#FeaturesSliderModule .Slides .ExpandedSlide .FeatureType,
+#FeaturesSliderModule #ExpandedSlide .FeatureType
+{background: var(--CSUIDBGColor) !important; color: var(--CSUIWhiteColor); padding: 10px !important;}
