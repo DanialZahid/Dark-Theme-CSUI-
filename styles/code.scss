@@ -1,0 +1,45 @@
+#ItemProfileModule .CodeWithLineNumbers
+{
+	font-size: var(--CSUISmallFontSize) !important;
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+	font-family: var(--CSUIMonoFF) !important
+}
+
+#CodeViewerModule .CodeWithLineNumbers
+{
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+	font-family: var(--CSUIMonoFF) !important;
+}
+
+pre,
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper,
+#ArchiveTreesModule .Content>ul>li .ArchiveTreeWrapper
+{
+	color: var(--CSUIGreenColor) !important;
+	border: 2px solid rgba(156, 204, 101, 0.2) !important;
+	box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+	background: var(--CSUITextAreaBGColor) !important;
+	font-family: var(--CSUIMonoFF) !important;
+}
+
+#CodeViewerModule .CodeWithLineNumbers .Code
+{border-left: 1px solid var(--CSUIGreyColor) !important; width: 100%; text-align: left; font-size: var(--CSUISmallFontSize) !important;}
+
+#ItemProfileModule .CodeWithLineNumbers .Code {border-left: 1px solid rgba(156, 204, 101, 0.2) !important; color: var(--CSUITextColor) !important;}
+.ScriptPreview .LineNumbers {top: 0;}
+.ScriptPreview code {background: rgba(17, 17, 17, 0.5); font-size: x-small !important;}
+code {font-family: var(--CSUIMonoFF) !important; color: var(--CSUIGreenColor) !important;}
+.LineNumbers {color: var(--CSUIGreyColor) !important;}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper del,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper del
+{color: var(--CSUIRedColor) !important;}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper ins,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper ins
+{color: var(--CSUIBlueColor) !important;}

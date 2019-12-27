@@ -1,0 +1,123 @@
+stateLabel
+{
+	padding: 5px !important;
+	background: #111 !important;
+	border: 1px solid #616161 !important;
+	font-family: "Doppio One" !important;
+	font-size: smaller !important;
+	color: var(--CSUIWhiteColor);
+}
+
+stateLabel.IsRipeRelated,
+stateLabel.GameKeyGrade_premium,
+stateLabel.IsRipeSupporter
+{
+	background: linear-gradient(to left, #e84e40, #FFEB3B, #9CCC65, #4FC3F7, #BA68C8) !important;
+	text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000;
+	color: var(--CSUIWhiteColor) !important;
+	font-weight: bold !important;
+	border: 2px solid var(--CSUITealColor) !important;
+}
+
+stateLabel.IdeaResolution_addressed,
+stateLabel.RequestResolution_delivered,
+stateLabel[data-_sThreadState="Done"],
+stateLabel.ContestState_Running,
+#BuddiesListModule recordCell.Status stateLabel.Online,
+.AvatarTooltip .Column .OnlineStatus stateLabel.Online,
+stateLabel.QuestionState_Solved,
+.QuestionPreview blockquote.Solved
+{color: var(--CSUIGreenColor) !important;}
+
+stateLabel.SupportResolution_closed,
+stateLabel.RequestResolution_cancelled,
+stateLabel.RequestResolution_expired,
+stateLabel.RequestResolution_duplicate,
+stateLabel.IdeaResolution_duplicate,
+stateLabel.ContestState_Ended,
+stateLabel[data-_sThreadState="Closed"],
+#BuddiesListModule recordCell.Status stateLabel.Offline,
+.AvatarTooltip .Column .OnlineStatus stateLabel.Offline
+{color: var(--CSUIGreyColor) !important;}
+
+.PostsListModule .Posts>li .PostHeader .PostLabels stateLabel.IsSubmitter,
+stateLabel.QuestionState_Answered, 
+QuestionPreview blockquote.Answered
+{color: var(--CSUIBlueColor) !important;}
+
+stateLabel.BugResolution_new,
+stateLabel[data-_sThreadState="Unanswered"],
+stateLabel.RequestResolution_open,
+stateLabel.IdeaResolution_unknown
+{color: var(--CSUIBlueColor) !important;}
+
+stateLabel.IsRedistributor,
+stateLabel.IsPending,
+stateLabel[data-_sTutorialDifficulty="Intermediate"],
+stateLabel.RequestResolution_in_delivery,
+stateLabel.BugPriority_high,
+stateLabel.IsFlagged,
+stateLabel.IsPending
+{color: var(--CSUIOrangeColor) !important;}
+
+stateLabel.QuestionState_Unanswered, 
+QuestionPreview blockquote.Unanswered
+{color: var(--CSUIRedColor) !important;}
+
+stateLabel.SupportResolution_feedback,
+stateLabel.BugResolution_feedback
+{color: var(--CSUIPurpleColor) !important;}
+
+stateLabel.IdeaResolution_wont_address,
+stateLabel.IdeaResolution_cannot_address
+{color: var(--CSUIRedColor) !important;}
+
+.AvatarTooltip .Column .StatusLevels stateLabel:not(.IsRipeSupporter) {background: #111;}
+.AvatarTooltip .Column .StatusLevels stateLabel:not(.IsRipeSupporter).HasClearanceLevel {color: var(--CSUIRedColor) !important;}
+.MainForm .InputsWrapper fieldset>legend stateLabel.RequiredInput {color: var(--CSUIRedColor) !important;}
+.MainForm .InputsWrapper fieldset>legend stateLabel.RecommendedInput {color: var(--CSUIGreenColor) !important;}
+stateLabel.IsNsfw {color: var(--CSUIRedColor) !important;}
+stateLabel.PermitLevel_junior{color: var(--CSUIGreenColor) !important;}
+stateLabel.PermitLevel_senior {color: var(--CSUIRedColor) !important;}
+stateLabel.BugResolution_confirmed {color: var(--CSUIRedColor) !important;}
+stateLabel.IdeaResolution_will_address {color: var(--CSUIBlueColor) !important;}
+stateLabel.FlagState_0 {color: var(--CSUIGreenColor);}
+stateLabel.FlagState_3 {color: var(--CSUIRedColor);}
+stateLabel.TodoPriority_3 {color: var(--CSUIRedColor);}
+stateLabel.TodoPriority_1 {color: var(--CSUIGreyColor);}
+stateLabel.IsCreator {color: var(--CSUIGreenColor);}
+stateLabel.IdeaResolution_unknown {color: var(--CSUIGreyColor);}
+stateLabel[data-_sThreadState="Hot"] {color: var(--CSUIRedColor);}
+stateLabel[data-_sTutorialDifficulty="Beginner"] {color: var(--CSUIGreenColor);}
+stateLabel[data-_sTutorialDifficulty="Advanced"] {color: var(--CSUIRedColor);}
+stateLabel.RequestResolution_undeliverable {color: var(--CSUIRedColor);}
+
+// UPDATE TYPE
+
+stateLabel[data-_sUpdateType="Addition"],
+stateLabel[data-_sUpdateType="Suggestion"],
+stateLabel[data-_sUpdateType="Feature"]
+{color: var(--CSUIBlueColor);}
+
+stateLabel[data-_sUpdateType="Optimization"],
+stateLabel[data-_sUpdateType="Tweak"],
+stateLabel[data-_sUpdateType="Improvement"]
+{color: var(--CSUIPurpleColor);}
+
+stateLabel[data-_sUpdateType="Removal"],
+stateLabel[data-_sUpdateType="Refactor"]
+{color: var(--CSUIGreyColor);}
+
+stateLabel[data-_sUpdateType="Overhaul"],
+stateLabel[data-_sUpdateType="BugFix"]
+{color: var(--CSUIRedColor);}
+
+stateLabel[data-_sUpdateType="Adjustment"],
+stateLabel[data-_sUpdateType="Amendment"]
+{color: var(--CSUIGreenColor);}
+
+// BUG PRIORITY
+
+stateLabel.BugPriority_low {color: var(--CSUIGreenColor);}
+stateLabel.BugPriority_medium {color: var(--CSUIYellowColor) !important;}
+stateLabel.BugPriority_emergency {color: var(--CSUIRedColor) !important;}
