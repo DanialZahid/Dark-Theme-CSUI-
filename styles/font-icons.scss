@@ -1,0 +1,65 @@
+matIcon
+{
+	opacity: 1;
+	text-shadow: 1px 1px 1px #000, 1px 1px 1px #000 !important;
+	font-size: 15px !important;
+	color: var(--CSUIPurpleColor);
+	vertical-align: middle !important;
+}
+
+statwrapper.Progress maticon,
+#SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon:hover,
+.RecommendedInput matIcon,
+statwrapper.LastBoostDate maticon,
+statwrapper.Bounty maticon,
+statwrapper.Bounty,
+statwrapper.LastActivityDate maticon,
+.Modal .CloseModal:hover,
+#MasterLog log .CloseButton:hover,
+.PageModule > .RelatedLinksButton:hover,
+#SectionExplanationsModule #SectionAreas > li .Sections li matIcon:hover
+{color: var(--CSUImatIconHoverColor) !important;}
+
+#SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon,
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li matIcon,
+#ThanksToggleModule .Content #ShowThanksOptionsToggle.ModalLauncher
+{color: var(--CSUImatIconColor) !important;}
+
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li:hover matIcon,
+.RequiredInput matIcon, .RequiredInputsCount maticon
+{color: var(--CSUIRedColor) !important;}
+
+#SectionExplanationsModule #SectionAreas > li .Sections li matIcon
+{color: var(--CSUImatIconColor); transition-duration: var(--CSUIDTransition) !important;}
+
+statwrapper.Rank maticon,
+.RecommendedInputsCount maticon
+{color: var(--CSUIGreenColor) !important;}
+
+spriteIcon.RightArrowIcon,
+.SpriteIcon.RightArrowIcon
+{opacity: 1;}
+
+.Modal .CloseModal,
+#MasterLog log .CloseButton
+{color: var(--CSUImatIconColor); font-size: x-large !important;}
+
+html.Member_Submissions_Todo #SubmissionsListModule .Identifiers>matIcon,
+#TodosModule .Identifiers>matIcon
+{color: var(--CSUIPurpleColor) !important;}
+
+.Modal .CloseModal {top: 5px; right: 5px; padding: 5px;}
+maticon.WasFeatured {color: var(--CSUIYellowColor) !important;}
+maticon.RemoveToggleButton.RedColor {opacity: 0.8;}
+maticon.RemoveToggleButton.RedColor:hover {opacity: 1;}
+#ToggleHiddenColumnModeButton.Active matIcon {color: var(--CSUIGreenColor); border-left-color: var(--CSUIGreenColor);}
+#ToggleHiddenColumnModeButton.Selected matIcon {color: var(--CSUIRedColor); border-left-color: var(--CSUIRedColor);}
+#ToggleHiddenColumnModeButton matIcon {background: var(--CSUIDBGColor);}
+#SearchNavModule #SearchForm button:hover maticon {color: var(--CSUIGreenColor);}
+#SearchNavModule #SearchForm button maticon {color: var(--CSUITealColor);}
+.QuickDlIcon.PurpleColor {color: var(--CSUIGreenColor) !important; opacity: 0.8 !important;}
+.QuickDlIcon.PurpleColor:hover {opacity: 1 !important;}
+#SubmissionsListModule .OwnSubmission {color: var(--CSUIBlueColor) !important;}
+.PageModule > .RelatedLinksButton {color: var(--CSUIPurpleColor); top: 0; padding: 10px; font-size: large !important;}
+#ThanksToggleModule .Content #ShowThanksOptionsToggle.ModalLauncher:hover {color: var(--CSUImatIconHoverColor) !important; opacity: 1 !important;}
+.PostsListModule .Posts>li .PostLabels>.SolvedIcon_32 {top: 25px !important; right: 15px !important;}

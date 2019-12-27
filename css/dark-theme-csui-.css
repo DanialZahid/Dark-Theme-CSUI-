@@ -1,0 +1,2933 @@
+/*
+	# Dark Theme (CSUI)
+
+	[DESCRIPTION]
+
+	A UI theme (custom CSS) for GameBanana website.
+
+	The UI theme is focused on changing the site-wide UI into a darker one (black), as well as tweaking almost all of the aspects of the site.
+	-----------------------------
+
+	[DETAILS]
+	
+	Browsers tested:
+	
+	* Google Chrome (version 79.0.3945.88 (Official Build) (64-bit))
+	* Mozilla Firefox (version 68.0 (64-bit))
+	* Opera (version 62.0.3331.72)
+
+	Date released: 2019-07-17
+	Last updated: 2019-12-27
+	Current version: 1.5.0
+
+	On my portfolio: http://danialzahid.ga/dark-theme-csui-
+	On GitHub: https://github.com/DanialZahid/Dark-Theme-CSUI-
+	On GameBanana: https://gamebanana.com/scripts/10441
+	-----------------------------
+
+	[AUTHORS]
+
+	* Danial Zahid [Code] (danialz@pm.me)
+
+	Special thanks to:
+
+	* tom [QuickDL material icon class addition]
+	* Ring-A-Ding Rampage [Helped with a few issues]
+	* Willian Justen de Vasconcellos [Background image]
+	-----------------------------
+
+	[CHANGELOG]
+
+	## Version 1.5.0 [2019-12-27]
+
+	* Updated the code to match with the Dark Theme (CSUI) [Frost] theme's code.
+
+	## Version 1.4.0 [2019-11-21]
+
+	* [Changed] Transition duration for most of the elements has been lowered (to 0.15s).
+	* [Removed] Low opacity from table cells.
+	* [Revamped] SubNavigator and form tabs.
+	* [Revamped] Floating header.
+	* [Tweaked] Features module on the home page.
+	* [Tweaked] Features module on the game section.
+	* [Tweaked] Advanced elements tab on the home page (Trending, Classics, and New games toggle module tabs).
+	* [Tweaked] Manage pane.
+	* [Tweaked] Table header and cell border.
+	* [Tweaked] Style of certain triggered elements to match with the rest of the theme.
+	* [Miscellaneous] Removed the redundant code.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.3.0 [2019-11-12]
+
+	* [Fixed] Opacity flickering issue on records table.
+	* [Removed] Low opacity from the records.
+	* [Revamped] Buttons UI.
+	* [Tweaked] Member profile > Updates section records.
+	* [Tweaked] Member profile > Game Keys section records.
+	* [Tweaked] Submission profile > History section.
+	* [Tweaked] Records table header and cells border.
+	* [Tweaked] Center aligned most of the buttons to match with the rest of the theme.
+	* [Miscellaneous] Several other minor changes and bug fixes.
+
+	## Version 1.2.0 [2019-11-04]
+
+	* [Fixed] Next and previous button icons in the lightbox.
+	* [Fixed] Attributes module links color to match with the default UI link color.
+	* [Fixed] Uneven margin on the presets in the filters area.
+	* [Fixed] Scripts section code viewer UI.
+	* [Added] Blue color UI to the stamps form.
+	* [Changed] Main background color with an image.
+	* [Changed] Add, edit, and reply forms UI color from blue to green. Also, reduced their color alpha a bit.
+	* [Changed] Avatar border style (for members with clearance level) to solid.
+	* [Changed] Top and side navigator background color as well as their panes color to be more dark.
+	* [Changed] Lightbox icon colors from teal to indigo.
+	* [Changed] Several module buttons position aligned to center to match with the rest of the UI style.
+	* [Changed] Add and edit forms as well as their tabs aligned to center.
+	* [Revamped] Modules UI.
+	* [Revamped] Subtitle.
+	* [Revamped] Record UI in various sections/areas.
+	* [Tweaked] Member profile > Stamps Log and Posts sections.
+	* [Tweaked] Updates module records UI.
+	* [Tweaked] Posts (comments) list.
+	* [Miscellaneous] A couple of other tweaks and bug fixes.
+
+	## Version 1.1.0 [2019-07-24]
+
+	* [Fixed] SubjectShaper style is no longer overridden by the theme.
+	* [Fixed] Posts are now left-aligned in the Questions section.
+	* [Tweaked] Blockquote styling.
+	* [Tweaked] Messages styling in the Alerts and the Activity panes.
+	* [Miscellaneous] A few other minor changes.
+
+	## Version 1.0.0 [2019-07-17]
+
+	* Initial release.
+
+	[LICENSE]
+
+	You are allowed to install this UI theme.
+
+	You are not allowed to:
+
+	1. Redistribute this UI theme on the Internet.
+	2. Use this UI theme in your own work (either, published or not).
+	3. Modify and publish the modified version of this UI theme on the Internet.
+	4. Take or use any components (either, modified or not) of this UI theme and use in your own work (either, published or not).
+	5. Take or use any components (either, modified or not) of this UI theme and publish on the Internet.
+	6. Use this UI theme or its components for commercial purposes.
+	-----------------------------
+*/
+@import url("https://fonts.googleapis.com/css?family=Arimo|Aldrich|Fira+Mono|Doppio+One&display=swap");
+* {
+  border-radius: 0 !important;
+  filter: none !important;
+}
+
+html {
+  background: #212121;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--CSUIDBGColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--CSUIPurpleColor);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--CSUIWhiteColor);
+}
+
+::selection {
+  background-color: var(--CSUIPurpleColor);
+  color: #fff;
+}
+
+#BodyWrapper {
+  background: var(--CSUIBodyBG) #212121;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-size: var(--CSUIFontSize);
+  font-family: var(--CSUITextFF) !important;
+  color: var(--CSUITextColor);
+  background: var(--CSUIBodyColor);
+  text-shadow: var(--CSUIBodyTS);
+}
+
+a:hover,
+.Linklike:hover,
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div strong,
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div small,
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover,
+.MainForm fieldset#Attributes .AvailableAttributes h5:hover,
+.RichText .TableOfContents ul li:hover,
+.AdvancedListSettingsModule > .Content .OrderAndSortControls fieldset legend:hover,
+#SectionMatchesModule ul li.Selected a,
+#SectionMatchesModule ul li:hover a,
+#SectionMatchesModule ul li.Selected a span,
+#GameMatchesModule ul li.Selected a span,
+#AttributesModule a:hover {
+  color: var(--CSUILinkHoverColor) !important;
+}
+
+a,
+.Linklike,
+.RichText .TableOfContents ul li {
+  color: var(--CSUILinkColor);
+  text-shadow: var(--CSUILinkShadow);
+}
+
+#AttributesModule a {
+  color: var(--CSUILinkColor) !important;
+  text-shadow: var(--CSUILinkShadow) !important;
+}
+
+#ContentGrid.HiddenColumnMode.xs row > column.xs-h {
+  background: #212121;
+  border-left: var(--CSUIDBorder);
+}
+
+.PageModule > .Content {
+  padding: 10px;
+}
+
+#ContentGrid > row > column:not(:first-child) {
+  background: initial;
+  border: initial;
+}
+
+#MasterLog log {
+  color: var(--CSUIGreenColor);
+  font-weight: bold;
+  border: 1px solid var(--CSUIGreenColor);
+  font-size: var(--CSUIFontSize);
+  background: var(--CSUIDBGColor);
+  padding: 5px;
+}
+
+#MasterLog log span {
+  border: none;
+}
+
+#Loader span,
+#Loader span:after {
+  border-radius: 50% !important;
+  width: 22px;
+  height: 22px;
+}
+
+#Loader.Complete span {
+  border-color: var(--CSUIGreenColor);
+}
+
+#Loader span {
+  border: 3px dashed var(--CSUIRedColor);
+}
+
+#Loader.Complete num {
+  color: var(--CSUIGreenColor);
+}
+
+#Loader num {
+  color: var(--CSUIRedColor);
+  font-size: 10px;
+  text-align: center;
+  margin-top: 1px;
+}
+
+@media only screen and (min-width: 400px) {
+  #PostsListModule_0 > .Content > .Posts > .Post > .PostReplies > .PostsListModule {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .PostsListModule .Posts > li .PostReplies.Focussed > .PostsListModule {
+    border-left: 1px solid var(--CSUIWhiteColor);
+  }
+}
+
+.PageModule > h3,
+moduleGroup > h3 {
+  text-align: center;
+  padding: 5px;
+  background: var(--CSUICardHeaderBG);
+  margin: 0 0 10px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+fieldset legend {
+  font-family: var(--CSUIHFF) !important;
+  color: var(--CSUIHColor);
+}
+
+h5,
+h6,
+#TopNav module pane h5,
+#SideNav module pane h5 {
+  font-size: var(--CSUIH56FontSize);
+}
+
+h3,
+#SubmissionsListModuleGroup h3 {
+  font-size: var(--CSUIH3FontSize) !important;
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--CSUIH4FontSize) !important;
+}
+
+#HeadlineWrapper {
+  background: transparent;
+}
+
+#AlertsNavModule pane .Broadcasts > li,
+#ActivityNavModule pane .Broadcasts > li {
+  padding: var(--CSUIPanesCardPadding);
+  margin: var(--CSUIPanesCardMargin);
+  opacity: 0.8;
+  border: var(--CSUIPanesCardBorder) !important;
+  background: var(--CSUIPanesCardBGColor);
+}
+
+#SearchNavModule pane #SearchOptionsForm {
+  font-size: var(--CSUISmallFontSize);
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0 !important;
+  background: var(--CSUITextAreaBGColor) !important;
+}
+
+#BuddiesNavModule pane article .ChannelContents > .Messages > .SelfMessage .RichText,
+#BuddiesNavModule pane article .ChannelContents > .Messages > .Message .RichText {
+  font-size: var(--CSUISmallFontSize) !important;
+  background: var(--CSUISLBGColor) !important;
+  border-radius: 0 !important;
+  border: 0.02px solid rgba(79, 195, 247, 0.5) !important;
+}
+
+#BananaNavModule pane article ul li a {
+  font-size: var(--CSUISmallFontSize);
+  border-radius: 0;
+  padding: 5px;
+  background: var(--CSUISLBGColor);
+  border: 1px solid rgba(79, 195, 247, 0.5);
+  font-family: var(--CSUIHFF) !important;
+}
+
+#TopNav,
+#SideNav,
+#PageFooter {
+  background: var(--CSUITopSideFooterColor);
+}
+
+#TopNav module.Selected icon,
+#TopNav module.Selected widget,
+#SideNav module.Selected icon,
+#SideNav module.Selected widget {
+  background: var(--CSUIPanesBGColor);
+}
+
+#PersonalNavModule pane .Column1 .Identity,
+#PersonalNavModule pane column:nth-child(1) .Identity {
+  background: rgba(158, 158, 158, 0.1);
+  border: 1px solid rgba(158, 158, 158, 0.2);
+}
+
+#AlertsNavModule pane .Broadcasts .Unseen,
+#ActivityNavModule pane .Broadcasts .Unseen,
+#UnseenBroadcastsModule {
+  color: var(--CSUIWhiteColor);
+  background: var(--CSUINotCardBGColor);
+  border: var(--CSUINotCardBorder) !important;
+}
+
+#SideNav > wrapper module.HasUpdates icon,
+#TopNav #StatsNavModule.PointsGained widget,
+#TopNav #StatsNavModule.PointsGained icon,
+#SideNav #StatsNavModule.PointsGained widget,
+#SideNav #StatsNavModule.PointsGained icon {
+  background: var(--CSUIGreenColor);
+  border-color: var(--CSUIGreenColor);
+}
+
+#TopNav #StatsNavModule.PointsLost widget,
+#TopNav #StatsNavModule.PointsLost icon,
+#SideNav #StatsNavModule.PointsLost widget,
+#SideNav #StatsNavModule.PointsLost icon {
+  background: var(--CSUIRedColor);
+  border-color: var(--CSUIRedColor);
+}
+
+#AlertsNavModule pane .Controls .MarkAllAsSeen:hover span,
+#ActivityNavModule pane .Controls .MarkAllAsSeen:hover span,
+#AlertsNavModule pane .Broadcasts .Unseen .BroadcastStatusWrapper:hover span,
+#ActivityNavModule pane .Broadcasts .Unseen .BroadcastStatusWrapper:hover span {
+  background: var(--CSUIGreenColor);
+}
+
+#AlertsNavModule pane .Controls .MarkAllAsSeen span,
+#ActivityNavModule pane .Controls .MarkAllAsSeen span,
+#AlertsNavModule pane .Broadcasts .Unseen .BroadcastStatusWrapper span,
+#ActivityNavModule pane .Broadcasts .Unseen .BroadcastStatusWrapper span {
+  background: rgba(156, 204, 101, 0.4);
+  border: 2px solid var(--CSUIGreenColor);
+}
+
+#TopNav #StatsNavModule pane column:first-child stat rank,
+#TopNav #StatsNavModule pane column:first-child stat itemCount,
+#SideNav #StatsNavModule pane column:first-child stat rank,
+#SideNav #StatsNavModule pane column:first-child stat itemCount {
+  font-size: var(--CSUIH4FontSize);
+}
+
+#AlertsNavModule pane .Controls .PageNumber,
+#ActivityNavModule pane .Controls .PageNumber {
+  padding: 5px;
+  color: var(--CSUIGreyColor);
+  font-size: var(--CSUISmallFontSize);
+}
+
+#AlertsNavModule pane .Broadcasts > li .Messages li,
+#ActivityNavModule pane .Broadcasts > li .Messages li {
+  padding: 5px;
+  border-top: 1px solid rgba(158, 158, 158, 0.3);
+  font-size: var(--CSUISmallFontSize);
+}
+
+#SearchNavModule #SearchForm input[type=text] {
+  color: var(--CSUIWhiteColor);
+  font-size: var(--CSUIFontSize);
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#MessagesNavModule pane #BuddyChatPromoColumn {
+  background: var(--CSUIDBGColor);
+  border-radius: 0;
+  font-size: var(--CSUISmallFontSize);
+}
+
+#ManageNavModule pane .PaneTabs .Selected, #ManageNavModule pane .Panes .Pane.Selected {
+  background: #9e9e9e4d !important;
+}
+
+#ManageNavModule pane .Panes {
+  background: 0;
+  padding: 0;
+}
+
+#ManageNavModule ul.PaneTabs {
+  padding: 0;
+}
+
+#MessagesNavModule pane #LatestPmsColumn li {
+  border-bottom: 1px solid rgba(158, 158, 158, 0.3);
+}
+
+#BuddiesNavModule pane article .ChannelContents > .Messages > .Message small {
+  color: var(--CSUIGreyColor);
+  font-size: 10px;
+}
+
+#BuddiesNavModule pane article #BuddyChatInitiators li.Unseen:after {
+  background: var(--CSUIGreenColor);
+}
+
+#TopNav module.HasUpdates widget {
+  background: var(--CSUIGreenColor);
+  border: 1px solid var(--CSUIGreenColor);
+}
+
+#TopNav module pane, #SideNav module pane {
+  background: var(--CSUIPanesBGColor);
+  border: var(--CSUIPanesBorder);
+}
+
+#SideNav > wrapper module pane header:after {
+  bottom: 0px;
+  background: none;
+  border-bottom: 3px solid #000000;
+}
+
+#NavOptionsNavModule pane textarea {
+  font-size: var(--CSUISmallFontSize);
+  font-family: var(--CSUIMonoFF);
+  color: var(--CSUIGreenColor);
+}
+
+#BuddiesNavModule pane header {
+  background: initial;
+  border: initial;
+}
+
+#BuddiesNavModule pane article .ChannelContents > .Messages {
+  background: var(--CSUIDBGColor);
+}
+
+#BuddiesNavModule pane button:hover {
+  color: var(--CSUIWhiteColor) !important;
+  opacity: 1 !important;
+}
+
+#SearchNavModule pane #SearchOptionsForm form_extension label span {
+  font-family: var(--CSUIMonoFF);
+}
+
+#SearchNavModule #SearchForm button {
+  transition: opacity 0.15s ease-in-out !important;
+  margin-left: 10px;
+}
+
+#BananaNavModule pane article ul li a:hover {
+  background: var(--CSUISLBGColor);
+}
+
+body[data-_sSideNavMode=Collapsed] #SideNav.Expanded {
+  width: 500px;
+}
+
+#SubNavigator,
+.AdvancedElement_Tabs {
+  background: var(--CSUIBlurBG);
+  border: var(--CSUICardBorder) !important;
+  text-align: center;
+  font-family: var(--CSUIHFF) !important;
+  justify-content: center;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+#SubNavigator .BasicSubNavigator,
+#SubNavigator .DropdownMenuSubNavigator,
+#Breadcrumb {
+  font-family: var(--CSUIHFF) !important;
+  margin-right: 0;
+}
+
+#SubNavigator .ActiveEntry,
+.MainForm .InputsWrapper .CategoryTabs li.Selected,
+.AdvancedElement_Tabs li.Selected {
+  border: 0 !important;
+  background: var(--CSUIButtonSelectedBGColor) !important;
+}
+
+#SubNavigator .DropdownMenuSubNavigator > li:hover,
+.AdvancedElement_Tabs li:hover,
+.AdvancedElement_Tabs li.Selected,
+.MainForm .InputsWrapper .CategoryTabs li:hover,
+#SubNavigator .BasicSubNavigator li:hover,
+.AdvancedElement_Tabs.Minimal li:hover {
+  background: #9e9e9e4d;
+  border: 0;
+}
+
+.AdvancedElement_Tabs li:hover,
+.AdvancedElement_Tabs li.Selected,
+#SubNavigator .ActiveEntry {
+  margin-bottom: 0;
+}
+
+.MainForm .InputsWrapper .CategoryTabs li:hover,
+.MainForm .InputsWrapper .CategoryTabs li.Selected {
+  color: var(--CSUIWhiteColor);
+}
+
+#SubNavigator .DropdownMenuSubNavigator > li ul > li:last-child,
+.AdvancedElement_Tabs.Minimal {
+  border: 0 !important;
+  width: auto;
+}
+
+#SubNavigator .ActiveEntry a,
+.AdvancedElement_Tabs li > span {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+#SubNavigator .DropdownMenuSubNavigator > li ul {
+  border: 1px solid #000;
+  border-top: 0;
+}
+
+#SubNavigator .DropdownMenuSubNavigator > li ul > li {
+  background: var(--CSUIDBGColor);
+  border: 0;
+}
+
+body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed #SubNavigator {
+  font-size: smaller;
+  background: var(--CSUIDBGColor);
+}
+
+body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
+  background: none;
+  margin: -10px auto;
+}
+
+#SubNavigator .DropdownMenuSubNavigator > li ul > li:hover {
+  background: #9e9e9e;
+  border: 0;
+}
+
+#SubNavigator li itemCount {
+  font-size: var(--CSUIFontSize);
+  color: var(--CSUIGreenColor);
+}
+
+.AdvancedElement_Tabs li {
+  transition: none;
+}
+
+.PageModule {
+  background: var(--CSUICardBG);
+  border: var(--CSUICardBorder) !important;
+  margin: 10px;
+  padding: 0;
+}
+
+#ResponsibilitiesModule li {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid var(--CSUIRedColor) !important;
+  background: rgba(232, 78, 64, 0.1) !important;
+}
+
+#LicenseModule article {
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+}
+
+#SubmissionsListModule .SubmissionCounts ul li {
+  font-size: smaller;
+}
+
+#SubmissionsListModule .SubmissionCounts ul li span {
+  color: var(--CSUIGreenColor);
+}
+
+.PageModule > .Description {
+  padding: 5px 30px 5px 5px;
+  margin: 5px auto;
+  color: var(--CSUIWhiteColor);
+  font-size: medium;
+  background: linear-gradient(45deg, #9e9e9e4d, transparent);
+}
+
+#WithholdNoticeModule {
+  color: var(--CSUIWhiteColor) !important;
+  padding-bottom: 20px;
+  background: rgba(232, 78, 64, 0.15);
+  border: 1px solid rgba(232, 78, 64, 0.3);
+}
+
+.PageModule > h3:after,
+moduleGroup > h3:after {
+  display: none;
+}
+
+moduleGroup {
+  margin: 10px;
+  padding: initial;
+  border: none;
+}
+
+moduleGroup > .PageModule {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+#PurchasesListModule {
+  margin: 10px !important;
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+#UpdatesModule,
+#ProgressReportModule,
+#BountySummaryModule,
+#BoostBountyFormModule,
+#AwardBountyFormModule,
+#PrizesModule,
+#UnwithholdFormModule {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(156, 204, 101, 0.15);
+}
+
+#UnwithholdInstructionsModule,
+#PrivateAccessNoticeModule,
+#FlagNoticeModule,
+#ModeratorNoticeModule,
+#IssuesModule,
+#RequirementsModule,
+#RulesModule {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(232, 78, 64, 0.15) !important;
+}
+
+#WithholdFormModule,
+#TrashFormModule,
+#FlagsModule,
+#ManagersListModule,
+#TrashNoticeModule,
+#PermitsModule,
+#AddModnoteFormModule {
+  background: rgba(232, 78, 64, 0.07) !important;
+}
+
+#LicenseModule,
+#WhenModule {
+  background: rgba(255, 112, 67, 0.15) !important;
+  color: var(--CSUIOrangeColor) !important;
+}
+
+#FilesModule,
+#AlternateFileSourcesModule {
+  background: rgba(121, 134, 203, 0.15) !important;
+  text-align: center !important;
+}
+
+#CategoryModule,
+#CategoryModule .Content a {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+#FeaturingsModule,
+#FeaturedListModule,
+#ContestModule {
+  background: rgba(255, 235, 59, 0.15) !important;
+}
+
+#ModeratorNoticeModule article,
+#PrivateAccessNoticeModule p {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+#ParticipantsListModule,
+#VotersListModule,
+#WhereModule {
+  background: rgba(79, 195, 247, 0.15) !important;
+}
+
+#ParticipantsListModule h3,
+#VotersListModule h3,
+#WhereModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(79, 195, 247, 0.3);
+}
+
+#WithholdLogModule {
+  background: rgba(255, 112, 67, 0.15) !important;
+}
+
+.PageModule > .LogMessages {
+  color: var(--CSUIGreyColor) !important;
+}
+
+#ResponsibilitiesModule {
+  background: rgba(232, 78, 64, 0.15) !important;
+  text-align: center !important;
+}
+
+#IdentityModule .KeyInfo small {
+  color: var(--CSUIGreyColor);
+  margin: auto;
+  display: block;
+  font-size: smaller !important;
+}
+
+#CoreStatsModule {
+  padding: 10px 0;
+}
+
+#CoreStatsModule .Content {
+  padding: 0 !important;
+}
+
+#CoreStatsModule ul {
+  margin: auto;
+  text-align: center;
+  padding: 0 !important;
+}
+
+#CoreStatsModule ul li {
+  margin: auto 5px;
+  padding: 10px !important;
+  background: rgba(17, 17, 17, 0.7) !important;
+}
+
+#CoreStatsModule ul small {
+  font-size: smaller !important;
+  color: var(--CSUIWhiteColor) !important;
+}
+
+#LicenseModule article footer {
+  color: var(--CSUIRedColor) !important;
+  text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000, 1px 1px 1px #000000;
+}
+
+#LicenseModule .Content {
+  font-family: var(--CSUIFF) !important;
+  color: var(--CSUITextColor) !important;
+  padding: 10px !important;
+  font-size: small !important;
+}
+
+#UpdatesModule record {
+  padding: 10px !important;
+  margin: 5px !important;
+  background: rgba(17, 17, 17, 0.8);
+  border: var(--CSUIDBorder);
+}
+
+#FlagsModule recordCell.Preview {
+  text-align: left;
+}
+
+#UpdatesModule .Details > ul > li code {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+#WithholdNoticeModule h3,
+#UnwithholdInstructionsModule h3,
+#PrivateAccessNoticeModule h3,
+#ModeratorNoticeModule h3,
+#TrashNoticeModule h3,
+#FlagNoticeModule h3,
+#RequirementsModule h3,
+#RulesModule h3,
+#ResponsibilitiesModule h3,
+#ManagersListModule h3,
+#TrashNoticeModule h3,
+#FlagsModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(232, 78, 64, 0.3);
+}
+
+#FilesModule h3,
+#AlternateFileSourcesModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(121, 134, 203, 0.3);
+}
+
+#LicenseModule h3,
+#WhenModule h3,
+#WithholdLogModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(255, 112, 67, 0.3);
+}
+
+#UpdatesModule h3,
+#ProgressReportModule h3,
+#AvailableKeysListModule h3,
+#BountySummaryModule h3,
+#BoostBountyFormModule h3,
+#AwardBountyFormModule h3,
+#PrizesModule h3,
+#UnseenBroadcastsModule h3,
+#UnwithholdFormModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(156, 204, 101, 0.3);
+}
+
+#EditFormModule,
+#AddFormModule,
+#ReplyFormModule {
+  background: rgba(156, 204, 101, 0.07);
+  border: 1px solid rgba(156, 204, 101, 0.3) !important;
+}
+
+#GlobalSubmissionAnnouncementModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(128, 203, 196, 0.3);
+}
+
+#TodosModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+  background: rgba(186, 104, 200, 0.3);
+}
+
+#ContestModule h3 {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+#WhereModule h3 {
+  color: var(--CSUIGreyColor);
+}
+
+#FilesModule .Content ul li {
+  border-bottom: 1px solid rgba(158, 158, 158, 0.3);
+}
+
+#GlobalSubmissionAnnouncementModule {
+  background: rgba(128, 203, 196, 0.15) !important;
+}
+
+#StampsFormModule {
+  border: 1px solid rgba(79, 195, 247, 0.3) !important;
+  background: rgba(79, 195, 247, 0.07) !important;
+}
+
+#TodosModule {
+  background: rgba(186, 104, 200, 0.15) !important;
+}
+
+#PointsModule span#PointsLeader {
+  font-size: var(--CSUISmallFontSize);
+}
+
+#PointsModule span.ClimbedRank {
+  color: var(--CSUIGreenColor) !important;
+}
+
+#PointsModule span.DroppedRank {
+  color: var(--CSUIRedColor) !important;
+}
+
+#StatsModule ul li {
+  margin: 3px !important;
+  padding: 5px !important;
+  background: #212121 !important;
+  border: 1px solid #111 !important;
+}
+
+#StatsModule ul {
+  margin-bottom: auto !important;
+}
+
+button,
+.ButtonLike {
+  font-size: var(--CSUIButtonFontSize);
+  font-family: var(--CSUIButtonFF);
+  padding: var(--CSUIButtonPadding) !important;
+  background: var(--CSUIButtonBGColor) !important;
+  border: var(--CSUIDBorder) !important;
+  color: var(--CSUIButtonTextColor);
+  font-weight: bold !important;
+  text-shadow: 2px 2px #000;
+}
+
+#FilesModule .Content ul li .DownloadOptions a span small {
+  font-size: var(--CSUISmallFontSize);
+  color: var(--CSUIWhiteColor);
+  display: block;
+  text-transform: uppercase;
+}
+
+button:hover,
+.ButtonLike:hover,
+#GameMatchesModule ul li:hover a,
+#GameMatchesModule ul li:hover a,
+#SectionMatchesModule ul li:hover a,
+#Recipients .RecipientGroup > div ul li:hover {
+  background: var(--CSUIButtonBGHoverColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+}
+
+.ButtonLike.Selected,
+button.Expanded,
+button[disabled]:hover,
+button[disabled].Selected,
+button[disabled].Expanded,
+.ButtonLike[disabled]:hover,
+.ButtonLike[disabled].Selected,
+.ButtonLike[disabled].Expanded,
+button[disabled],
+.ButtonLike[disabled],
+#SectionMatchesModule ul li.Selected a,
+#GameMatchesModule ul li.Selected a,
+#Recipients .RecipientGroup > div ul li.SelectedRecipient,
+.ButtonLike.Expanded {
+  background: var(--CSUIButtonSelectedBGColor) !important;
+  color: var(--CSUIGreenColor) !important;
+  border: var(--CSUIDBorder) !important;
+}
+
+button.IconButton span,
+button.IconButton hoverAlt,
+.ButtonLike.IconButton span,
+.ButtonLike.IconButton hoverAlt {
+  padding: 1px !important;
+  border: 0 !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion > button,
+#HistoryListModule .Content .Changes li .PreviousVersion > button {
+  font-size: var(--CSUISmallFontSize);
+  margin: 0 3px 0 0;
+}
+
+.IconOnlyButton {
+  margin: auto 5px;
+}
+
+.PostsListModule .Posts > li .PostTools .TopAnswerToggleButton {
+  font-size: var(--CSUIButtonFontSize);
+  margin: auto 5px;
+}
+
+.AdvancedElement_Switch li {
+  font-size: var(--CSUISmallFontSize);
+  font-family: var(--CSUIMonoFF);
+  margin-right: 3px;
+}
+
+#AlternateFileSourcesModule li small {
+  color: var(--CSUIWhiteColor) !important;
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+a.ButtonLike:hover {
+  text-shadow: none !important;
+}
+
+#FilesModule .Content ul li .DownloadOptions a, #AlternateFileSourcesModule li {
+  padding: 10px !important;
+  background: rgba(156, 204, 101, 0.4) !important;
+  font-weight: bold !important;
+  font-family: var(--CSUIButtonFF) !important;
+  font-size: var(--CSUIButtonFontSize);
+  border: var(--CSUIDBorder);
+}
+
+#PageFooter #ImportantLinks li a {
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: var(--CSUIButtonFF) !important;
+  border: var(--CSUIDBorder);
+}
+
+#FilesModule .Content ul li .DownloadOptions a:hover {
+  background: rgba(156, 204, 101, 0.8) !important;
+  color: var(--CSUIWhiteColor) !important;
+  text-shadow: none !important;
+}
+
+#BuddyToggleModule button,
+#SubmitterSubscriptionToggleModule button,
+#GameSubscriptionToggleModule button,
+#SubmissionSubscriptionToggleModule button,
+button#WaveformToggle,
+#MemberSubscriptionToggleModule button,
+#SubscriptionToggleModule button {
+  background: rgba(79, 195, 247, 0.4) !important;
+}
+
+#BuddyToggleModule button:hover,
+#SubmitterSubscriptionToggleModule button:hover,
+#GameSubscriptionToggleModule button:hover,
+#SubmissionSubscriptionToggleModule button:hover,
+button#WaveformToggle:hover,
+#MemberSubscriptionToggleModule button:hover,
+#SubscriptionToggleModule button:hover {
+  background: rgba(79, 195, 247, 0.8) !important;
+}
+
+#PageFooter #ImportantLinks li #AddBugLink:hover,
+#AddModnoteFormRequesterModule button:hover,
+#IssueAddFormRequesterModule button:hover,
+button#sbmtgmtrshr:hover {
+  background: rgba(232, 78, 64, 0.8) !important;
+}
+
+#UiThemeInstallerModule button,
+#AvailableKeysListListToolbarModule button,
+#InstallFormModule button {
+  background: rgba(156, 204, 101, 0.4) !important;
+}
+
+#UiThemeInstallerModule button:hover,
+#AvailableKeysListListToolbarModule button:hover,
+#InstallFormModule button:hover,
+.ExtendedContentButton:hover,
+button.Selected {
+  background: rgba(156, 204, 101, 0.8) !important;
+}
+
+#ModlogListAdvancedListSettingsModule button,
+#SubmissionsListAdvancedListSettingsModule button,
+#MembersListAdvancedListSettingsModule button,
+#WithheldSubmissionsListAdvancedListSettingsModule button {
+  background: rgba(128, 203, 196, 0.4) !important;
+}
+
+#ModlogListAdvancedListSettingsModule button:hover,
+#SubmissionsListAdvancedListSettingsModule button:hover,
+#MembersListAdvancedListSettingsModule button:hover,
+#WithheldSubmissionsListAdvancedListSettingsModule button:hover {
+  background: rgba(128, 203, 196, 0.8) !important;
+}
+
+#LikeToggleModule button,
+#ThanksToggleModule button {
+  background: rgba(186, 104, 200, 0.4) !important;
+}
+
+#LikeToggleModule button:hover,
+#ThanksToggleModule button:hover {
+  background: rgba(186, 104, 200, 0.8) !important;
+}
+
+#AddModnoteFormRequesterModule button,
+#IssueAddFormRequesterModule button,
+button#sbmtgmtrshr {
+  background: rgba(232, 78, 64, 0.4) !important;
+}
+
+#PmMeModule button {
+  background: rgba(255, 235, 59, 0.4) !important;
+}
+
+#PmMeModule button:hover {
+  background: rgba(255, 235, 59, 0.8) !important;
+}
+
+.ExtendedContentButton {
+  color: var(--CSUIButtonTextColor);
+  background: rgba(156, 204, 101, 0.4) !important;
+}
+
+#PageFooter #ImportantLinks li #AddIdeaLink {
+  background: rgba(255, 235, 59, 0.4) !important;
+  color: var(--CSUIYellowColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddIdeaLink:hover {
+  background: rgba(255, 235, 59, 0.8) !important;
+}
+
+#PageFooter #ImportantLinks li #AddBugLink {
+  background: rgba(232, 78, 64, 0.4) !important;
+  color: var(--CSUIRedColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddTicketLink {
+  background: rgba(79, 195, 247, 0.4) !important;
+  color: var(--CSUIBlueColor) !important;
+}
+
+#PageFooter #ImportantLinks li #AddTicketLink:hover {
+  background: rgba(79, 195, 247, 0.8) !important;
+}
+
+#PageFooter #ImportantLinks li a:hover {
+  background: var(--CSUIButtonBGHoverColor);
+  text-shadow: none !important;
+}
+
+#PageFooter #ImportantLinks li a:hover span {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+[data-_sViewMode=Classic] columnHeadings columnHeading {
+  background: var(--CSUITableTHBGColor);
+  text-align: center;
+  color: var(--CSUITableHeadingColor);
+  border-top: var(--CSUIDBorder);
+  border-bottom: var(--CSUIDBorder);
+  font-size: var(--CSUITableHeadingFontSize);
+  font-family: var(--CSUIHFF);
+  padding: 5px;
+}
+
+.Paginator,
+.AjaxPaginator {
+  padding: 5px;
+  background: var(--CSUIRecordsBGColor);
+  border: var(--CSUIRecordTableViewBorder);
+  margin: 5px 0px 5px 0px;
+  text-align: center;
+}
+
+table thead th {
+  font-weight: bold;
+  text-align: center;
+  color: var(--CSUITableHeadingColor);
+  border-top: var(--CSUITableHeadingBorder);
+  border-bottom: var(--CSUITableHeadingBorder);
+  font-size: var(--CSUITableHeadingFontSize);
+  background: var(--CSUITableTHBGColor);
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  border-bottom: var(--CSUIRecordTableViewBorder);
+  background: var(--CSUIRecordsBGColor);
+}
+
+table thead th:empty {
+  border-top: var(--CSUITableHeadingBorder);
+  border-bottom: var(--CSUITableHeadingBorder);
+}
+
+[data-_sViewMode=Classic] record recordCell {
+  padding: var(--CSUIRecordCellPadding);
+  border-bottom: var(--CSUIRecordTableViewBorder);
+}
+
+[data-_sViewMode=Classic] records {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0px;
+}
+
+recordcell.PostId,
+recordcell.PostDate,
+recordcell.Suspicions.RedColor,
+recordcell.Poster {
+  margin: auto 5px;
+}
+
+StampsLogListModule .Direction,
+#StampsLogListModule .PostInfo {
+  margin: 5px;
+}
+
+#CategoriesListModule record,
+#SectionsModule record {
+  padding: 10px;
+  margin: 0 0 5px 0;
+}
+
+[data-_sViewMode=Grid] record .Category,
+[data-_sViewMode=Grid] record .Ownership {
+  transition: opacity 0.15s ease-in-out;
+}
+
+#LikesModule record,
+#ThankersLogModule record {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+record {
+  background: var(--CSUIRecordsBGColor);
+  border: var(--CSUIDBorder);
+  padding: var(--CSUIRecordCellPadding);
+  margin: 10px 5px;
+}
+
+recordcell.Identifiers {
+  text-align: left;
+}
+
+recordCell.Stats {
+  font-size: var(--CSUISmallFontSize) !important;
+  text-align: center !important;
+  margin: 5px 0;
+}
+
+recordCell.Stats statGroup {
+  margin: 5px 0;
+}
+
+recordcell.Stamps {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #000;
+  background: rgba(158, 158, 158, 0.2);
+}
+
+#StampsLogListModule .Direction .Avatar.HasClearanceLevel {
+  border: 1px solid var(--CSUIRedColor) !important;
+}
+
+#MembersListModule recordCell.Member {
+  width: initial !important;
+  justify-content: center !important;
+}
+
+[data-_sViewMode=List] recordCell {
+  margin: 0 0 5px 0;
+}
+
+[data-_sViewMode=Grid] records {
+  margin: 0;
+  justify-content: space-around;
+}
+
+[data-_sViewMode=Grid] record {
+  padding: 0 0 5px 0;
+}
+
+recordcell.Parent {
+  text-align: center;
+  margin: 5px;
+}
+
+[data-_sViewMode=Grid] recordCell.Ownership {
+  top: 5px;
+  left: 5px;
+}
+
+[data-_sViewMode=Grid] recordCell.Category {
+  top: 5px;
+  right: 5px;
+}
+
+[data-_sViewMode=List] record {
+  border: 1px solid #000000;
+  margin: 5px;
+  padding: 5px;
+}
+
+[data-_sViewMode=List] record:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.SubmissionsListModule recordcell.Preview {
+  max-width: initial;
+}
+
+#PostsListModule recordCell.Section {
+  padding: 5px;
+  border: 1px solid #000;
+  background: rgba(158, 158, 158, 0.2);
+}
+
+#PostsListModule recordcell {
+  font-size: 16px !important;
+  margin: 5px;
+}
+
+recordcell.Preview {
+  margin: auto;
+}
+
+.PostsListModule .Posts > li {
+  margin: 10px auto !important;
+  padding: var(--CSUIPostsPadding) !important;
+  background: var(--CSUIPostsBGColor) !important;
+  border: var(--CSUIPostsBorder) !important;
+}
+
+.RichText blockquote {
+  opacity: 0.7;
+  font-size: var(--CSUISmallFontSize) !important;
+  padding: 5px !important;
+  border-left: 2px solid var(--CSUIWhiteColor) !important;
+  background: rgba(158, 158, 158, 0.07) !important;
+}
+
+.PostsListModule .Posts > li article .PostStamps li[data-_sCategory=positive],
+#StampsLogListModule .Stamps li[data-_sCategory=positive] {
+  color: var(--CSUIGreenColor) !important;
+  border-color: var(--CSUIGreenColor) !important;
+}
+
+.PostsListModule .Posts > li article .PostStamps li,
+#StampsLogListModule .Stamps li {
+  border-left: 5px solid !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 5px !important;
+}
+
+#DiscussionsListModule .Content .List li {
+  background: var(--CSUIPostsBGColor) !important;
+  border: var(--CSUIPostsBorder) !important;
+}
+
+.PostsListModule .Posts > li .PostHeader .PostLabels stateLabel.IsExemplary {
+  color: var(--CSUIGreenColor) !important;
+  border: 2px solid var(--CSUIGreenColor) !important;
+}
+
+.PostsListModule .Posts > li.IsExemplary {
+  background: rgba(156, 204, 101, 0.1) !important;
+  border: 2px solid var(--CSUIGreenColor) !important;
+  margin: 0px;
+}
+
+.PostsListModule .Posts > li article .PostStamps li[data-_sCategory=negative] {
+  color: var(--CSUIRedColor) !important;
+  border-color: var(--CSUIRedColor) !important;
+}
+
+.PostsListModule .Posts > li article .PostStamps li[data-_sCategory=neutral] {
+  color: var(--CSUIGreyColor) !important;
+  border-color: var(--CSUIGreyColor) !important;
+}
+
+.PostsListModule .Posts > li .PostTools .PostUrlForm > * {
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+.PostsListModule .Posts > li .PostTools {
+  transition: opacity .15s ease-in-out !important;
+}
+
+ul.FullStampsDisplay {
+  text-align: center;
+  padding: 5px;
+}
+
+#DiscussionsListModule .Content .List li .Row1 {
+  border-left: initial !important;
+}
+
+.PostHeader {
+  margin: 5px 0px 0px 5px;
+}
+
+.PostsListModule .Posts > li .PostReplies.Focussed > .PostsListModule {
+  border-left: 1px solid var(--CSUIWhiteColor) !important;
+}
+
+.PostsListModule .Posts > li .PostHeader .Poster small {
+  font-size: 11px;
+}
+
+.PostText {
+  width: 100%;
+}
+
+.PostText > .RichText {
+  background: var(--CSUITextAreaBGColor) !important;
+  border: var(--CSUIDBorder) !important;
+  font-size: small;
+}
+
+stateLabel {
+  padding: 5px !important;
+  background: #111 !important;
+  border: 1px solid #616161 !important;
+  font-family: "Doppio One" !important;
+  font-size: smaller !important;
+  color: var(--CSUIWhiteColor);
+}
+
+stateLabel.IsRipeRelated,
+stateLabel.GameKeyGrade_premium,
+stateLabel.IsRipeSupporter {
+  background: linear-gradient(to left, #e84e40, #FFEB3B, #9CCC65, #4FC3F7, #BA68C8) !important;
+  text-shadow: 1px 1px 1px #000000, 1px 1px 1px #000000;
+  color: var(--CSUIWhiteColor) !important;
+  font-weight: bold !important;
+  border: 2px solid var(--CSUITealColor) !important;
+}
+
+stateLabel.IdeaResolution_addressed,
+stateLabel.RequestResolution_delivered,
+stateLabel[data-_sThreadState="Done"],
+stateLabel.ContestState_Running,
+#BuddiesListModule recordCell.Status stateLabel.Online,
+.AvatarTooltip .Column .OnlineStatus stateLabel.Online,
+stateLabel.QuestionState_Solved,
+.QuestionPreview blockquote.Solved {
+  color: var(--CSUIGreenColor) !important;
+}
+
+stateLabel.SupportResolution_closed,
+stateLabel.RequestResolution_cancelled,
+stateLabel.RequestResolution_expired,
+stateLabel.RequestResolution_duplicate,
+stateLabel.IdeaResolution_duplicate,
+stateLabel.ContestState_Ended,
+stateLabel[data-_sThreadState="Closed"],
+#BuddiesListModule recordCell.Status stateLabel.Offline,
+.AvatarTooltip .Column .OnlineStatus stateLabel.Offline {
+  color: var(--CSUIGreyColor) !important;
+}
+
+.PostsListModule .Posts > li .PostHeader .PostLabels stateLabel.IsSubmitter,
+stateLabel.QuestionState_Answered,
+QuestionPreview blockquote.Answered {
+  color: var(--CSUIBlueColor) !important;
+}
+
+stateLabel.BugResolution_new,
+stateLabel[data-_sThreadState="Unanswered"],
+stateLabel.RequestResolution_open,
+stateLabel.IdeaResolution_unknown {
+  color: var(--CSUIBlueColor) !important;
+}
+
+stateLabel.IsRedistributor,
+stateLabel.IsPending,
+stateLabel[data-_sTutorialDifficulty="Intermediate"],
+stateLabel.RequestResolution_in_delivery,
+stateLabel.BugPriority_high,
+stateLabel.IsFlagged,
+stateLabel.IsPending {
+  color: var(--CSUIOrangeColor) !important;
+}
+
+stateLabel.QuestionState_Unanswered,
+QuestionPreview blockquote.Unanswered {
+  color: var(--CSUIRedColor) !important;
+}
+
+stateLabel.SupportResolution_feedback,
+stateLabel.BugResolution_feedback {
+  color: var(--CSUIPurpleColor) !important;
+}
+
+stateLabel.IdeaResolution_wont_address,
+stateLabel.IdeaResolution_cannot_address {
+  color: var(--CSUIRedColor) !important;
+}
+
+.AvatarTooltip .Column .StatusLevels stateLabel:not(.IsRipeSupporter) {
+  background: #111;
+}
+
+.AvatarTooltip .Column .StatusLevels stateLabel:not(.IsRipeSupporter).HasClearanceLevel {
+  color: var(--CSUIRedColor) !important;
+}
+
+.MainForm .InputsWrapper fieldset > legend stateLabel.RequiredInput {
+  color: var(--CSUIRedColor) !important;
+}
+
+.MainForm .InputsWrapper fieldset > legend stateLabel.RecommendedInput {
+  color: var(--CSUIGreenColor) !important;
+}
+
+stateLabel.IsNsfw {
+  color: var(--CSUIRedColor) !important;
+}
+
+stateLabel.PermitLevel_junior {
+  color: var(--CSUIGreenColor) !important;
+}
+
+stateLabel.PermitLevel_senior {
+  color: var(--CSUIRedColor) !important;
+}
+
+stateLabel.BugResolution_confirmed {
+  color: var(--CSUIRedColor) !important;
+}
+
+stateLabel.IdeaResolution_will_address {
+  color: var(--CSUIBlueColor) !important;
+}
+
+stateLabel.FlagState_0 {
+  color: var(--CSUIGreenColor);
+}
+
+stateLabel.FlagState_3 {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel.TodoPriority_3 {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel.TodoPriority_1 {
+  color: var(--CSUIGreyColor);
+}
+
+stateLabel.IsCreator {
+  color: var(--CSUIGreenColor);
+}
+
+stateLabel.IdeaResolution_unknown {
+  color: var(--CSUIGreyColor);
+}
+
+stateLabel[data-_sThreadState="Hot"] {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel[data-_sTutorialDifficulty="Beginner"] {
+  color: var(--CSUIGreenColor);
+}
+
+stateLabel[data-_sTutorialDifficulty="Advanced"] {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel.RequestResolution_undeliverable {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel[data-_sUpdateType="Addition"],
+stateLabel[data-_sUpdateType="Suggestion"],
+stateLabel[data-_sUpdateType="Feature"] {
+  color: var(--CSUIBlueColor);
+}
+
+stateLabel[data-_sUpdateType="Optimization"],
+stateLabel[data-_sUpdateType="Tweak"],
+stateLabel[data-_sUpdateType="Improvement"] {
+  color: var(--CSUIPurpleColor);
+}
+
+stateLabel[data-_sUpdateType="Removal"],
+stateLabel[data-_sUpdateType="Refactor"] {
+  color: var(--CSUIGreyColor);
+}
+
+stateLabel[data-_sUpdateType="Overhaul"],
+stateLabel[data-_sUpdateType="BugFix"] {
+  color: var(--CSUIRedColor);
+}
+
+stateLabel[data-_sUpdateType="Adjustment"],
+stateLabel[data-_sUpdateType="Amendment"] {
+  color: var(--CSUIGreenColor);
+}
+
+stateLabel.BugPriority_low {
+  color: var(--CSUIGreenColor);
+}
+
+stateLabel.BugPriority_medium {
+  color: var(--CSUIYellowColor) !important;
+}
+
+stateLabel.BugPriority_emergency {
+  color: var(--CSUIRedColor) !important;
+}
+
+matIcon {
+  opacity: 1;
+  text-shadow: 1px 1px 1px #000, 1px 1px 1px #000 !important;
+  font-size: 15px !important;
+  color: var(--CSUIPurpleColor);
+  vertical-align: middle !important;
+}
+
+statwrapper.Progress maticon,
+#SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon:hover,
+.RecommendedInput matIcon,
+statwrapper.LastBoostDate maticon,
+statwrapper.Bounty maticon,
+statwrapper.Bounty,
+statwrapper.LastActivityDate maticon,
+.Modal .CloseModal:hover,
+#MasterLog log .CloseButton:hover,
+.PageModule > .RelatedLinksButton:hover,
+#SectionExplanationsModule #SectionAreas > li .Sections li matIcon:hover {
+  color: var(--CSUImatIconHoverColor) !important;
+}
+
+#SubmissionsListAdvancedListSettingsModule .RecentGames li matIcon,
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li matIcon,
+#ThanksToggleModule .Content #ShowThanksOptionsToggle.ModalLauncher {
+  color: var(--CSUImatIconColor) !important;
+}
+
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li:hover matIcon,
+.RequiredInput matIcon, .RequiredInputsCount maticon {
+  color: var(--CSUIRedColor) !important;
+}
+
+#SectionExplanationsModule #SectionAreas > li .Sections li matIcon {
+  color: var(--CSUImatIconColor);
+  transition-duration: var(--CSUIDTransition) !important;
+}
+
+statwrapper.Rank maticon,
+.RecommendedInputsCount maticon {
+  color: var(--CSUIGreenColor) !important;
+}
+
+spriteIcon.RightArrowIcon,
+.SpriteIcon.RightArrowIcon {
+  opacity: 1;
+}
+
+.Modal .CloseModal,
+#MasterLog log .CloseButton {
+  color: var(--CSUImatIconColor);
+  font-size: x-large !important;
+}
+
+html.Member_Submissions_Todo #SubmissionsListModule .Identifiers > matIcon,
+#TodosModule .Identifiers > matIcon {
+  color: var(--CSUIPurpleColor) !important;
+}
+
+.Modal .CloseModal {
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+}
+
+maticon.WasFeatured {
+  color: var(--CSUIYellowColor) !important;
+}
+
+maticon.RemoveToggleButton.RedColor {
+  opacity: 0.8;
+}
+
+maticon.RemoveToggleButton.RedColor:hover {
+  opacity: 1;
+}
+
+#ToggleHiddenColumnModeButton.Active matIcon {
+  color: var(--CSUIGreenColor);
+  border-left-color: var(--CSUIGreenColor);
+}
+
+#ToggleHiddenColumnModeButton.Selected matIcon {
+  color: var(--CSUIRedColor);
+  border-left-color: var(--CSUIRedColor);
+}
+
+#ToggleHiddenColumnModeButton matIcon {
+  background: var(--CSUIDBGColor);
+}
+
+#SearchNavModule #SearchForm button:hover maticon {
+  color: var(--CSUIGreenColor);
+}
+
+#SearchNavModule #SearchForm button maticon {
+  color: var(--CSUITealColor);
+}
+
+.QuickDlIcon.PurpleColor {
+  color: var(--CSUIGreenColor) !important;
+  opacity: 0.8 !important;
+}
+
+.QuickDlIcon.PurpleColor:hover {
+  opacity: 1 !important;
+}
+
+#SubmissionsListModule .OwnSubmission {
+  color: var(--CSUIBlueColor) !important;
+}
+
+.PageModule > .RelatedLinksButton {
+  color: var(--CSUIPurpleColor);
+  top: 0;
+  padding: 10px;
+  font-size: large !important;
+}
+
+#ThanksToggleModule .Content #ShowThanksOptionsToggle.ModalLauncher:hover {
+  color: var(--CSUImatIconHoverColor) !important;
+  opacity: 1 !important;
+}
+
+.PostsListModule .Posts > li .PostLabels > .SolvedIcon_32 {
+  top: 25px !important;
+  right: 15px !important;
+}
+
+.lg-next.lg-icon:hover,
+.lg-prev.lg-icon:hover {
+  background: var(--CSUIButtonBGHoverColor) !important;
+}
+
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+  background: var(--CSUIButtonBGColor) !important;
+  color: var(--CSUIButtonTextColor) !important;
+}
+
+.lg-toolbar {
+  background: var(--CSUISLBGColor) !important;
+}
+
+#lg-counter {
+  color: var(--CSUIGreyColor) !important;
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+.lg-toolbar .lg-icon:hover {
+  color: var(--CSUIWhiteColor) !important;
+}
+
+.lg-toolbar .lg-icon {
+  color: var(--CSUIPurpleColor) !important;
+}
+
+.lg-sub-html {
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: var(--CSUITextColor) !important;
+}
+
+#FeaturesSliderModule .Slides .Slide .Info .Name small {
+  background: var(--CSUIPurpleColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+  padding: 5px !important;
+  font-size: var(--CSUIH4FontSize) !important;
+}
+
+#FeaturesSliderModule #SlideShortcuts .Slide.Selected {
+  border-top-color: var(--CSUIPurpleColor) !important;
+}
+
+#HeadlineWrapper overlay h1 {
+  font-size: 40px;
+  text-shadow: 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+#HeadlineWrapper overlay h2 {
+  font-size: 20px !important;
+  text-shadow: 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000 !important;
+}
+
+#FeaturesSliderModule .Slides .Slide .Info .Name h4,
+#FeaturesSliderModule .Slides .Slide .FeatureType {
+  background: var(--CSUIPurpleColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+  font-size: 24px !important;
+  padding: 0 10px !important;
+}
+
+#FeaturesSliderModule .Slides .ExpandedSlide .Info .Name h4,
+#FeaturesSliderModule #ExpandedSlide .Info .Name h4 {
+  background: var(--CSUIPurpleColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+  padding: 0 5px !important;
+  font-size: x-large !important;
+}
+
+#FeaturesSliderModule .Slides .ExpandedSlide .Info .Name small,
+#FeaturesSliderModule #ExpandedSlide .Info .Name small {
+  background: var(--CSUIDBGColor) !important;
+  color: var(--CSUIWhiteColor) !important;
+  font-size: large !important;
+  padding: 5px !important;
+}
+
+#FeaturesSliderModule .Slides .ExpandedSlide .FeatureType,
+#FeaturesSliderModule #ExpandedSlide .FeatureType {
+  background: var(--CSUIDBGColor) !important;
+  color: var(--CSUIWhiteColor);
+  padding: 10px !important;
+}
+
+#ItemProfileModule .CodeWithLineNumbers {
+  font-size: var(--CSUISmallFontSize) !important;
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#CodeViewerModule .CodeWithLineNumbers {
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+pre,
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper,
+#ArchiveTreesModule .Content > ul > li .ArchiveTreeWrapper {
+  color: var(--CSUIGreenColor) !important;
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#CodeViewerModule .CodeWithLineNumbers .Code {
+  border-left: 1px solid var(--CSUIGreyColor) !important;
+  width: 100%;
+  text-align: left;
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+#ItemProfileModule .CodeWithLineNumbers .Code {
+  border-left: 1px solid rgba(156, 204, 101, 0.2) !important;
+  color: var(--CSUITextColor) !important;
+}
+
+.ScriptPreview .LineNumbers {
+  top: 0;
+}
+
+.ScriptPreview code {
+  background: rgba(17, 17, 17, 0.5);
+  font-size: x-small !important;
+}
+
+code {
+  font-family: var(--CSUIMonoFF) !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
+.LineNumbers {
+  color: var(--CSUIGreyColor) !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper del,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper del {
+  color: var(--CSUIRedColor) !important;
+}
+
+#HistoryListModule .Content .Changes li .NewVersion .ValueWrapper ins,
+#HistoryListModule .Content .Changes li .PreviousVersion .ValueWrapper ins {
+  color: var(--CSUIBlueColor) !important;
+}
+
+.GreenColor {
+  color: var(--CSUIGreenColor) !important;
+}
+
+.RedColor {
+  color: var(--CSUIRedColor) !important;
+}
+
+.GreyColor {
+  color: var(--CSUIGreyColor) !important;
+}
+
+.BlueColor {
+  color: var(--CSUIBlueColor) !important;
+}
+
+.PurpleColor {
+  color: var(--CSUIPurpleColor) !important;
+}
+
+.OrangeColor {
+  color: var(--CSUIOrangeColor) !important;
+}
+
+.LessThan5minsOld {
+  color: var(--CSUIRedColor) !important;
+}
+
+.LessThan4HoursOld {
+  color: var(--CSUIOrangeColor) !important;
+}
+
+.LessThan30minsOld {
+  color: var(--CSUIRedColor) !important;
+}
+
+.LessThan1HourOld {
+  color: var(--CSUIRedColor) !important;
+}
+
+.OlderThan1Day {
+  color: var(--CSUIGreyColor) !important;
+}
+
+span.RatedLessThan5 {
+  color: var(--CSUIRedColor);
+}
+
+span.Rated5To7 {
+  color: var(--CSUIOrangeColor);
+}
+
+span.Rated7To9 {
+  color: var(--CSUIBlueColor);
+}
+
+span.Rated9To10 {
+  color: var(--CSUIGreenColor);
+}
+
+#ArchiveTreesModule .Content > ul > li > small span,
+#ArchiveTreesModule .Content > ul > li > small a,
+#ModlogListModule .Action blockquote,
+#ModlogListModule .Affected li,
+#PmTheModsModule .Content,
+#StaffProfileModule div.Content dd.Initiatives ul li div em,
+#StaffProfileModule div.Content dd.Initiatives ul li div a,
+#EmptyBioNoticeModule span,
+#ArchiveTreesModule .Content > ul > li > small,
+.MainForm fieldset#Attributes .SelectedAttributes ul li span,
+.MainForm fieldset#Attributes .SelectedAttributes ul li button,
+.MainForm fieldset#Attributes .AvailableAttributes ul .AttributesGroup strong,
+.MainForm fieldset#ChangeLog ul li > spriteIcon,
+.MainForm fieldset#ChangeLog ul li button,
+.MainForm fieldset#ChangeLog ul li input,
+.MainForm fieldset#ChangeLog ul li select,
+.PostsListModule .Posts > li .PostHeader .DateAdded,
+.PostsListModule .Posts > li .PostHeader .DateModified,
+#NavOptionsNavModule pane .GuestNotice,
+#NavOptionsNavModule pane wrapper > span,
+#NavOptionsNavModule pane a,
+#FilesModule .Content ul li > span small,
+#FilesModule .Content ul li > .FileInfo small,
+#GlobalSubmissionAnnouncementModule .Content p small,
+#AvailableKeysListListToolbarModule button small,
+#RegistrationFormModule .Description small,
+li.Stamper {
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+#RanksListModule recordcell span,
+#SideNav #StatsNavModule pane column:first-child stat statLabel,
+#Recipients small,
+#Recipients textarea,
+#FilesModule .Content ul li > span .Description,
+#FilesModule .Content ul li > .FileInfo .Description,
+#MedalsModule .Content ul li div small,
+.MainForm .InputsWrapper fieldset .InputHelp,
+#TopGamesModule .Content .GamesList li a span, dt,
+#SearchNavModule pane #PopularTermSuggestions li small,
+#SearchNavModule pane #BrowserHistorySuggestions li small,
+#PortfolioEntriesListModule recordcell.Identifiers small,
+.MainForm fieldset#Category .Category small,
+.MainForm fieldset#Type small,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .BulkAddAuthorInput small,
+.PostsListModule .Posts > li article footer {
+  color: var(--CSUIGreyColor) !important;
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+#ParticipantsListModule .Entries ul,
+.PostsListModule .Posts > li article .PostStamps,
+#FilesModule .Content ul li .DownloadOptions,
+#ThanksToggleModule .Content,
+#GameModule .Content a,
+#StatsModule ul,
+#MoreBySubmitterSubmissionsListModule records,
+#MoreInCategorySubmissionsListModule records,
+#SubmitterModule .Content,
+#WipsBySubmitterSubmissionsListModule records,
+.AdvancedElement_Switch.Inline ul,
+.PostsListModule .Posts > li .PostTools,
+.AdvancedListSettingsModule > .Content .ActiveSortsAndFilters {
+  justify-content: center !important;
+}
+
+#ShareButtonsModule,
+#OverviewModule table,
+#FlagsModule li,
+#GameSubscriptionToggleModule,
+#LikeToggleModule,
+#UiThemeInstallerModule,
+#PostAddFormRequesterModule,
+#TodoAddFormRequesterModule,
+#UpdateAddFormRequesterModule,
+#SubmissionsListAdvancedListSettingsModule,
+.InfiniteScroller,
+#ModlogListAdvancedListSettingsModule,
+#FlagAddFormRequesterModule,
+#WithheldSubmissionsListAdvancedListSettingsModule,
+#NavOptionsNavModule pane wrapper,
+#PermitsModule recordcell.Identifiers,
+[data-_sViewMode=Grid] recordCell.Preview,
+recordcell.Ownership, recordcell.Controls,
+[data-_sViewMode=Grid] recordCell.Identifiers,
+#StaffListModule table,
+#HeadlineWrapper overlay,
+#SideNav > wrapper module pane article form,
+.MainForm .Submit {
+  text-align: center !important;
+}
+
+#TopGamesModule .Content .AdditionalLinks a,
+#GamesListModule .Endnote a {
+  padding: 10px !important;
+  background: var(--CSUIDBGColor) !important;
+  border: 1px solid var(--CSUIPurpleColor) !important;
+  font-size: var(--CSUIFontSize) !important;
+  font-family: var(--CSUIHFF) !important;
+}
+
+#SectionsModule .Info .CategoriesListWrapper,
+#CategoriesListModule record .Info .SubcategoriesListWrapper {
+  margin: 10px 0 5px 0 !important;
+  font-size: var(--CSUISmallFontSize) !important;
+  border: 2px solid rgba(156, 204, 101, 0.2) !important;
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+}
+
+#DiscussionSectionsSummaryModule li {
+  border: 1px solid rgba(158, 158, 158, 0.5) !important;
+  margin-bottom: 5px !important;
+  padding: 5px !important;
+  background: rgba(158, 158, 158, 0.08) !important;
+  opacity: 0.8;
+}
+
+.AdvancedElement_InputSuggestionsList {
+  font-family: var(--CSUIMonoFF) !important;
+  color: var(--CSUIWhiteColor) !important;
+  padding: 5px !important;
+  font-size: var(--CSUISmallFontSize) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid #000 !important;
+}
+
+.AdvancedElement_InputSuggestionsList li {
+  padding: 2px !important;
+  background: var(--CSUIButtonBGColor);
+  border: var(--CSUIButtonBorder) !important;
+  font-family: var(--CSUIMonoFF) !important;
+  color: var(--CSUIButtonTextColor) !important;
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+#ModInstallerPromoModule ul li a {
+  padding: 10px !important;
+  background: var(--CSUIDBGColor) !important;
+  border: 1px solid var(--CSUIPurpleColor) !important;
+  font-family: var(--CSUIHFF) !important;
+}
+
+.RichText h1 .IndexNumber,
+.RichText h2 .IndexNumber,
+.RichText h3 .IndexNumber,
+.RichText h4 .IndexNumber,
+.RichText h5 .IndexNumber,
+.RichText h6 .IndexNumber,
+.RichText .TableOfContents ul li .IndexNumber {
+  font-weight: bold !important;
+  color: var(--CSUIGreyColor) !important;
+}
+
+.MainForm fieldset#LicenseChecklist #ChecklistWrapper ul li span,
+.MainForm fieldset#LicenseChecklist #ChecklistWrapper ul li select {
+  font-size: var(--CSUIFontSize);
+}
+
+.Content .DefinitionListEntries ul,
+#ProfileWysiwygEditor .InputWrapper #AvailableModules,
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row {
+  background: var(--CSUIULListBGColor) !important;
+  border: var(--CSUIULListBorder) !important;
+}
+
+#SubmissionsListAdvancedListSettingsModule .RecentGames li,
+#SubmissionsListAdvancedListSettingsModule .SelectedGames li {
+  padding: 5px;
+  background: var(--CSUIDBGColor);
+  border: var(--CSUIDBorder);
+  margin: 3px;
+  transition-duration: 0.15s !important;
+}
+
+.MainForm .InputsWrapper .InputHasError .InputHelp,
+.MainForm .InputsWrapper .InputHasError .InputError,
+.MainForm .InputsWrapper .InputHasError .InputWrapper {
+  border-left: 5px solid var(--CSUIRedColor);
+}
+
+#HistoryListModule .Content .Changes li .NewVersion,
+#HistoryListModule .Content .Changes li .PreviousVersion {
+  margin-right: 5px;
+}
+
+#TopGamesModule .Content .GamesList li a .Banner,
+#GamesListModule record .Icon,
+#SectionExplanationsModule #SectionAreas > li .Sections li spriteIcon,
+#NewBexGamesModule li,
+#GamesListModule .Content > ul > li .Preview,
+.PostsListModule .Posts > li .PostReplies .PostsListModule,
+.lg-toolbar .lg-icon,
+.RichText .Spoiler {
+  transition-duration: var(--CSUIDTransition) !important;
+}
+
+html.Member_Submissions_Todo #SubmissionsListModule .Identifiers.Status_Complete > span,
+#TodosModule .Identifiers.Status_Complete > span {
+  color: var(--CSUIGreenColor) !important;
+}
+
+.Editor .WysiwygPalettes .UsernameInserter ul li:hover,
+.Editor .WysiwygPalettes .BitpitFileInserter ul li:hover {
+  outline: 2px dotted var(--CSUIPurpleColor) !important;
+}
+
+select optgroup,
+.SelectLike optgroup {
+  color: var(--CSUIBlueColor);
+}
+
+option,
+.OptionLike {
+  background: var(--CSUIDBGColor) !important;
+}
+
+.Modal .Contents > module > .Description,
+.Modal .Contents > module > .LogMessages {
+  margin-right: 0;
+}
+
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a {
+  margin: 5px;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.5);
+  border: var(--CSUIDBorder);
+}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options .Selected {
+  color: var(--CSUIWhiteColor) !important;
+  background: #616161 !important;
+  border: 2px solid var(--CSUIGreenColor) !important;
+}
+
+.AdvancedListSettingsModule > .Content .ActiveSortsAndFilters toggle {
+  background: var(--CSUIPanesCardBGColor);
+  padding: 5px;
+  border: 1px solid rgba(156, 204, 101, 0.5);
+  color: var(--CSUIGreenColor);
+}
+
+.AdvancedListSettingsModule > .Content .Presets ul li {
+  background: var(--CSUIPanesCardBGColor);
+  padding: 5px;
+  border: 1px solid rgba(128, 203, 196, 0.5);
+}
+
+#SubmissionsListAdvancedListSettingsModule .SelectedGames:empty:after {
+  color: var(--CSUIRedColor);
+  font-size: var(--CSUISmallFontSize);
+}
+
+#ContentGrid.HiddenColumnMode.md row > column.md-h {
+  border: 2px solid #000;
+  background: #101010cc;
+}
+
+#SectionExplanationsModule #SectionAreas > li .Sections li itemCount {
+  color: var(--CSUIGreyColor);
+  font-size: var(--CSUISmallFontSize);
+  font-family: var(--CSUIMonoFF);
+}
+
+.Editor.DragInProgress .ViewModes .Wysiwyg:after {
+  font-size: 12px;
+  background: var(--CSUIPurpleColor);
+  border-radius: 0 !important;
+  padding: 5px;
+  color: #000;
+}
+
+fieldset#Userid .AdvancedElement_InputSuggestionsList li:hover {
+  background: var(--CSUIButtonBGHoverColor) !important;
+  border: var(--CSUIButtonBorderHover) !important;
+}
+
+#SectionExplanationsModule #SectionAreas > li .Sections li itemCount.RecentlyAddedItems {
+  color: var(--CSUIGreenColor) !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+#SectionExplanationsModule #SectionAreas > li .Sections li itemCount.RecentlyUpdatedItems {
+  color: var(--CSUIBlueColor) !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+.Editor .ViewModes .Wysiwyg .RichText .HoveredElement,
+.Editor .WysiwygPalettes .CannedResponseInserter ul li:hover {
+  outline: 2px dotted var(--CSUIPurpleColor);
+}
+
+.meter1 {
+  color: var(--CSUIRedColor) !important;
+}
+
+.meter2 {
+  color: var(--CSUIOrangeColor) !important;
+}
+
+.meter3 {
+  color: var(--CSUIYellowColor) !important;
+}
+
+.meter4 {
+  color: var(--CSUIGreenColor) !important;
+}
+
+.meter5 {
+  color: var(--CSUIBlueColor) !important;
+}
+
+.Content #AvailableDefinitionListEntries li {
+  color: var(--CSUIRedColor) !important;
+}
+
+.Content #EnabledDefinitionListEntries li {
+  color: var(--CSUIGreenColor) !important;
+}
+
+#ProfileTemplate textarea {
+  color: var(--CSUIGreenColor);
+}
+
+#UnlocksEditFormModule .Content .InputsWrapper .InputWrapper .SalePromo {
+  color: var(--CSUIYellowColor);
+}
+
+#SectionAddFormSelectorModule .Content #SelectGameStep .GamesList .LetterGroup {
+  color: var(--CSUIBlueColor);
+  font-size: var(--CSUILargeFontSize);
+}
+
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row column {
+  background: #101010e6 !important;
+  border: 1px solid #000 !important;
+}
+
+.MainForm .InputsWrapper fieldset > legend:after {
+  height: 2px;
+  margin-top: 3px;
+  width: 100%;
+  background: #fff;
+}
+
+#ManagersListModule ul li .SeniorPermitHolder {
+  color: var(--CSUIRedColor);
+}
+
+#GamesNavModule pane header .SubscriptionBenefitsNotice wrapper placeholder {
+  border: 2px dashed var(--CSUIPurpleColor);
+  border-radius: 100% !important;
+}
+
+#TopGamesModule .Content .GameTypeFilters li {
+  padding: 5px;
+}
+
+#TopGamesModule .Content .GameTypeFilters {
+  font-size: var(--CSUILargeFontSize) !important;
+  font-family: var(--CSUIHFF) !important;
+}
+
+.RecipientGroups .RecipientGroup .MasterSwitch .CustomOptionsToggle {
+  color: var(--CSUILinkColor) !important;
+}
+
+.RecipientGroups .RecipientGroup .MasterSwitch .CustomOptionsToggle:hover {
+  color: var(--CSUILinkHoverColor) !important;
+}
+
+#EmbeddableImagesListModule li {
+  padding: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.AdvancedListSettingsModule > .Content .OrderAndSortControls fieldset legend {
+  font-size: var(--CSUISmallFontSize);
+  color: var(--CSUILinkColor);
+}
+
+itemCount {
+  font-family: var(--CSUIMonoFont) !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
+#RulesModule ol li {
+  font-size: var(--CSUISmallFontSize);
+  color: var(--CSUIRedColor);
+}
+
+#SearchSuggesterModule .GeneralSuggestions li {
+  color: var(--CSUIBlueColor);
+}
+
+#OverviewModule .Content .StatBlock dl dd.Type_number {
+  font-family: var(--CSUIMonoFF);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText .SelectedElement {
+  outline: 2px solid var(--CSUIPurpleColor);
+}
+
+p.NoRecordsFound {
+  color: var(--CSUIRedColor);
+}
+
+#EmbeddableImagesListModule li input {
+  font-size: var(--CSUISmallFontSize) !important;
+  color: var(--CSUIGreenColor);
+}
+
+#EmbeddableImagesListModule li label {
+  font-size: var(--CSUISmallFontSize);
+}
+
+#Recipients textarea {
+  color: var(--CSUIGreenColor) !important;
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#CategoriesListModule record .Icon {
+  opacity: 1;
+  margin: 0 10px 0 5px;
+}
+
+#RulesModule ol li {
+  font-size: var(--CSUISmallFontSize) !important;
+  color: var(--CSUIWhiteColor) !important;
+  margin: 10px 3px 10px 3px !important;
+}
+
+.QuestionPreview blockquote {
+  padding: 10px;
+  font-size: var(--CSUISmallFontSize);
+  color: var(--CSUITextColor);
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+#Member_Submissions_Update #SubmissionsListModule .UpdateHeader {
+  font-size: var(--CSUIH3FontSize);
+  margin: 5px;
+}
+
+p#Countdown {
+  color: var(--CSUIRedColor) !important;
+  font-size: var(--CSUIH4FontSize);
+}
+
+#DiscussionSectionsSummaryModule li:hover {
+  opacity: 1;
+}
+
+#DiscussionSectionsSummaryModule li.ActiveSection {
+  background: var(--CSUIButtonSelectedBGColor) !important;
+  opacity: 1;
+}
+
+#RatingsSummaryModule #OverallRating itemcount {
+  font-size: 30px;
+}
+
+progress {
+  border: 1px solid rgba(156, 204, 101, 0.3);
+}
+
+.RangeSlider span {
+  font-family: var(--CSUIMonoFF) !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
+html.Member_Submissions_Flag #SubmissionsListModule .Preview ul, #FlagsModule .Preview ul {
+  color: var(--CSUIRedColor) !important;
+}
+
+#WaveformVisualizerModule .Content #SliderWrapper {
+  padding: 5px;
+  background: var(--CSUIPanesCardBGColor);
+  border: 1px solid rgba(79, 195, 247, 0.5);
+}
+
+#ModlogListModule .Action.Severity_positive span {
+  color: var(--CSUIGreenColor) !important;
+}
+
+#ModlogListModule .Action.Severity_negative span {
+  color: var(--CSUIRedColor) !important;
+}
+
+#ItemProfileModule article.IsUnavailable {
+  text-decoration: line-through;
+  color: var(--CSUIGreyColor);
+}
+
+img.PreviewImage {
+  box-shadow: none !important;
+  border: 1px solid #000 !important;
+}
+
+#SearchSuggesterModule .GameIndexes {
+  background: var(--CSUIDBGColor) !important;
+  border: var(--CSUIDBorder) !important;
+}
+
+#GamesNavModule pane article .TrendingGames li span small {
+  color: var(--CSUIGreyColor);
+}
+
+rank {
+  font-family: var(--CSUIMonoFF) !important;
+}
+
+#OverviewModule .Content .StatBlock dl dd .ChangeResult_positive {
+  color: var(--CSUIGreenColor);
+}
+
+html.Member_Submissions_Todo #SubmissionsListModule recordCell, #TodosModule recordCell {
+  text-align: left;
+}
+
+#PortfolioEntriesListModule recordcell.Identifiers a {
+  font-size: var(--CSUIH3FontSize);
+}
+
+.Editor.DragInProgress .ViewModes .Wysiwyg {
+  outline: 2px dashed var(--CSUIPurpleColor);
+}
+
+.AdvancedElement_InputSuggestionsList:hover {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+#ProsAndConsModule {
+  font-size: 18px;
+}
+
+.ThreadPreview blockquote {
+  font-size: var(--CSUISmallFontSize);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--CSUIWhiteColor);
+}
+
+dd {
+  color: var(--CSUIWhiteColor);
+}
+
+.RichText .Spoiler {
+  text-shadow: 0.125em 0 12px var(--CSUIPurpleColor), -1px 0 12px var(--CSUIPurpleColor);
+}
+
+.MainForm fieldset .UploadedFiles,
+.Editor .WysiwygPalettes .UsernameInserter ul,
+.MainForm fieldset#EmbeddedMedia ul,
+.MainForm fieldset#Attributes .SelectedAttributes > div,
+.MainForm fieldset#Attributes .AvailableAttributes > div,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .AuthorsList,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li .BulkAddAuthorInput,
+.MainForm fieldset#AlternateFileSources ul,
+.MainForm fieldset#Requirements ul,
+.Editor .WysiwygPalettes .ImageInserter ul,
+.MainForm fieldset#Attributes .AvailableAttributes ul .AttributesGroup,
+#NavOptionsNavModule pane #NavOptionsUiThemeList,
+.WysiwygList ul,
+fieldset#OfficialAttributes wrapper .SectionsMenu,
+fieldset#OfficialAttributes wrapper .Sections,
+fieldset#OfficialAttributes wrapper .Sections .Section ul,
+#Recipients .RecipientGroup > div ul,
+#EmbeddableImagesListModule li,
+.MainForm fieldset#ChangeLog ul,
+.Editor .WysiwygPalettes .BitpitFileInserter ul
+.Editor .WysiwygPalettes .CannedResponseInserter ul {
+  background: var(--CSUIULListBGColor) !important;
+  border: var(--CSUIULListBorder) !important;
+}
+
+.MainForm fieldset .UploadedFiles li,
+.MainForm fieldset#SubmissionAuthors #AuthorGroupsList li,
+.MainForm fieldset#AlternateFileSources ul li,
+.MainForm fieldset#EmbeddedMedia ul li,
+.MainForm fieldset#Requirements ul li,
+#NavOptionsNavModule pane #NavOptionsUiThemeList li,
+.WysiwygList ul li,
+.MainForm fieldset#Attributes .SelectedAttributes ul li,
+fieldset#OfficialAttributes wrapper .SectionsMenu li,
+fieldset#OfficialAttributes wrapper .Sections .Section ul li,
+.Editor .WysiwygPalettes .UsernameInserter ul li,
+#Recipients .RecipientGroup > div ul li,
+#EmbeddableImagesListModule li .Codes,
+.MainForm fieldset#ChangeLog ul li,
+.Editor .WysiwygPalettes .BitpitFileInserter ul li
+.Editor .WysiwygPalettes .CannedResponseInserter ul li {
+  background: var(--CSUIULListLIBGColor) !important;
+  border: var(--CSUIULListLIBorder) !important;
+}
+
+.Content #EnabledDefinitionListEntries li,
+.Content #AvailableDefinitionListEntries li,
+#ProfileWysiwygEditor .InputWrapper #AvailableModules .TemplateModule,
+#ProfileWysiwygEditor .InputWrapper #TemplateGrid row column placeholder,
+.Editor .WysiwygPalettes > palette {
+  background: var(--CSUIULListLIBGColor) !important;
+  border: var(--CSUIULListLIBorder) !important;
+}
+
+#SettingsPortalModule ul li {
+  margin: 5px !important;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.5);
+  border: var(--CSUIDBorder);
+}
+
+ol,
+ul,
+menu,
+li {
+  list-style-position: inside;
+}
+
+article > ul {
+  padding: 5px;
+}
+
+ul.Posts {
+  text-align: left;
+}
+
+#Recipients .RecipientGroup > div ul li {
+  margin: 5px !important;
+  padding: 5px !important;
+}
+
+#ParticipantsListModule .Entries ul li {
+  font-size: var(--CSUISmallFontSize) !important;
+  max-width: 125px !important;
+}
+
+li.OptionLike:hover {
+  background: #424242 !important;
+}
+
+#BexPromoModule .Content > a .MoneyCostOverlay,
+#BexPromoModule .Content > a .PointCostOverlay,
+#NewBexGamesModule li a overlay,
+#GamesListModule .Content > ul > li .Preview .GameName {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: var(--CSUISmallFontSize) !important;
+}
+
+#BexPromoModule .Content > a .PointCostOverlay,
+#NewBexGamesModule li a overlay.PointsCost,
+#GamesListModule .Content > ul > li .Preview .PointCost {
+  color: var(--CSUIGreenColor) !important;
+}
+
+#AvailableKeysListListToolbarModule button span {
+  font-size: var(--CSUIFontSize) !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
+#NewBexGamesModule li a overlay.Availability {
+  color: var(--CSUIRedColor) !important;
+}
+
+.AdvancedListSettingsModule > .Content .Presets ul li:last-child {
+  margin-bottom: auto;
+}
+
+.AdvancedListSettingsModule > .Content .Presets ul li.Selected {
+  background: var(--CSUIDBGColor);
+  padding: 5px;
+  border: 1px solid rgba(156, 204, 101, 0.5);
+}
+
+.AdvancedListSettingsModule > .Content .Presets ul li.Selected a {
+  color: var(--CSUIGreenColor) !important;
+}
+
+.AdvancedListSettingsModule > .Content .Presets ul li.Selected a:hover {
+  color: var(--CSUILinkHoverColor) !important;
+}
+
+.Avatar.Online:after,
+.MemberLink.Online:after {
+  box-shadow: none;
+  border: 1px solid #000000;
+  background: var(--CSUIGreenColor);
+}
+
+.Avatar.HasClearanceLevel {
+  box-shadow: none;
+  border: 2px solid var(--CSUIRedColor);
+}
+
+.Avatar.IsRipeSupporter {
+  background: linear-gradient(to bottom, #e84e40, #FFEB3B, #9CCC65, #4FC3F7, #BA68C8);
+  padding: 5px !important;
+}
+
+.AdvancedElement_Switch.List ul li:hover,
+.AdvancedElement_Switch.List ul li.Selected {
+  font-weight: bold !important;
+  color: var(--CSUIGreenColor) !important;
+}
+
+.AdvancedElement_Switch.List span {
+  margin: 0 5px;
+}
+
+.AdvancedElement_Switch.List ul li {
+  color: var(--CSUIGreyColor) !important;
+}
+
+.tooltipster-base .Title,
+body > .BananaTip .Title {
+  padding: 5px;
+  color: var(--CSUIWhiteColor);
+  font-size: small;
+  background: linear-gradient(45deg, #9e9e9e4d, transparent);
+}
+
+.tooltipster-sidetip .tooltipster-box,
+body > .BananaTip,
+#BuddiesNavModule pane article #BuddyChatInitiators.Active li:hover span {
+  background: rgba(17, 17, 17, 0.9);
+  border: 1px solid var(--CSUIGreyColor);
+}
+
+.tooltipster-base .Title:after,
+body > .BananaTip .Title:after {
+  display: none;
+}
+
+.HelpBeaconTooltip {
+  color: var(--CSUIGreenColor);
+}
+
+.QuickDlTooltip li small {
+  font-size: var(--CSUISmallFontSize);
+  margin: 5px 0px 0px 0px;
+  color: var(--CSUIGreyColor);
+}
+
+#EditFormModule .MainForm,
+#AddFormModule .MainForm {
+  margin: auto;
+}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover {
+  color: var(--CSUILinkHoverColor);
+  background: #424242 !important;
+  border: 1px solid var(--CSUIGreenColor);
+}
+
+.MainForm {
+  max-width: 1000px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000000;
+}
+
+.MainForm .InputsWrapper fieldset > legend .Title {
+  font-size: var(--CSUIH4FontSize);
+  color: var(--CSUIHColor);
+}
+
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options {
+  background: var(--CSUIDBGColor) !important;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=num]:focus,
+input[type=tel]:focus,
+select:focus,
+.SelectLike:focus,
+option:focus,
+.OptionLike:focus,
+optgroup:focus,
+textarea:focus,
+.TextareaLike:focus {
+  background: var(--CSUITextAreaBGColor) !important;
+  border: var(--CSUITextAreaHoverBorder) !important;
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=password]:hover,
+input[type=number]:hover,
+input[type=email]:hover,
+input[type=num]:hover,
+input[type=tel]:hover,
+select:hover,
+.SelectLike:hover,
+option:hover,
+.OptionLike:hover,
+optgroup:hover,
+textarea:hover,
+.TextareaLike:hover {
+  background: var(--CSUITextAreaBGColor) !important;
+  border: var(--CSUITextAreaHoverBorder) !important;
+}
+
+input[type=text],
+input[type=password],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=num],
+input[type=tel],
+select,
+.SelectLike,
+optgroup,
+textarea,
+.TextareaLike {
+  border: var(--CSUITextAreaBorder) !important;
+  background: var(--CSUITextAreaBGColor) !important;
+}
+
+input#GameFinder {
+  color: var(--CSUIWhiteColor);
+}
+
+.Modal,
+#GamesListModule .Content .SteamInfoRollout {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: none !important;
+}
+
+.Editor .WysiwygPalettes .ImageInserter ul:empty:after,
+.Editor .WysiwygPalettes .ElementConfig.Active:empty:after {
+  color: var(--CSUIRedColor) !important;
+}
+
+.Editor .ViewModes .Wysiwyg .RichText,
+.Editor .ViewModes .Source textarea,
+.Editor .ViewModes .Backup .RichText {
+  background: var(--CSUITextAreaBGColor);
+  border: var(--CSUITextAreaBorder);
+  font-size: var(--CSUIFontSize);
+}
+
+.Editor .Toolbars > div {
+  margin: 0 0 10px 0;
+}
+
+.Editor .ViewModes .Wysiwyg .RichText {
+  font-family: var(--CSUITextFF);
+  color: var(--CSUIWhiteColor);
+}
+
+.Editor .ViewModes .Source textarea {
+  font-family: var(--CSUIMonoFF);
+  color: var(--CSUIGreenColor);
+  font-size: 12px !important;
+}
+
+.Editor .ViewModes .Backup .RichText {
+  box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  color: var(--CSUIGreyColor);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText:focus {
+  background: var(--CSUITextAreaBGColor);
+  border: var(--CSUITextAreaHoverBorder);
+}
+
+.Editor .ViewModes .Wysiwyg .RichText:hover {
+  background: var(--CSUITextAreaBGColor);
+  border: var(--CSUITextAreaHoverBorder);
+}
+
+.Editor .ViewModeSwitchers span.Wysiwyg {
+  color: var(--CSUIWhiteColor);
+  background: rgba(186, 104, 200, 0.5);
+  border: 1px solid var(--CSUIPurpleColor);
+}
+
+.Editor .ViewModeSwitchers span.Source {
+  color: var(--CSUIWhiteColor);
+  background: rgba(156, 204, 101, 0.5);
+  border: 1px solid var(--CSUIGreenColor);
+}
+
+.Editor .ViewModeSwitchers span.Backup {
+  color: var(--CSUIWhiteColor);
+  background: rgba(79, 195, 247, 0.5);
+  border: 1px solid var(--CSUIBlueColor);
+}
+
+.Editor .ViewModeSwitchers span {
+  font-family: var(--CSUIMonoFF);
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.Editor .ViewModeSwitchers span.Active {
+  opacity: 1;
+}
+
+.Editor .WysiwygPalettes {
+  background: rgba(79, 195, 247, 0.05);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+}
+
+.Editor .WysiwygPalettes > h4 {
+  font-family: var(--CSUIMonoFF) !important;
+  font-size: 10px !important;
+  background: rgba(66, 66, 66, 0.7);
+  opacity: 0.6;
+}
+
+:root {
+  --CSUIMonoFF: "Fira Mono";
+  --CSUITextFF: Arimo;
+  --CSUIHFF: "Doppio One";
+  --CSUIButtonFF: Aldrich;
+  --CSUIBodyBG: url("https://raw.githubusercontent.com/DanialZahid/Dark-Theme-CSUI-/master/assets/bg.webp") no-repeat center center fixed;
+  --CSUIFontSize: 14px;
+  --CSUISmallFontSize: 12px;
+  --CSUILargeFontSize: 20px;
+  --CSUITextColor: #e0e0e0;
+  --CSUIDBGColor: #212121;
+  --CSUIDBorder: 1px solid #111;
+  --CSUILinkColor: #ffd54f;
+  --CSUILinkHoverColor: #BA68C8;
+  --CSUILinkShadow: 1px 1px 1px #000, 1px 1px 1px #000;
+  --CSUIBodyTS: 1px 1px #000;
+  --CSUICardBorder: 1px solid #111;
+  --CSUICardHeaderBG: rgba(17, 17, 17, 0.7);
+  --CSUICardBG: rgba(17, 17, 17, 0.5);
+  --CSUIDTransition: 0.15s;
+  --CSUImatIconColor: var(--CSUIPurpleColor);
+  --CSUImatIconHoverColor: var(--CSUIWhiteColor);
+  --CSUIHColor: #fff;
+  --CSUIH3FontSize: 22px;
+  --CSUIH4FontSize: 18px;
+  --CSUIH56FontSize: 16px;
+  --CSUITopSideFooterColor: #151515;
+  --CSUIPanesBGColor: #1C1C1C;
+  --CSUIPanesBorder: 1px solid #000;
+  --CSUINotCardBGColor: #9ccc6526;
+  --CSUINotCardBorder: 1px solid var(--CSUIGreenColor);
+  --CSUIPanesCardBGColor: #9e9e9e26;
+  --CSUIPanesCardBorder: 1px solid #9e9e9e4d;
+  --CSUIPanesCardMargin: 5px;
+  --CSUIPanesCardPadding: 5px;
+  --CSUIButtonBGColor: #616161;
+  --CSUIButtonBGHoverColor: #9e9e9e;
+  --CSUIButtonTextColor: #fff;
+  --CSUIButtonFontSize: 12px;
+  --CSUIButtonPadding: 5px;
+  --CSUIButtonSelectedBGColor: #9ccc654d;
+  --CSUIRecordsBGColor: #ffffff12;
+  --CSUIRecordCellPadding: 10px;
+  --CSUIRecordCellBorder: 1px solid #ffffff4d;
+  --CSUITableHeadingColor: #fff;
+  --CSUITableHeadingBorder: 1px solid #ffffffb3;
+  --CSUITableHeadingFontSize: large;
+  --CSUIRecordTableViewBorder: 1px solid #000;
+  --CSUITableTHBGColor: #9e9e9e4d;
+  --CSUIPostsBGColor: #11111199;
+  --CSUIPostsBorder: 1px solid #111;
+  --CSUIPostsPadding: 10px;
+  --CSUIModalBGColor: #7986cb12;
+  --CSUIModalBorder: 2px solid #000;
+  --CSUITextAreaBGColor: #7986cb1a;
+  --CSUITextAreaBorder: 1px solid #000;
+  --CSUITextAreaHoverBorder: 1px solid var(--CSUIGreenColor);
+  --CSUIULListBGColor: #b3e5fc1a;
+  --CSUIULListBorder: 2px solid #000;
+  --CSUIULListLIBGColor: #81d4fa0d;
+  --CSUIULListLIBorder: 1px solid #000;
+  --CSUIRedColor: #e84e40;
+  --CSUIGreenColor: #9CCC65;
+  --CSUIGreyColor: #9E9E9E;
+  --CSUIWhiteColor: #fff;
+  --CSUIPurpleColor: #BA68C8;
+  --CSUIBlueColor: #4FC3F7;
+  --CSUIIndigoColor: #7986CB;
+  --CSUIOrangeColor: #FF7043;
+  --CSUIYellowColor: #FFEB3B;
+  --CSUITealColor: #80cbc4;
+  --CSUIBlueGreyColor: #263238;
+}

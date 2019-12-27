@@ -1,0 +1,14 @@
+.lg-next.lg-icon:hover,
+.lg-prev.lg-icon:hover
+{background: var(--CSUIButtonBGHoverColor) !important;}
+
+.lg-actions .lg-next,
+.lg-actions .lg-prev
+{background: var(--CSUIButtonBGColor) !important; color: var(--CSUIButtonTextColor) !important;}
+
+.lg-toolbar {background: var(--CSUISLBGColor) !important;}
+#lg-counter {color: var(--CSUIGreyColor) !important; font-size: var(--CSUISmallFontSize) !important;}
+.lg-toolbar .lg-icon:hover {color: var(--CSUIWhiteColor) !important;}
+.lg-toolbar .lg-icon {color: var(--CSUIPurpleColor) !important;}
+
+.lg-sub-html {background: rgba(0, 0, 0, 0.25) !important; color: var(--CSUITextColor) !important;}

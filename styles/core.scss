@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Aldrich|Fira+Mono|Doppio+One&display=swap');
+
+// UNIVERSAL AND HTML SELECTOR
+
+* {border-radius: 0 !important; filter: none !important;}
+html {background: #212121;}
+
+// SCROLLBAR
+
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {background: var(--CSUIDBGColor);}
+::-webkit-scrollbar-thumb {background: var(--CSUIPurpleColor);}
+::-webkit-scrollbar-thumb:hover {background: var(--CSUIWhiteColor);}
+::selection {background-color: var(--CSUIPurpleColor); color: #fff;}
+
+// BODYWRAPPER AND BODY
+
+#BodyWrapper
+{
+	background: var(--CSUIBodyBG) #212121;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body
+{
+	font-size: var(--CSUIFontSize);
+	font-family: var(--CSUITextFF) !important;
+	color: var(--CSUITextColor);
+	background: var(--CSUIBodyColor);
+	text-shadow: var(--CSUIBodyTS);
+}
+
+// LINKS
+
+a:hover,
+.Linklike:hover,
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div strong,
+#SectionAddFormSelectorModule .Content #SelectSectionStep .Column li a:hover div small,
+.MainForm fieldset#Category .UberSelect .OptionsWrapper .Options li:hover,
+.MainForm fieldset#Attributes .AvailableAttributes h5:hover,
+.RichText .TableOfContents ul li:hover,
+.AdvancedListSettingsModule>.Content .OrderAndSortControls fieldset legend:hover,
+#SectionMatchesModule ul li.Selected a,
+#SectionMatchesModule ul li:hover a,
+#SectionMatchesModule ul li.Selected a span,
+#GameMatchesModule ul li.Selected a span,
+#AttributesModule a:hover
+{color: var(--CSUILinkHoverColor) !important;}
+
+a,
+.Linklike,
+.RichText .TableOfContents ul li
+{color: var(--CSUILinkColor); text-shadow: var(--CSUILinkShadow);}
+
+#AttributesModule a {color: var(--CSUILinkColor) !important; text-shadow: var(--CSUILinkShadow) !important;}
+#ContentGrid.HiddenColumnMode.xs row>  column.xs-h {background: #212121; border-left: var(--CSUIDBorder);}
+.PageModule>.Content {padding: 10px;}
+#ContentGrid>row>column:not(:first-child) {background: initial; border: initial;}
+
+// MASTERLOG
+
+#MasterLog log
+{
+	color: var(--CSUIGreenColor);
+	font-weight: bold;
+	border: 1px solid var(--CSUIGreenColor);
+	font-size: var(--CSUIFontSize);
+	background: var(--CSUIDBGColor);
+	padding: 5px;
+
+	span {border: none;}
+}
+
+// LOADER
+
+#Loader span,
+#Loader span:after
+{border-radius: 50% !important; width: 22px; height: 22px;}
+
+#Loader.Complete span {border-color: var(--CSUIGreenColor);}
+#Loader span {border: 3px dashed var(--CSUIRedColor);}
+#Loader.Complete num {color: var(--CSUIGreenColor);}
+#Loader num {color: var(--CSUIRedColor); font-size: 10px; text-align: center; margin-top: 1px;}
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: 400px)
+{
+	#PostsListModule_0>.Content>.Posts>.Post>.PostReplies>.PostsListModule {border-left: 1px solid rgba(255, 255, 255, 0.1);}
+	.PostsListModule .Posts>li .PostReplies.Focussed>.PostsListModule {border-left: 1px solid var(--CSUIWhiteColor);}
+}
+
+// HEADINGS
+
+.PageModule>h3,
+moduleGroup>h3
+{text-align: center; padding: 5px; background: var(--CSUICardHeaderBG); margin: 0 0 10px 0;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+fieldset legend
+{font-family: var(--CSUIHFF) !important; color: var(--CSUIHColor);}
+
+h5,
+h6,
+#TopNav module pane h5,
+#SideNav module pane h5
+{font-size: var(--CSUIH56FontSize);}
+
+h3,
+#SubmissionsListModuleGroup h3
+{font-size: var(--CSUIH3FontSize) !important; text-align: center;}
+
+h4 {font-size: var(--CSUIH4FontSize) !important;}
+#HeadlineWrapper {background: transparent;}
